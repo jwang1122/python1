@@ -15,6 +15,17 @@
 
 
 ### ❌Python sytax error
+```py
+print("%d + %d = %d",(b, a, c))
+```
+```output
+
+```
+
+✔️Solution: replace , with %
+```py
+print("%d + %d = %d" %(b, a, c))
+```
 💡 Oh, I see it
 ```output
   File "c:\Users\12818\workspace\python1\hello.py", line 1
