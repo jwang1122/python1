@@ -1,11 +1,12 @@
 # Python class level-I Notes
 
-* [Markdown Tricks](doc/markdownTricks.md)
-* [VS Code Tricks](doc/vscodeTricks.md)
-* [Python Programm](doc/python.md)
-* [Software Installation](doc/installation.md)
-* [Errors](doc/mistakes.md)
-* [Icons](doc/myIcons.md)
+1. [Markdown Tricks](doc/markdownTricks.md)
+2. [VS Code Tricks](doc/vscodeTricks.md)
+3. [Python Programm](doc/python.md)
+4. [Software Installation](doc/installation.md)
+5. [Errors](doc/mistakes.md)
+6. [Keyboard](doc/keyboard.md)
+7. [Icons](doc/myIcons.md)
 
 ## Learning Cycle
 ```mermaid

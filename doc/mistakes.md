@@ -9,7 +9,7 @@
 
 ## Errors
 ### ❌cannot open image in markdown preview
-* ✔️Solution: move **keyboard.md** under **doc/** folder.
+✔️Solution: move **keyboard.md** under **doc/** folder.
 
 ### ❓Why my cls command does NOT work?
 
