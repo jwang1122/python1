@@ -1,5 +1,8 @@
 # VSCode Tricks
 
+## recover wrong typing
+Ctrl+z
+
 ## open terminal
 
 ## open python playground
