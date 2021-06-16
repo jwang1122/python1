@@ -5,8 +5,8 @@
 * [Python Program](doc/python.md)
 * [VSCode Tricks](doc/vscodeTricks.md)
 * 👍[QA](doc/questionAnswer.md)
-
-Repository
+* [Useful Icons](doc/myIcons.md)
+  
 ## Learning Cycle
 ```mermaid
 graph TB
