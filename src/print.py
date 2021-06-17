@@ -1,3 +1,8 @@
+from math import pi # math is a module from python
+
+r=1.0
+circleArea = r**2*pi
+print(circleArea)
 """
 variable name cannot start with number
 1width=14
@@ -27,3 +32,5 @@ print("John said: \"It's really nice feature.\"")
 # print("Problem 01: %d - %d = %d" %(x, y, z))
 # print("Problem 02: %d - %d = %d" %(x, y, z))
 # print("Problem 03: I don't know how to do it.")
+
+print(4/3.0*pi*6**3)

@@ -4,6 +4,6 @@
   1. Add Extension (Markdown PDF, PDF Preview, Python)
   2. Save file
   3. Open Terminal
-  4. Add Terminal
+  4. Add new Terminal
   5. Create a Python file
-  6. Run Python file
+  6. Run Python file (3 way to run)
