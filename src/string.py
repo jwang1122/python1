@@ -1,10 +1,10 @@
 s = 'meet me at python class.' # single or double quote are the same
-# print(type(s))
+print(type(s))
 print(s)
 
 # string is iterable
-# for item in s:
-#     print(item, end=' ')
+for item in s:
+    print(item, end=' ')
 
 # string slicing
 print(s[0:6])
@@ -15,6 +15,7 @@ print(s[::])
 print(s[-1])
 print(s[::-1])
 
+# string functions
 s = "123"
 print(s.isalnum())
 print(s.isalpha())
@@ -29,6 +30,11 @@ print(x+29)
 s="print.md"
 index = s.index('.')
 print(s[index:])
+
+# string math operators
+s1 = "John"
+s2 = "Wang"
+fullName = s1 + ' ' + s2
 
 n="2"
 s = n*5
