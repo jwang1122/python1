@@ -2,6 +2,10 @@
 
 ## open terminal
 
+## Create table of Contents
+* put you cursor on the place you want put table
+* Right-click > Command Pallete... > Markdown All: create table contents
+
 ## open python playground
 ```DOS
 python

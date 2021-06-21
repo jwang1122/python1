@@ -1,6 +1,17 @@
-# Python Language Basic
+<h1> Python Language Basic </h1>
 
 [Interesting Icons](myIcons.md)
+
+
+- [My First python program](#my-first-python-program)
+- [print(with variable)](#printwith-variable)
+- [comment (single line, multiple line)](#comment-single-line-multiple-line)
+- [Variable Naming](#variable-naming)
+- [Data Type](#data-type)
+- [Operator](#operator)
+- [Execution Control](#execution-control)
+- [Loop](#loop)
+
 
 ## My First python program
 ```py
@@ -19,6 +30,16 @@ print("Hello, world!")
 [Python Keywords](https://realpython.com/python-keywords/#:~:text=%20Python%20Keywords%20and%20Their%20Usage%20%201,are%20used%20for%20control%20flow%3A%20if%2C...%20More%20)
 4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
+
+## Data Type
+* [Numbers](../src/number.py)
+    - int
+    - float
+    - str
+* [String](../src/string.py)
+* [Tuple](../src/tuple.py)
+
+## Operator 
 
 ## Execution Control
 * **if-elif-else** statement Syntax
@@ -67,3 +88,5 @@ class A,A1 start
 class B,B1,B2 html
 class E,E1 end1
 ```
+
+## Loop
