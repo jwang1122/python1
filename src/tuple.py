@@ -73,3 +73,4 @@ t = (3, 23,6,45,9,11,21)
 t1 = tuple(sorted(t,reverse=True))
 print(t)
 print(t1)
+# x=t.pop() # AttributeError
