@@ -6,6 +6,7 @@ t1 = (1,2,3,4,5)
 """
 # Create tuple
 t1=() # empty tuple
+t1=tuple()
 print(type(t1))
 print(len(t1))
 t1 = (1, 2, 3, 4, 5)
