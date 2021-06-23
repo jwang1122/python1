@@ -3,7 +3,7 @@
 hint:
 
 ```py
-print("\tsomething")
+print("\tsomething") # \t is a tab symbol
 ```
 
 Sample String : 

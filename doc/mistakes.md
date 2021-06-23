@@ -34,7 +34,7 @@ print("after 5 years you will be %d years old." %(age+5))
 
 ## Errors
 ### ❌cannot open image in markdown preview
-* ✔️Solution: move **keyboard.md** under **doc/** folder.
+✔️Solution: move **keyboard.md** under **doc/** folder.
 
 ### ❓Why my cls command does NOT work?
 

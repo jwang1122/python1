@@ -1,6 +1,7 @@
-a = 5 # a is an integer
-b = 2.3 # b is a float number
-c = 3+5j # c is a complex number
+a = 4 # int: integer
+b = 4.56 # float: decimal point number
+c = 5 - 3j # complex: complex number with real and imaginary parts
+
 print(a)
 print(type(a))
 print(b)

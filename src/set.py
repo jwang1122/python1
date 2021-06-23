@@ -33,6 +33,8 @@ print(set1)
 print(set2)
 set1.add(11)
 print(set1)
+set1.add(2) # no duplicate item allowed in set.
+print(set1)
 set1.discard(3)
 print(set1)
 x=set1.pop()
@@ -42,6 +44,14 @@ print(set1)
 # set3.pop()
 set1.remove(11)
 print(set1)
+
+# Operator on set:
+# & intersection
+# | union
+# > 
+# <
+# ==
+
 
 # relationship between sets
 set1 = {1,2,3,4,5}

@@ -1,21 +1,23 @@
-s = 'meet me at python class.' # single or double quote are the same
+s = 'meet me at python class.' # single or double quote are equivalent
 print(type(s))
 print(s)
 
 # string is iterable
 for item in s:
     print(item, end=' ')
-
 # string slicing
-print(s[0:6])
 print(s[4:9])
 print(s[1:100])
 print(s[1:100:2]) # s[[start]:[stop]:[step]]
 print(s[::])
 print(s[-1])
 print(s[::-1])
+print(s[-2:-8:-1])
 
 # string functions
+print(s.title())
+print(s.capitalize())
+
 s = "123"
 print(s.isalnum())
 print(s.isalpha())

@@ -18,5 +18,5 @@ Sample Output :
 
 ```output
 r = 1.1
-area = 3.8013271108436504
+circleArea = 3.8013271108436504
 ```
