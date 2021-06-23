@@ -1,0 +1,5 @@
+digit=input("enter a digit:")
+x1=int(digit)
+x2=int(digit*2)
+x3=int(digit*3)
+print(x1+x2+x3)
