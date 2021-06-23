@@ -1,5 +1,6 @@
 # All mistake in the class
-⚡️📄📝✔️❌❓❗️📌🔨💡☝️👉👍👎👌💾🗑🐛📒⚠️😄😢♻️🔥🛠📐🎯✉️☎️
+
+[Markdown Shared Library](myIcons.md)
 
 ## My Errors
 

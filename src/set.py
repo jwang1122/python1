@@ -18,6 +18,16 @@ for i in range(3, 8):
 print(set1)
 print(set2)
 
+set3 = set("hello") # use set function pass iterable to create new set
+print(set3)
+
+evens = set(range(0,10,2))
+print(evens)
+odds = set(range(1,10,2))
+print(odds)
+set3 = set([6,7,12,3,5,89])
+print(set3)
+
 # set is iterable
 for item in set1:
     print(item, end=', ')
@@ -28,11 +38,22 @@ print(sum(set1))
 # set slicing
 # x = set1[3] # set is unordered, cannot be sliced
 
-# modify set (add, clear, pop, remove)
+# modify set (add, clear, pop, remove, discarrd)
 set1.add(15)
 print(set1)
 set1.add(2) # no duplicate item allowed in set.
 print(set1)
+set1.discard(15)
+print(set1)
+set1.discard(20) # do nothing if element not exist
+print(set1)
+# set1.remove(20)
+set1.remove(3)
+print(set1)
+x = set1.pop()
+print(x)
+print(set1)
+
 
 # Operator on set:
 # & intersection
@@ -40,8 +61,14 @@ print(set1)
 # > 
 # <
 # ==
-
-
+set1 = {1,2,3,4,5}
+set2 = {4,5,6,7,8}
+set3 = set1 & set2
+print(set1)
+print(set2)
+print(set3)
+set3 = set1 | set2
+print(set3)
 # set management (union)
 
 # Checking relation between sets
