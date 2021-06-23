@@ -43,9 +43,11 @@ l1 = cards[::]
 print(l1)
 l1 = cards[::-1] # reverse the original list
 
-# modify a list
+# modify a list (append, insert, remove, pop)
 l1 = [1,2,3,4,5]
 l1[0] = 12 # modify single element in the list
+print(l1)
+l1.append(54) # add a new element at end of the list
 print(l1)
 l1.insert(2, 11) # insert single element
 print(l1)
@@ -54,8 +56,6 @@ print(l1)
 print(x)
 x = l1.pop(0) # default pop up last which is index=-1, stack
 print(x)
-print(l1)
-l1.append(54) # add a new element at end of the list
 print(l1)
 
 # list can have mixed data type

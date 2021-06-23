@@ -2,7 +2,6 @@
 
 [Interesting Icons](myIcons.md)
 
-
 - [My First python program](#my-first-python-program)
 - [print(with variable)](#printwith-variable)
 - [comment (single line, multiple line)](#comment-single-line-multiple-line)
@@ -14,13 +13,18 @@
 
 
 ## My First python program
-```py
-print("Hello, world!")
-```
+[hello.py](../src/hello.py)
 
 ## print(with variable)
+[print.py](../src/print.py)
+```py
+print(f"The circle area with radius={r} is {a:.2f}")
+```
 
 ## comment (single line, multiple line)
+[comment.py](../src/comment.py)
+* single line comment
+* multiple line comment
 
 ## Variable Naming
 1. variable name cannot start with number
@@ -37,9 +41,28 @@ otherwise, your python builtins functions no longer works the way you expected.
     - float
     - str
 * [String](../src/string.py)
+    - iterale
+    - slicing
+    - +, * operators
+    - built in functions (isdigit, isalnum, title, ...)
 * [Tuple](../src/tuple.py)
+    - iterable
+    - immutable
+    - slicing
+    - +, * operator
+* [List](../src/list.py)
+    - iterable
+    - mutable
+    - slicing
+    - +, * operator
+    - built in functions (append, insert, remove, pop, ...)
+* [Set](../src/set.py)
+    - iterable
+    - mutable
+    - built in functions(add, )
 
 ## Operator 
+
 
 ## Execution Control
 * **if-elif-else** statement Syntax
