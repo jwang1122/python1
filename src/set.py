@@ -17,6 +17,9 @@ print(evens)
 
 print(len(evens))
 
+set3 = set([6,7,12,3,5,89])
+print(set3)
+
 # set is iterable
 for el in evens:
     print(el, end=' ')
@@ -42,6 +45,7 @@ print(set1)
 # set3.pop()
 set1.remove(11)
 print(set1)
+
 
 # relationship between sets
 set1 = {1,2,3,4,5}
