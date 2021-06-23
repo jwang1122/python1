@@ -1,2 +1,1 @@
-print("Hello, world!")
-print("Something")
+print(4.00)
