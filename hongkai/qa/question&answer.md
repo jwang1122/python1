@@ -14,5 +14,4 @@ At line:1 char:3
    tFoundException
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
-
-hi
+and how do I fix it
