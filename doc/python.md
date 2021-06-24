@@ -22,10 +22,10 @@
 
 
 ## Markdown 
-[Markdown Tricks](aDoc/markdownTricks.md)
+[Markdown Tricks](markdownTricks.md)
 * Homeworks
-  - [markdown-01](homeworks/markdown01.md)
-  - [markdown-02](homeworks/markdown02.md)
+  - [markdown-01](../homeworks/markdown01.md)
+  - [markdown-02](../homeworks/markdown02.md)
   
 ## Language Basics
 * [print.py](src/languageBasics/print.py)
