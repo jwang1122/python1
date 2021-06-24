@@ -1,7 +1,10 @@
 # My questions
 
+[Useful Icons](../doc/myIcons.md)
 
-What does this mean?
+✔️❌❓
+
+* ❓ What does this mean, and how do I fix it? ❓
 ```dos
 PS C:\Users\Hongkai Z\workspace\python1> & C:/Users/12818/AppData/Local/Programs/Python/Python39/python.exe "c:/Users/Hongkai Z/workspace/python1/hongkai/src/hello.py"
 & : The term 'C:/Users/12818/AppData/Local/Programs/Python/Python39/python.exe' is not recognized as 
@@ -15,4 +18,4 @@ At line:1 char:3
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
 
-hi
+* ❓ Are you going to answer my first question?!?!?!?

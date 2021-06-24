@@ -5,6 +5,15 @@ mutable and separated by comma, has no duplicate elements, surrounded by {}.é›†å
 set1 = {1,2,3,4,5}
 """
 
+
+
+
+
+
+
+
+
+
 # Create set
 set1 = set()
 set2 = set()
@@ -58,15 +67,19 @@ print(set1)
 print(set2)
 print(f"intersection of set1 and set2 is {set3}")
 
+
+# set1.remove(11)
+
+print(set1)
+print(set2)
+
+
 # relationship between sets
 set1 = {1,2,3,4,5}
 set2 = {4,5,6,7,8}
 set3 = set1.intersection(set2)
 print(set3)
-
 # set3 = set1 + set2
-#print(set3)#
-set3 = set1 | set2
-
-                   
-
+# print(set3)#
+set3 = set1 | set2 
+print(set3)
