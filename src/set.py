@@ -48,8 +48,14 @@ print(set1)
 # set1.remove(11)
 
 # operator on set
+<<<<<<< HEAD
 # &: intersection operator
 # |: union
+=======
+# &: intersection
+# |: union
+# 
+>>>>>>> a2b4077f2356d55db974932db810a0d5caca1452
 set1 = set(range(1, 6))
 set2 = set(range(3, 8))
 set3 = set1 & set2
@@ -64,6 +70,12 @@ set3 = set1.intersection(set2)
 print(set3)
 
 # set3 = set1 + set2
+<<<<<<< HEAD
 # print(set3)
 set3 = set1 | set2
 print(set3)
+=======
+# print(set3)# 
+set3 = set1 | set2
+print(set3)
+>>>>>>> a2b4077f2356d55db974932db810a0d5caca1452
