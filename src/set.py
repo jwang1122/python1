@@ -25,6 +25,7 @@ print()
 # set licing
 # x = odds[0]
 # odds[1]=12
+# |: union
 
 # modify set(add, discard, remove, pop)
 set1 = set(range(1, 6))
@@ -32,7 +33,7 @@ set2 = set(range(3, 8))
 print(set1)
 print(set2)
 set1.add(11)
-print(set1)
+print(set1)                                                                                                                                                           
 set1.discard(3)
 print(set1)
 x=set1.pop()
@@ -48,3 +49,10 @@ set1 = {1,2,3,4,5}
 set2 = {4,5,6,7,8}
 set3 = set1.intersection(set2)
 print(set3)
+
+# set3 = set1 + set2
+#print(set3)#
+set3 = set1 | set2
+
+                   
+
