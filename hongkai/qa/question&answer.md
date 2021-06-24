@@ -1,7 +1,7 @@
 # My questions
 
 
-What does this mean?
+* ❓ What does this mean❓
 ```dos
 PS C:\Users\Hongkai Z\workspace\python1> & C:/Users/12818/AppData/Local/Programs/Python/Python39/python.exe "c:/Users/Hongkai Z/workspace/python1/hongkai/src/hello.py"
 & : The term 'C:/Users/12818/AppData/Local/Programs/Python/Python39/python.exe' is not recognized as 
@@ -14,4 +14,4 @@ At line:1 char:3
    tFoundException
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
-and how do I fix it
+* ❓ And how do I fix it❓
