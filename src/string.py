@@ -40,3 +40,9 @@ n="2"
 s = n*5
 print(type(s))
 print(n*5)
+
+s = "2476"
+n = len(s)
+s = 9674839
+n = len(str(s))
+print(f"the number {s} has {n} digits.")
