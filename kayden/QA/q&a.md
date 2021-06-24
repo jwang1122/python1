@@ -1,2 +1,4 @@
-# My question 
-[](../doc/myIcons.md)
+[](../../doc/myIcons.md)
+
+✔️❌❓
+❓what is python

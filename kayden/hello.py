@@ -1,1 +1,1 @@
-print(4.00)
+print("Hello world")
