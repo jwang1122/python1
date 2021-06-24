@@ -1,5 +1,8 @@
 # My questions
 
+[Useful Icons](../doc/myIcons.md)
+
+✔️❌❓
 
 * ❓ What does this mean❓
 ```dos
