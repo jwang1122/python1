@@ -1,7 +1,7 @@
 # Python class level-I Notes
 
 1. [Markdown Tricks](doc/markdownTricks.md)
-2. [Software Installation](doc/installation.md)
+2. [Software Installation](doc/pythonInstall.md)
 3. [Python Program](doc/python.md)
 4. [VSCode Tricks](doc/vscodeTricks.md)
 5. [Keyboard](doc/keyboard.md)
