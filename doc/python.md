@@ -6,6 +6,7 @@
 - [print](#print)
 - [comment](#comment)
 - [Variable Naming](#variable-naming)
+  - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
 
 
@@ -29,8 +30,11 @@
 3. don't use reserved keywords as variable name
 ![](images/python-keywords.png)
 [Python Keywords](https://realpython.com/python-keywords/#:~:text=%20Python%20Keywords%20and%20Their%20Usage%20%201,are%20used%20for%20control%20flow%3A%20if%2C...%20More%20)
-1. Avoid using existing function name as your variable name.
+4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
+### Variable and memory
+![](images/chineseMedicine.jpg)
+![](images/memory.gif)
 
 ![](images/LanguageBasics.svg)
 
