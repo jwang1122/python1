@@ -1,5 +1,6 @@
 # My read Me file
 [markdown shared lib](../doc/myIcons.md)
 
-* [vscodeTricks](doc/vscodetricks.md)
-* [q&a](qa/q&a.md)  
+* [VS Code Tricks](doc/vscodetricks.md)
+* [Questions & answses](qa/q&a.md)  
+* [my mistacke](doc/mistakes.md)
