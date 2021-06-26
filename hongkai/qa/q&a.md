@@ -4,7 +4,8 @@
 
 ✔️❌❓
 
-* ❓ What does this mean, and how do I fix it? ❓
+* ❓ I more or less understand the issue, but how do I fix it? ❓
+  * It's trying to open *your* python interpreter even though it's not your computer
 ```dos
 PS C:\Users\Hongkai Z\workspace\python1> & C:/Users/12818/AppData/Local/Programs/Python/Python39/python.exe "c:/Users/Hongkai Z/workspace/python1/hongkai/src/hello.py"
 & : The term 'C:/Users/12818/AppData/Local/Programs/Python/Python39/python.exe' is not recognized as 
