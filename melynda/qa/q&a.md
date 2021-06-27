@@ -11,3 +11,5 @@
 >✔️My homework is going fine
 
 * ❓What's the difference with .md and .py?
+
+* ❓I really don't get how to do input03.py
