@@ -60,6 +60,13 @@ set3 = set1 & set2
 print(set1)
 print(set2)
 print(f"intersection of set1 and set2 is {set3}")
+# <<<<<<< HEAD
+set1 = {1,2,3}
+set2 = {1,2,3}
+print(set1>set2)
+print(set1<set2)
+print(set1==set2)
+# =======
 set3 = set1 | set2  # Union does NOT give duplicate elements
 print(set3) 
 
@@ -71,6 +78,7 @@ print(set1==set2)
 # set3 = set1 + set2
 # print(set3)#
 
+# >>>>>>> 954ffa248c1d2685693733a8eb3318ea52b1b114
 
 # Function on set(intersection,union,difference,isdisjoint )
 set1 = {1,2,3,4,5}
