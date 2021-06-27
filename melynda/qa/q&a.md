@@ -12,4 +12,4 @@
 
 * ❓What's the difference with .md and .py?
 
-* ❓I really don't get how to do input03.py
+* ❓How do you do input03.py?
