@@ -4,5 +4,4 @@
 
 ✔️❌❓
 
-* ❓ what do I put in my settings.json file
 * 
