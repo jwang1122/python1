@@ -72,6 +72,9 @@ otherwise, your python builtins functions no longer works the way you expected.
     - as function: set(iterable)
     - set functions ()
 * [Dictionary](../src/languageBasics/dictionary.py)
-    - dict is iterable
-    - dict is mutable
+    - iterable
+    - mutable
+    - no duplication
+    - ** operator
+    - function (items, keys, values, clear, pop)
 
