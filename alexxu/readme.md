@@ -1,6 +1,21 @@
 # My read Me file
 [markdown shared lib](../doc/myIcons.md)
 
-* [VS Code Tricks](doc/vscodetricks.md)
-* [Questions & answses](qa/q&a.md)  
-* [my mistacke](doc/mistakes.md)
+* [vscodeTricks](doc/vscodeTricks.md)
+* [q&a](qa/q&a.md)  
+
+## file structure
+```output
+<project root>
+    ├── 📝doc/
+    |    ├── mistakes.md 
+    |    ├── vscodeTrics.md 
+    |    └── python.md 
+    ├── 🔨homeworks/
+    |       └── <filenameXX.md>
+    ├── 🔥src/
+    |      └── hello.py 
+    └── 👉ReadMe.md
+```
+
+
