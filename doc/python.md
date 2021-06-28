@@ -11,16 +11,16 @@
 
 
 ## My First python program
-[hello world](../src/languageBasics/hello.py)
+[hello world](../src/hello.py)
 
 ## print
-[print](../src/languageBasics/print.py)
+[print](../src/print.py)
 - place holder (%s, %d, %f)
 - print with tuple
 - formated print: print(f"x={x}") 
 
 ## comment 
-[comment](../src/languageBasics/../comment.py)
+[comment](../src/comment.py)
 * single line comment: #
 * multiple lines comment: """, '''
 
