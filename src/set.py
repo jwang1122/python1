@@ -31,6 +31,12 @@ print()
 # |: union
 
 # modify set(add, discard, remove, pop)
+
+
+
+
+
+
 set1 = set(range(1, 6))
 set2 = set(range(3, 8))
 print(set1)
