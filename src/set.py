@@ -38,7 +38,7 @@ print(sum(set1))
 # set slicing
 # x = set1[3] # set is unordered, cannot be sliced
 
-# modify set (add, clear, pop, remove, discarrd)
+# set is mutable, modify set (add, clear, pop, remove, discarrd)
 set1.add(15)
 print(set1)
 set1.add(2) # no duplicate item allowed in set.
@@ -84,5 +84,13 @@ print(set3)
 set3 = set1.difference(set2)
 set3 = set2.difference(set1)
 print(set3)
+print(set1)
+print(set2)
 set3 = set1.intersection(set2)
 print(set3)
+b = set1.isdisjoint(set2)
+print(b)
+set1.remove(3)
+print(set1)
+b = set1.isdisjoint(set2)
+print(b)

@@ -42,6 +42,7 @@ otherwise, your python builtins functions no longer works the way you expected.
     - str
 * [String](../src/string.py)
     - iterale
+    - immutable
     - slicing
     - +, * operators
     - built in functions (isdigit, isalnum, title, ...)
@@ -58,9 +59,15 @@ otherwise, your python builtins functions no longer works the way you expected.
     - built in functions (append, insert, remove, pop, ...)
 * [Set](../src/set.py)
     - iterable
+    - mutable (add, clear, pop, remove, discard)
+    - Operators (&:intersection, |:union, >,<,==)
+    - built in functions(union,update,difference,intersection,isdisjoint )
+* [Dict](../src/dictionary.py)
+    - iterable
     - mutable
-    - built in functions(add, )
-
+    - Operator(**)
+    - function ()
+  
 ## Operator 
 
 
