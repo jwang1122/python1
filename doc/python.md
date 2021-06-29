@@ -80,15 +80,15 @@ otherwise, your python builtins functions no longer works the way you expected.
     - function (items, keys, values, clear, pop)
 
 ## operator
-* Arithmatic operator: +;-;*;/;%;**;// floor divisor
-    [Arithmatic.py](../src/arithmatic.py)
-* Assignment Operators: =; +=; -=; *=; /=; %=; **=; //=
-    [Assignment.py](../src/assignment.py)
-* Comparison Operators: ==; !=; <; >; >=; <=
-    [](../src/comparison.py)
-* Identity Operator: is, is not; return True or False
-    [](../src/identity.py)
+* Arithmatic operator: +; -; *; /; %; **; //(floor divisor)
+    [arithmatic.py](../src/arithmatic.py)
+* Assignment Operator: =; +=; -=; *=; /=; %=; **=; //=
+    [assignment.py](../src/assignment.py)
+* Comparison Operators: ==, !=, <, >, <=, >=
+    [comparison.py](../src/comparison.py)
 * Logical Operator: and, or, not
-    [](../src/logical.py)
-* Membership Operator: in, not in
-    [](../src/membership.py)
+    [logical.py](../scr/../src/logical.py)
+* Membership operator: in, not in
+    [membership.py](../src/membership.py)
+* Identity operator: is, is not
+    [identity.py](../src/identity.py)

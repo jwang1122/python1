@@ -1,4 +1,8 @@
-# Identity Operator: is, is not; return True or False
+"""
+Identity operator: is, is not
+Always return True or False.
+
+"""
 
 a = 5
 b = 5
@@ -7,21 +11,16 @@ c = a
 print(a is b)
 print(a is c)
 
-a = str("john")
-b = str("john")
+c = 10 # peel off the label c put that label in the new location which store 10
+print(a)
+print(a is c) # a is no long c, this is only happens on premitive data type such as int, float.
 
-print(a is b)
+l1 = [1,2,3,4,5]
+l2 = l1
+print(l1 is l2)
 
-from turtle import Turtle
-turtle1 = Turtle() # you create an instance of Turtle
-turtle2 = Turtle()
-print(turtle1 is turtle2)
-
-l1 = list()
-l2 = list()
-l3 = l1
-print(l1 is not l2) # return True because they are different memory location
-print(l1 is l3)
-l1.append(1)
+l2.append('hello') # if you change the content of l2, content of l1 will be changed as well
+print(l1 is l2)
 print(l1)
-print(l3)
+
+from turtle import turtle
