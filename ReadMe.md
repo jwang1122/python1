@@ -11,7 +11,11 @@
 
 C:\Users\12818\AppData\Local\Programs\Python\Python39\python
 
+<<<<<<< HEAD
 ## file structure 
+=======
+## file structure
+>>>>>>> 4c9dae125ba5f1b1c223e77797bd18800f78a7a1
 ```output
 <project root>
     ├── 📝doc/
