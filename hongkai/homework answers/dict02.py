@@ -6,11 +6,14 @@
   - Print the dictionary
 """
 vehicle = {
-    'Model':'42.69',
-    'Make':'Whats a make',
-    'Year':'2763',
-    'Mileage':'23'
+    'Model':'Cameray',
+    'Make':'Toyota',
+    'Year': 2019,
+    'Mileage':23
 }
-vehicle['Year'] = '6969'
-vehicle['Type'] = 'helicopter'
+print(vehicle['Year'])
+vehicle['Year'] = 6969
+print(vehicle['Year'])
+
+vehicle['type'] = 'car'
 print(vehicle)
