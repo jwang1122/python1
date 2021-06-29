@@ -35,6 +35,8 @@ print(f"The circle area with radius={r} is {a:.2f}")
 4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
 
+![](images/LanguageBasics.svg)
+
 ## Data Type
 * [Numbers](../src/number.py)
     - int
