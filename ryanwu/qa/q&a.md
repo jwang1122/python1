@@ -9,4 +9,12 @@
 
 
 
-* ❓ Which command do I use to "float" a word (The command I am asking about functions basically the same way as "float", but applies to words.)?
+* ❓ How do I remove the quotes that appears when i run this code?.
+```py
+a = input("Input first name: ")
+b = input("Input last name: ")
+c = (a)
+d = (b)
+print("Hello %a, %a!" %(c,d))
+```
+
