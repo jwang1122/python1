@@ -14,5 +14,5 @@ expected output:
 ```
 Please enter the stuff you are looking for: pliers
 
-pliers: located at shelf2, row1, column1.
+Your pliers are located at shelf2, row1, column1.
 ```

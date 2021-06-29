@@ -8,7 +8,6 @@
 - [Variable Naming](#variable-naming)
   - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
-- [operator](#operator)
 
 
 ## My First python program
@@ -40,24 +39,24 @@ otherwise, your python builtins functions no longer works the way you expected.
 ![](images/LanguageBasics.svg)
 
 ## Data Type
-* [Numbers](../src/number.py)
+* [Numbers](../src/languageBasics/number.py)
     - int: a=4
     - float: a=3.4
     - complex: c=4-3j
-* [String](../src/string.py)
+* [String](../src/languageBasics/string.py)
     - string is iterable
     - string slicing: [[start]:[end]:[step]]
     - String operator +, *
     - as function str(object)
     - string functions
-* [Tuple](../src/tuple.py)
+* [Tuple](../src/languageBasics/tuple.py)
     - tuple is iterable
     - tuple is immutable
     - tuple slicing: tuple1[[start]:[end]:[step]]
     - tupler operator +, *
     - as function: tuple(iterable)
     - tuple functions ()
-* [List](../src/list.py)
+* [List](../src/languageBasics/list.py)
     - list is iterable
     - list is mutable
     - list slicing: list1[[start]:[end]:[step]]
@@ -65,30 +64,16 @@ otherwise, your python builtins functions no longer works the way you expected.
     - modify list
     - as function: list(iterable)
     - list functions (append, insert)
-* [Set](../src/set.py)
+* [Set](../src/languageBasics/set.py)
     - set is iterable
     - set is mutable
     - set operators: &, |, <, >, ==
     - modify set
     - as function: set(iterable)
     - set functions ()
-* [Dictionary](../src/dictionary.py)
+* [Dictionary](../src/languageBasics/dictionary.py)
     - iterable
     - mutable
     - no duplication
     - ** operator
     - function (items, keys, values, clear, pop)
-
-## operator
-* Arithmatic operator: +;-;*;/;%;**;// floor divisor
-    [Arithmatic.py](../src/arithmatic.py)
-* Assignment Operators: =; +=; -=; *=; /=; %=; **=; //=
-    [Assignment.py](../src/assignment.py)
-* Comparison Operators: ==; !=; <; >; >=; <=
-    [](../src/comparison.py)
-* Identity Operator: is, is not; return True or False
-    [](../src/identity.py)
-* Logical Operator: and, or, not
-    [](../src/logical.py)
-* Membership Operator: in, not in
-    [](../src/membership.py)

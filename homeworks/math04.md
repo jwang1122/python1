@@ -1,6 +1,6 @@
 * Write a Python program to calculate sphere surface area with given radius. 
 
-![](../../images/sphere-surface-area.jpg)
+![](images/sphere-surface-area.jpg)
 
 $$ SA = 4 \pi r^2 $$
 

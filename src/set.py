@@ -87,7 +87,17 @@ set3 = set1.union(set2)
 print(set3)
 set3 = set1.difference(set2)
 print(set3)
-
-
-
-
+x = set1.isdisjoint(set2)
+print(x)
+set1.remove(4)
+set1.remove(5)
+print(set1)
+print(set2)
+x = set1.isdisjoint(set2)
+print(x)
+set3 = set1.intersection(set2)
+<<<<<<< HEAD
+print(set3)
+=======
+print(set3)
+>>>>>>> c151de9b2a678ea61aa0520db283464143ff5886
