@@ -11,16 +11,16 @@
 
 
 ## My First python program
-[hello world](../src/hello.py)
+[hello world](../src/languageBasics/hello.py)
 
 ## print
-[print](../src/print.py)
+[print](../src/languageBasics/print.py)
 - place holder (%s, %d, %f)
 - print with tuple
 - formated print: print(f"x={x}") 
 
 ## comment 
-[comment](../src/comment.py)
+[comment](../src/languageBasics/../comment.py)
 * single line comment: #
 * multiple lines comment: """, '''
 
@@ -39,24 +39,24 @@ otherwise, your python builtins functions no longer works the way you expected.
 ![](images/LanguageBasics.svg)
 
 ## Data Type
-* [Numbers](../src/number.py)
+* [Numbers](../src/languageBasics/number.py)
     - int: a=4
     - float: a=3.4
     - complex: c=4-3j
-* [String](../src/string.py)
+* [String](../src/languageBasics/string.py)
     - string is iterable
     - string slicing: [[start]:[end]:[step]]
     - String operator +, *
     - as function str(object)
     - string functions
-* [Tuple](../src/tuple.py)
+* [Tuple](../src/languageBasics/tuple.py)
     - tuple is iterable
     - tuple is immutable
     - tuple slicing: tuple1[[start]:[end]:[step]]
     - tupler operator +, *
     - as function: tuple(iterable)
     - tuple functions ()
-* [List](../src/list.py)
+* [List](../src/languageBasics/list.py)
     - list is iterable
     - list is mutable
     - list slicing: list1[[start]:[end]:[step]]
@@ -64,14 +64,14 @@ otherwise, your python builtins functions no longer works the way you expected.
     - modify list
     - as function: list(iterable)
     - list functions (append, insert)
-* [Set](../src/set.py)
+* [Set](../src/languageBasics/set.py)
     - set is iterable
     - set is mutable
     - set operators: &, |, <, >, ==
     - modify set
     - as function: set(iterable)
     - set functions ()
-* [Dictionary](../src/dictionary.py)
+* [Dictionary](../src/languageBasics/dictionary.py)
     - iterable
     - mutable
     - no duplication

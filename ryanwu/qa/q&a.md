@@ -6,7 +6,7 @@
 ✔️❌❓
 
 * ❓ How many math problems do i need to complete? 
-
+>✔️at least first 10.
 
 
 * ❓ How do I remove the quotes that appears when i run this code?.
