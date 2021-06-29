@@ -64,9 +64,9 @@ otherwise, your python builtins functions no longer works the way you expected.
     - built in functions(union,update,difference,intersection,isdisjoint )
 * [Dict](../src/dictionary.py)
     - iterable
-    - mutable
+    - mutable (CRUD)
     - Operator(**)
-    - function ()
+    - function (items, keys, values, pop)
   
 ## Operator 
 
