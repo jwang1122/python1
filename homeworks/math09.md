@@ -1,6 +1,6 @@
 * Write a Python program to calculate primeter of a rectangle with given width and length. 
 
-![Rectangle Primeter](../../images/rectangleArea.png)
+![Rectangle Primeter](images/rectangleArea.png)
 
 >$$ A = length \cdot width  $$
 
