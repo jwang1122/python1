@@ -96,4 +96,8 @@ print(set2)
 x = set1.isdisjoint(set2)
 print(x)
 set3 = set1.intersection(set2)
+<<<<<<< HEAD
 print(set3)
+=======
+print(set3)
+>>>>>>> c151de9b2a678ea61aa0520db283464143ff5886
