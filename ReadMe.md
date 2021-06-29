@@ -11,6 +11,19 @@
 
 C:\Users\12818\AppData\Local\Programs\Python\Python39\python
 
+## file structure 
+```output
+<project root>
+    ├── 📝doc/
+    |    ├── mistakes.md 
+    |    ├── vscodeTrics.md 
+    |    └── python.md 
+    ├── 🔨homeworks/
+    |       └── <filenameXX.md>
+    ├── 🔥src/
+    |      └── hello.py 
+    └── 👉ReadMe.md
+```
 ## Learning Cycle
 ```mermaid
 graph TB

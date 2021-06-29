@@ -50,27 +50,44 @@ print(set1)
 
 # operator on set
 # &: intersection operator
-# |: union
+# |: union, no duplicated elements
+# >
+# <
+# ==
 set1 = set(range(1, 6))
 set2 = set(range(3, 8))
 set3 = set1 & set2
 print(set1)
 print(set2)
 print(f"intersection of set1 and set2 is {set3}")
+set3 = set1 | set2  # Union does NOT give duplicate elements
+print(set3) 
+
+set1={1,2,3}
+set2={1,2,3,10}
+print(set1>set2)
+print(set1<set2)
+print(set1==set2)
+# set3 = set1 + set2
+# print(set3)#
 
 
-# set1.remove(11)
-
-print(set1)
-print(set2)
-
-
-# relationship between sets
+# Function on set(intersection,union,difference,isdisjoint )
 set1 = {1,2,3,4,5}
 set2 = {4,5,6,7,8}
 set3 = set1.intersection(set2)
 print(set3)
-# set3 = set1 + set2
-# print(set3)#
-set3 = set1 | set2 
+set3 = set1.union(set2)
+print(set3)
+set3 = set1.difference(set2)
+print(set3)
+x = set1.isdisjoint(set2)
+print(x)
+set1.remove(4)
+set1.remove(5)
+print(set1)
+print(set2)
+x = set1.isdisjoint(set2)
+print(x)
+set3 = set1.intersection(set2)
 print(set3)
