@@ -31,6 +31,12 @@ print()
 # |: union
 
 # modify set(add, discard, remove, pop)
+
+
+
+
+
+
 set1 = set(range(1, 6))
 set2 = set(range(3, 8))
 print(set1)
@@ -90,4 +96,8 @@ print(set2)
 x = set1.isdisjoint(set2)
 print(x)
 set3 = set1.intersection(set2)
+<<<<<<< HEAD
 print(set3)
+=======
+print(set3)
+>>>>>>> c151de9b2a678ea61aa0520db283464143ff5886

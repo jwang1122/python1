@@ -1,6 +1,6 @@
 * Write a Python program to calculate volume of a cylinder. 
 
-![Cylinder Surface Area](../../images/cylinderVolume.png)
+![Cylinder Surface Area](images/cylinderVolume.png)
 
 $$ V = \pi r^2 h $$
 

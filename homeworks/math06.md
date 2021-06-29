@@ -1,6 +1,6 @@
 * Write a Python program to calculate surface area of a cylinder. 
 
-![Cylinder Surface Area](../../images/cylinderSurfaceArea.png)
+![Cylinder Surface Area](images/cylinderSurfaceArea.png)
 
 $$ A = 2 \pi r^2 + h(2\pi r) $$
 

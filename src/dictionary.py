@@ -8,14 +8,26 @@ surrounded by {}, and no duplicate key. The key-value pairs seperated by colon.
 
 {'key1':1, 'key2':2}
 """
-d = {} # empty dictionary
-print(type(d))
-print(len(d))
-
 days = {
     '1': "Monday",
     '2': "Tuesday",
-    '3': "Wednesday",
+    '3': "Wendseday",
+    '4': "Thursday",
+    '5': "Friday",
+    '6': "Saturday",
+    '7': "Sunday",
+}
+print(days)
+
+# Create a dictionary
+d = {}
+print(type(d))
+print(len(d))
+
+d1 = {
+    '1': "Monday",
+    '2': "Tuesday",
+    '3': "Wendsday",
     '4': "Thursday",
     '5': "Friday",
     '6': "Saturday",

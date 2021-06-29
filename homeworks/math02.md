@@ -1,6 +1,6 @@
 * Write a Python program to calculate circle area with given radius.
 
-![](../../images/circleArea.jpg)
+![](images/circleArea.jpg)
 
 $$ A = \pi r^2 $$
 

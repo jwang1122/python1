@@ -1,0 +1,5 @@
+a = input("Input first name: ")
+b = input("Input last name: ")
+c = (a)
+d = (b)
+print("Hello %a, %a!" %(c,d))
