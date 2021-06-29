@@ -8,6 +8,7 @@
 - [Variable Naming](#variable-naming)
   - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
+- [operator](#operator)
 
 
 ## My First python program
@@ -78,3 +79,16 @@ otherwise, your python builtins functions no longer works the way you expected.
     - ** operator
     - function (items, keys, values, clear, pop)
 
+## operator
+* Arithmatic operator: +;-;*;/;%;**;// floor divisor
+    [Arithmatic.py](../src/arithmatic.py)
+* Assignment Operators: =; +=; -=; *=; /=; %=; **=; //=
+    [Assignment.py](../src/assignment.py)
+* Comparison Operators: ==; !=; <; >; >=; <=
+    [](../src/comparison.py)
+* Identity Operator: is, is not; return True or False
+    [](../src/identity.py)
+* Logical Operator: and, or, not
+    [](../src/logical.py)
+* Membership Operator: in, not in
+    [](../src/membership.py)
