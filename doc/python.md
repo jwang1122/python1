@@ -71,7 +71,26 @@ otherwise, your python builtins functions no longer works the way you expected.
     - function (items, keys, values, pop)
   
 ## Operator 
-
+* arithmatic operator +;-;*;/;%;**;// floor divisor
+  [arithmatic.py](../src/arithmitac.py)
+* assignment operators: =: +:= -=; *=; /=; %=; **=; //=
+  [assignment.py](../src/assignment.py)
+* comparison Operators:==; !=; <; >; >=: <=
+  [comparison.py](../src/comparison.py)
+* identity Operators: is, is not
+  [identity.py](../src/identity.py)
+* Logical Operator: often used with comparison operator
+  [logical.py](../src/logical.py)
+* Membership Operators: in, not in
+  [membership.py](../src/membership.py)
+* Ternary operator: using if-else or and-or to separate values and condition to 3 parts. 
+  - a if a<b else b 
+  - a<b and a or b
+    [ternary.py](../src/ternary.py)
+* Bitwise Operator: &, |, ^, <<, >>
+    [bitwise.py](../src/bitwise.py)
+* Multiple times operator: **
+  [other.py](../src/other.py)
 
 ## Execution Control
 * **if-elif-else** statement Syntax
@@ -120,5 +139,6 @@ class A,A1 start
 class B,B1,B2 html
 class E,E1 end1
 ```
+[](../src/if-else.py)
 
 ## Loop
