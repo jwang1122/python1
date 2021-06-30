@@ -1,9 +1,9 @@
 """
-Membership operator: in, not in
+Membership Operator: in, not in
 
-Return True if the container contains the element, return False otherwise.
+return True if the container contains the element, return False otherwise.
 
-here is some container: str, tuple, list, set, dict
+here are some containers: str, tuple, list, set, dict
 """
 
 s = "Hello, world!" # string container
@@ -21,3 +21,4 @@ print('hello' in set1)
 t1 = ((1,2),(3,4),(5,6))
 d = dict(t1)
 print(2 in d) # in operator only care about key NOT value
+

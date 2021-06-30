@@ -1,6 +1,6 @@
 """
 Identity operator: is, is not
-Always return True or False.
+Always return True or False
 
 """
 
