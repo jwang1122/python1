@@ -1,10 +1,15 @@
 """
-Ternary operator has 3 parts
+Ternary operator: if-else, and-or
+
+if-else: a if a<b else b
 1. first value
 2. condition: if condition is True, return first value, 
 3 another value, if condition is False, return another value.
 
-a if a<b else b
+and-or
+1. condition
+2. return first value if condition is True
+3. return another value if condition is False
 """
 
 a, b = 10, 20
