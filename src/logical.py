@@ -7,17 +7,10 @@ not: return reverse of comparison result
 """
 
 a, b = 10, 20
-<<<<<<< HEAD
-c = a==20 and b==20 #  comparison operator has higher priority than logical, assignment has lower 
-print(c)
-
-c = a==10 or b==10 
-=======
 c = a==20 and b==20 # comparison operator has higher priority than logical, assignmen has lowest priority
 print(c)
 
 c = a==10 or b==10
->>>>>>> 8f44d62b34f61f413ac87cfa479badc149f47826
 print(c)
 
 c = not a==10
