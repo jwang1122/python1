@@ -7,8 +7,8 @@ Comparison Operators
 >= Greater than or equal to
 <= Less than or equal to
 
-All of the comparison operator returns True or False.
+comparison operator always return True of False
 """
-a, b = 20,20
-f=(a>=b) # assignment operator has lowest priority
-print(f)
+a, b = 10,20
+flag=(a>=b) # comparison operator has higher priority than assignment operator
+print(flag)
