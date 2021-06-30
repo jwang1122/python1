@@ -10,7 +10,7 @@ for s in t: # s is the variable for each element in the tuple, you can name it w
     print(s, end=' ')
 print()
 
-# loop on 
-cars = ["ford",'toyota','bmw','mazada']
+# loop on list
+cars = ["ford",'toyota','bmw','mazda']
 for car in cars:
     print(car)
