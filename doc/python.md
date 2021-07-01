@@ -9,6 +9,7 @@
   - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
 - [operator](#operator)
+- [Loop](#loop)
 
 
 ## My First python program
@@ -92,3 +93,14 @@ otherwise, your python builtins functions no longer works the way you expected.
     [membership.py](../src/membership.py)
 * Identity Operator: is, is not
     [identity.py](../src/identity.py)
+* Ternary operator: if-else, and-or
+    [ternary.py](../src/ternary.py)
+* Multiple times operator: **
+    [others.py](../src/others.py)
+* Bitwise Operator: &, |, ^, <<, >>
+    [bitwise.py](../src/bitwise.py)
+
+## Loop
+* for loop
+* while loop
+
