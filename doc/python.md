@@ -10,6 +10,7 @@
 - [Data Type](#data-type)
 - [operator](#operator)
 - [Loop](#loop)
+- [Function](#function)
 
 
 ## My First python program
@@ -101,6 +102,33 @@ otherwise, your python builtins functions no longer works the way you expected.
     [bitwise.py](../src/bitwise.py)
 
 ## Loop
-* for loop
-* while loop
+* [for/while loop](../src/loop.py)
+
+```
+while loop has 3 part:
+1. initialize variable, a=0
+2. variable condition, a<10
+3. adjust variable, a +=1
+```
+
+```mermaid
+graph TB
+A([Python Programing])
+B[function]
+C[class]
+
+A--create-->B
+A--create-->C
+
+classDef block1 fill:#ECC335,color:white;
+
+class B,C block1
+```
+
+## Function
+$$
+\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
+$$
+* [function.py](../src/function.py)
+* [argument.py](../src/argument.py)
 
