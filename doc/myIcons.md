@@ -2,6 +2,9 @@
 
 ⚡️📄📝✔️❌❓❗️📌🔨💡☝️👉👇☝️👍👎👌💾🗑🐛📒⚠️😄😢♻️🔥🛠📐🎯✉️☎️
 
+## color picker
+[color website](https://www.webfx.com/web-design/color-picker/)
+
 ## Sample File Structure:
 
 ```output

@@ -10,6 +10,7 @@
 - [Data Type](#data-type)
 - [operator](#operator)
 - [Loop](#loop)
+- [Function](#function)
 
 
 ## My First python program
@@ -34,6 +35,7 @@
 [Python Keywords](https://realpython.com/python-keywords/#:~:text=%20Python%20Keywords%20and%20Their%20Usage%20%201,are%20used%20for%20control%20flow%3A%20if%2C...%20More%20)
 4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
+
 ### Variable and memory
 ![](images/chineseMedicine.jpg)
 ![](images/memory.gif)
@@ -95,6 +97,30 @@ otherwise, your python builtins functions no longer works the way you expected.
     [identity.py](../src/identity.py)
 
 ## Loop
-* [for loop]()
-* [while loop]()
-* 
+* [for/while loop](../src/loop.py)
+    1. initial value: a = 0
+    2. loop condition on the value: a<10
+    3. adjust value: a += 1
+
+```mermaid
+graph TB
+A([Python program])
+B[function]
+C[class]
+
+A-->B
+A-->C
+
+classDef block fill:#ECC335,color:white;
+
+class B,C block
+```
+## Function
+* Python built in functions
+![Built in functions](./images/builtinFunctions.png)
+
+* define a function
+$$
+\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
+$$
+[define circleArea function](../src/function.py)
