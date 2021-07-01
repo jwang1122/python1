@@ -1,18 +1,24 @@
 """
 Membership Operator: in, not in
+
 return True if the container contains the element, return False otherwise.
 
-sample container: str, tuple, list, set, dict
+here are some containers: str, tuple, list, set, dict
 """
 
-s = "Hello world!"
+s = "Hello, world!" # string container
 print('s' in s)
 
 t = (1,2,3,4,5)
-print('hello' not in t)
+print(6 not in t)
 
-t = ((1,2),(3,4),(5,6))
-d = dict(t)
-print(d)
-print(2 in d) # only check key not value
-print(2 not in d)
+l1 = [1,2,3,4,5]
+print(3 in l1)
+
+set1 = {1,2,3,4,5,"hello"}
+print('hello' in set1)
+
+t1 = ((1,2),(3,4),(5,6))
+d = dict(t1)
+print(2 in d) # in operator only care about key NOT value
+
