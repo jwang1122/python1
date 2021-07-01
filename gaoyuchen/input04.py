@@ -1,0 +1,8 @@
+number = (input('Enter a number: '))
+n1 = (number*2)
+n2 = (number*3)
+n3 = int(n1)
+n4 = int(n2)
+n5 = int(number)
+n3 = (n4 + n3 + n5)
+print(n3)
