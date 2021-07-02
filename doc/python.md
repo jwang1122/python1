@@ -126,6 +126,9 @@ class B,C block1
 ```
 
 ## Function
+A function is a block of organized, reusable code 
+that is used to perform a single, related action.
+
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
