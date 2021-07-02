@@ -1,11 +1,11 @@
 # Python class level-I Notes
 
-1. 🔥[Python Program](doc/python.md)
+1. [Python Programm](doc/python.md)
 2. [Markdown Tricks](doc/markdownTricks.md)
-3. [Software Installation](doc/pythonInstall.md)
-4. [VSCode Tricks](doc/vscodeTricks.md)
-5. [Keyboard](doc/keyboard.md)
-6. ❌[Mistakes](doc/mistakes.md)
+3. [VS Code Tricks](doc/vscodeTricks.md)
+4. [Software Installation](doc/installation.md)
+5. [Errors](doc/mistakes.md)
+6. [Keyboard](doc/keyboard.md)
 7. [Icons](doc/myIcons.md)
 8. ❓[✔️QA](doc/questionAnswer.md)
 

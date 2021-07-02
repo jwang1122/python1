@@ -20,6 +20,16 @@ print(len(evens))
 set3 = set([6,7,12,3,5,89])
 print(set3)
 
+set3 = set("hello") # use set function pass iterable to create new set
+print(set3)
+
+evens = set(range(0,10,2))
+print(evens)
+odds = set(range(1,10,2))
+print(odds)
+set3 = set([6,7,12,3,5,89])
+print(set3)
+
 # set is iterable
 for el in evens:
     print(el, end=' ')
@@ -31,12 +41,6 @@ print()
 # |: union
 
 # modify set(add, discard, remove, pop)
-
-
-
-
-
-
 set1 = set(range(1, 6))
 set2 = set(range(3, 8))
 print(set1)
@@ -86,24 +90,36 @@ print(set1==set2)
 # > 
 # <
 # ==
-
-
-# relationship between sets
 set1 = {1,2,3,4,5}
 set2 = {4,5,6,7,8}
-set3 = set1.intersection(set2)
-print(set3)
-set3 = set1.union(set2)
-print(set3)
-set3 = set1.difference(set2)
-print(set3)
-x = set1.isdisjoint(set2)
-print(x)
-set1.remove(4)
-set1.remove(5)
+set3 = set1 & set2
 print(set1)
 print(set2)
-x = set1.isdisjoint(set2)
-print(x)
+print(set3)
+set3 = set1 | set2
+print(set3)
+set1 = {1,2,3}
+set2 = {1,2,3}
+print(set1>set2) # set1 has every element in set2, and set1>set2
+print(set1<set2)
+print(set1==set2)
+
+# function for set(union, update, difference, intersection, isdisjoint)
+set2={3,4,5}
+set3 = set1.union(set2)
+print(set1)
+print(set2)
+print(set3)
+set3 = set1.difference(set2)
+set3 = set2.difference(set1)
+print(set3)
+print(set1)
+print(set2)
 set3 = set1.intersection(set2)
 print(set3)
+b = set1.isdisjoint(set2)
+print(b)
+set1.remove(3)
+print(set1)
+b = set1.isdisjoint(set2)
+print(b)

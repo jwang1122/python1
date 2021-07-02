@@ -1,5 +1,6 @@
-# Mistakes in Python Class
-## My mistakes
+# All mistake in the class
+
+[Markdown Shared Library](myIcons.md)
 
 * ❌TypeError due to input string
 ```output

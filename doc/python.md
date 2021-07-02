@@ -7,6 +7,7 @@
 - [comment](#comment)
 - [Variable Naming](#variable-naming)
   - [Variable and memory](#variable-and-memory)
+  - [Variable and memory](#variable-and-memory-1)
 - [Data Type](#data-type)
 - [operator](#operator)
 - [Loop](#loop)
@@ -35,6 +36,12 @@
 [Python Keywords](https://realpython.com/python-keywords/#:~:text=%20Python%20Keywords%20and%20Their%20Usage%20%201,are%20used%20for%20control%20flow%3A%20if%2C...%20More%20)
 4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
+### Variable and memory
+![](images/chineseMedicine.jpg)
+![](images/memory.gif)
+
+![](images/LanguageBasics.svg)
+
 ### Variable and memory
 ![](images/chineseMedicine.jpg)
 ![](images/memory.gif)
@@ -126,9 +133,13 @@ class B,C block1
 ```
 
 ## Function
+* define a function
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
+
+* Python built in functions
+![Built in functions](./images/builtinFunctions.png)
+
 * [function.py](../src/function.py)
 * [argument.py](../src/argument.py)
-

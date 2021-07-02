@@ -44,3 +44,13 @@ min1 = min(t)
 print(min1)
 max1 = max(t)
 print(max1)
+
+# use dict and condition to choose value
+min1 = {True:a, False:b}[a<b]
+print(min1)
+
+t = (2, 3, 14, 6, 5,7)
+max1 = max(t)
+print(max1)
+min1 = min(t)
+print(min1)

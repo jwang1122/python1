@@ -52,6 +52,15 @@ print(l1)
 l1.insert(2,11) # insert new element before the given index
 print(l1)
 l1.remove(11) # remove value NOT index
+l1 = cards[::-1] # reverse the original list
+
+# modify a list (append, insert, remove, pop)
+l1 = [1,2,3,4,5]
+l1[0] = 12 # modify single element in the list
+print(l1)
+l1.append(54) # add a new element at end of the list
+print(l1)
+l1.insert(2, 11) # insert single element
 print(l1)
 x = l1.pop() # LIFO: stack, FIFO: queue
 print(l1)
