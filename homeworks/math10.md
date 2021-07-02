@@ -1,6 +1,6 @@
 * Write a Python program to calculate area of a triangle with given base and height. 
 
-![Rectangle Primeter](../../images/triangleArea.webp)
+![Rectangle Primeter](images/triangleArea.webp)
 
 >$$ A = \frac 1 2 b \cdot h  $$
 

@@ -1,6 +1,6 @@
 * Write a Python program to calculate sphere volume with given radius. 
 
-![](../../images/sphereVolume.png)
+![](images/sphereVolume.png)
 
 $$ V = \frac 4 3 \pi r^3 $$
 
