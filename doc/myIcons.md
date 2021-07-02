@@ -1,6 +1,6 @@
 ## Useful Icons
 
-⚡️📄📝✔️❌❓❗️📌🔨💡☝️👉👇☝️👍👎👌💾🗑🐛📒⚠️😄😢♻️🔥🛠📐🎯✉️☎️
+❓✔️❌❗️📌⚡️📄📝🔨💡☝️👉👇☝️👍👎👌💾🗑🐛📒⚠️😄😢♻️🔥🛠📐🎯✉️☎️
 
 ## color picker
 [color website](https://www.webfx.com/web-design/color-picker/)
@@ -23,7 +23,7 @@
 ## Sample Mermaid Diagram
 
 ```mermaid
-graph LR
+graph TB
 START((start))
 B[code block]
 END[end]

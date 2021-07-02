@@ -1,4 +1,15 @@
 from math import pi
+"""
+A function is a block of organized, reusable code 
+that is used to perform a single, related action.
+
+1. Python built-in functions
+print()
+len()
+sum()
+2. User defined function
+circleArea()
+"""
 
 # define a function without calling, nothing happen
 # function can be called many times
