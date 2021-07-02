@@ -1,6 +1,6 @@
 * Write a Python program to print the following string in a specific format (see the output)
 
-hint:
+hint: use the **\t** for the indentation
 
 ```py
 print("\tsomething") # \t is a tab symbol
