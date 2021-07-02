@@ -6,6 +6,5 @@ volume = pi*r**2*h
 print(f"Height of Cylinder: {h}")
 print(f"Radius of cylinder: {r}")
 print()
-print(f"volume is: {volume}") 
 print(f"Surface Area is:{surfacearea}")
 
