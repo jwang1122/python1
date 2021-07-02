@@ -9,9 +9,8 @@
 7. [Icons](doc/myIcons.md)
 8. ❓[✔️QA](doc/questionAnswer.md)
 
-C:\Users\12818\AppData\Local\Programs\Python\Python39\python
 
-## file structure
+## file structure 
 ```output
 <project root>
     ├── 📝doc/

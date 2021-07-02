@@ -19,8 +19,10 @@ Expected output:
 str1 = 'I am so happy to learn Python which makes me happy, my parents happy, and also interested in Python Python Python Python Python.'
 words = str1.split() #the split is including the punctuation
 d = {}
+print(str1.count('Python'))
 for i in range(1,len(words)):
     str2 = words[i]
+    str2 = str2.strip(',.')
     if str2 in d:
         d[str2] += 1
     else:
