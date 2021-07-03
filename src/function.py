@@ -1,13 +1,21 @@
 from math import pi
+
 """
-Function is a block python code which can be called many times.
-1. function name
-2. arguement list
+A function is a block of organized, reusable code 
+that is used to perform a single, related action.
+* function name
+* argument list
+* function do nothing till you call it.
+
+1. Python built-in functions
+print()
+len()
+sum()
+2. User defined function
 
 def <functionName>(arguments):
     pass
 
-function do nothing till you call it
 """
 def circleArea(radius):
     return pi*radius**2
@@ -16,10 +24,9 @@ radius = 1
 area = circleArea(radius)
 print(area)
 
-# function may not return None if there is no return in the function
+# function return None if there is no return in the function
 def sayHello(name):
     print(f"Hello, {name}!")
-    return 5
-
-x = sayHello("Kayden")
+    
+x = sayHello("John")
 print(x)

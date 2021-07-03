@@ -10,6 +10,7 @@
 - [Data Type](#data-type)
 - [operator](#operator)
 - [Loop](#loop)
+- [Function](#function)
 
 
 ## My First python program
@@ -97,37 +98,40 @@ otherwise, your python builtins functions no longer works the way you expected.
     [ternary.py](../src/ternary.py)
 * Multiple times operator: **
     [others.py](../src/others.py)
-* Bitwise Operators: &, |, ^, <<, >>
+* Bitwise Operator: &, |, ^, <<, >>
     [bitwise.py](../src/bitwise.py)
-
 
 ## Loop
 * [for/while loop](../src/loop.py)
 
 ```
 while loop has 3 part:
-1. initial variable, a = 0
-2. variable condition, a < 10
-3. adjust variable, a += 1
+1. initialize variable, a=0
+2. variable condition, a<10
+3. adjust variable, a +=1
 ```
 
 ```mermaid
 graph TB
-A([Python Programming])
+A([Python Programing])
 B[function]
 C[class]
 
 A--create-->B
 A--create-->C
 
-classDef block1 fill:green, color:blue;
+classDef block1 fill:#ECC335,color:white;
 
 class B,C block1
 ```
 
 ## Function
+A function is a block of organized, reusable code 
+that is used to perform a single, related action.
+
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
-[function.py](../src/function.py)
-[argument.py](../src/arguement.py)
+* [function.py](../src/function.py)
+* [argument.py](../src/argument.py)
+

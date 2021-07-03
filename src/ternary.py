@@ -15,10 +15,10 @@ and-or: a<b and a or b
 a, b = 10, 20
 
 # if-else ternary
-min1 = a if a<b else b # always return the smaller number between a and b
+min1 = a if a<b else b # always return the smaller number between a and b.
 print(min1)
 
-max1 = a if a>b else b # always return the greater number
+max1 = a if a>b else b # always return greater number
 print(max1)
 
 # and-or ternary
@@ -39,7 +39,7 @@ print(min1)
 max1 = max(a, b)
 print(max1)
 
-t = (3, 1, 5, 7, 23, 11)
+t = (3, 1, 5,7,23,11)
 min1 = min(t)
 print(min1)
 max1 = max(t)

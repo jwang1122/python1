@@ -5,7 +5,8 @@ return True if the container contains the element, return False otherwise.
 
 here are some containers: str, tuple, list, set, dict
 """
-s = "Hello world!" # string container
+
+s = "Hello, world!" # string container
 print('s' in s)
 
 t = (1,2,3,4,5)
