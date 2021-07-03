@@ -12,3 +12,10 @@ for word in list1:
 print(d)
 word='I'
 print(f"number of '{word}' in the string is {d[word]}.")
+
+d={}
+for word in list1:
+    if word not in d:
+        d[word] = list1.count(word)
+print(d)
+

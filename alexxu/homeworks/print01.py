@@ -1,8 +1,8 @@
-s1 = "\n\tTwinkle, twinkle, little star, "
-s2 = "How I wonder what you are!"
-s3 = "\n\tUp above the world so high, "
-s4 = "Like a diamond in the sky."
-s5 = "\n\tTwinkle, twinkle, little star, "
+s1 = "Twinkle, twinkle, little star, "
+s2 = "\tHow I wonder what you are!"
+s3 = "\t\tUp above the world so high, "
+s4 = "\t\tLike a diamond in the sky."
+s5 = "Twinkle, twinkle, little star, "
 s6 = "How I wonder what you are"
 
 print(s1)

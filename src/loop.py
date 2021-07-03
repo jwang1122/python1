@@ -1,6 +1,10 @@
-# for loop on range()
+# for loop on range(), range is iterable
+from typing import Dict
+
+
 for i in range(10):
     print(i, end=" ")
+print()
 
 #  for loop on string
 
@@ -28,9 +32,9 @@ for e in set1:
     print()
 
 # for loop on dict
-for key in d:
-    print(key, d[key]), sep='-', end=', '
-print()
+# for key in d:
+#     print(key, d[key]), sep='-', end=', '
+# print()
 
 #break on for loop
 for i in range(10):
