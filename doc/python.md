@@ -129,9 +129,27 @@ class B,C block1
 A function is a block of organized, reusable code 
 that is used to perform a single, related action.
 
+    - def: use Python reserved keyword
+    - function name: you can name a function whatever you want but follow the variable rules.
+    - () you have to include () pair in you function definition
+    - : must end your definition with :.
+    - ❗️⚡️function can be overridden
+    - 😄return more than one value
+    - 💡Single response, do single thing
+
+
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
+
 * [function.py](../src/function.py)
 * [argument.py](../src/argument.py)
+* [raise error when radius<0](../src/circle.py)
+* [understand if __name__ == '__main__':](../src/testCircle.py)
+>😄avoid running test code from outside
+* [add try-except block](../src/tryexcept.py)
+* [Define inner functions inside outer function](../src/functionInFunction.py)
+* [return function dynamically](../src/returnFunction.py)
+>part of Functional programming which focus on goal
+* [Functional programming basic](../src/passFunction.py)
 
