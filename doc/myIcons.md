@@ -26,7 +26,6 @@
 ⟹| Longrightarrow
 ⇓ | Downarrow
 
-
 ## Sample File Structure:
 
 ```output
