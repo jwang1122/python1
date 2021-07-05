@@ -1,9 +1,16 @@
-# Assignment Operators: =; +=; -=; *=; /=; %=; **=; //=
-a, b = 10, 30
-a += b # same as a = a + b
+"""
+Assignment Operators =; +=; -=; *=; /=; %=; **=; //=;
+
+Each arithmetic operator has corresponding assignment operator.
+"""
+
+a,b=10,20
+
+print(a)
+a += b  # equivalent to: a = a + b
+print(a)
+a //= b # equivalent to: a = a//b
 print(a)
 
-a = 2
-b = 3
-b **=a # same as b = b ** a
+b **=a # b = b**a
 print(b)

@@ -12,3 +12,4 @@ print(words)
 
 Expected output:
 {'I': 1, 'am': 1, 'so': 1, 'happy': 3, 'to': 1, 'learn': 1, 'Python': 6, 'which': 1, 'makes': 1, 'me': 1, 'my': 1, 'parents': 1, 'and': 1, 'also': 1, 'interested': 1, 'in': 1} 
+/Users/gaoyuchen/workspace/python1/homeworks
