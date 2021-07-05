@@ -35,15 +35,18 @@ v=28
 w=7
 xx= 53+12+28+7
 
+yy='1296'
+zz= yy[-2]
+aa=201 + 402 + 804 + 603
 
 
 print("Problem 01: %d - %d = %d"%(x, y, z))
 print("Problem 02: %d + %d = %d"%(a, b, c))
-print("Problem 03: Don't Know How to Do")
-print("Problem 04: %d / %d = %d"%(d, e, f))
-print("Problem 05: %d * %d = %d"%(g, h, i))
-print("Problem 06: %d / %d = %d"%(j, k, l))
-print("Problem 07: %d * %d = %d"%(m, n, o))
-print("Problem 08: %d * %d + %d = %d"%(p, q, r, s))
+print(f"Problem 03: The tens digit of {yy} is {zz}")
+print("Problem 04: %d ÷  %d = %d"%(d, e, f))
+print("Problem 05: %d × %d = %d"%(g, h, i))
+print("Problem 06: %d ÷  %d = %d"%(j, k, l))
+print("Problem 07: %d × %d = %d"%(m, n, o))
+print("Problem 08: %d × %d + %d = %d"%(p, q, r, s))
 print("Problem 09: %d + %d + %d + %d = %d"%(t, u, v, w, xx))
-print("Problem 10:I Don't Know how to do")
+print("Problem 10:%d+%d+%d+%d=%d"%(201,402,804,603,aa))
