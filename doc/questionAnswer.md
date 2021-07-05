@@ -9,3 +9,5 @@ dir
 ```py
 print("Hello")
 ```
+
+git log --oneline
