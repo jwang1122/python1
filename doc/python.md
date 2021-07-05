@@ -123,4 +123,13 @@ class B,C block
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
-[define circleArea function](../src/function.py)
+* [define circleArea and sayHello function](../src/function.py)
+* [def circleArea function only](../src/circle.py)
+* [Understand if __name__=='__main__':](../src/testCircle.py)
+```py
+if __name__ == '__main__':
+    # your test code go here
+```
+give developer a chance to write test code before it used somewhere else.
+* [handle neigative radius by raise Error](../src/tryexcept.py)
+* [define inner functions](../src/functionInFunction.py)
