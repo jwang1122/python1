@@ -9,8 +9,8 @@
   - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
 - [operator](#operator)
-- [Loop](#loop)
 - [Function](#function)
+- [Loop](#loop)
 - [OOP (Object Oriented Programming)](#oop-object-oriented-programming)
 
 
@@ -136,6 +136,9 @@ $$
 
 * [for/while loop](../src/loop.py)
 
+* While loop
+    ![](images/DoWhile.svg)
+
 ```
 while loop has 3 part:
 1. initialize variable, a=0
@@ -160,4 +163,5 @@ class B,C block1
 ![](images/oop.png)
 * Abstraction
     ![](images/ClassAbstraction.png)
+* [Simplest class](../src/class01.py)
 
