@@ -2,6 +2,8 @@
 
 [Markdown Shared Library](myIcons.md)
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
 - [My First python program](#my-first-python-program)
 - [print](#print)
 - [comment](#comment)
@@ -9,9 +11,10 @@
   - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
 - [operator](#operator)
+- [Execution Control (If-else)](#execution-control-if-else)
 - [Loop](#loop)
 - [Function](#function)
-
+- [OOP (Object Oriented Programming)](#oop-object-oriented-programming)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -27,12 +30,18 @@
 * single line comment: #
 * multiple lines comment: """, '''
 
+---
+[Table of Contents](#table-of-contents)
+
 ## Variable Naming
 1. variable name cannot start with number
 2. variable can be combination of letters and numbers _, a~z, A~Z, 0~9, no other special characters
 3. don't use reserved keywords as variable name
+   
 ![](images/python-keywords.png)
+
 [Python Keywords](https://realpython.com/python-keywords/#:~:text=%20Python%20Keywords%20and%20Their%20Usage%20%201,are%20used%20for%20control%20flow%3A%20if%2C...%20More%20)
+
 4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
 ### Variable and memory
@@ -40,6 +49,9 @@ otherwise, your python builtins functions no longer works the way you expected.
 ![](images/memory.gif)
 
 ![](images/LanguageBasics.svg)
+
+---
+[Table of Contents](#table-of-contents)
 
 ## Data Type
 * [Numbers](../src/number.py)
@@ -81,6 +93,7 @@ otherwise, your python builtins functions no longer works the way you expected.
     - ** operator
     - function (items, keys, values, clear, pop)
 
+
 ## operator
 * Arithmatic Operator: +; -; *; /: %; **;//(floor divisor)
     [arithmatic.py](../src/arithmatic.py)
@@ -101,9 +114,59 @@ otherwise, your python builtins functions no longer works the way you expected.
 * Bitwise Operator: &, |, ^, <<, >>
     [bitwise.py](../src/bitwise.py)
 
+## Execution Control (If-else)
+Execution control
+
+```mermaid
+graph TB
+A((start))
+B{if <condition>:}
+C[if code block]
+D[else code block]
+E[end]
+
+
+A-->B
+B--True-->C-->E
+B--False-->D-->E
+
+A1((start))
+B1{if <condition>:<br>line-10}
+B2{elif <condition>:<br>line-12}
+C1[if code block<br>line-11]
+D1[elif code block<br>line-13]
+E1[end]
+F1[else code block<br>line-15]
+
+A1-->B1
+B1--True-->C1-->E1
+B1--False-->B2--True-->D1-->E1
+B2--False-->F1-->E1
+
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px;
+class A,A1 start
+class B,B1,B2 html
+class E,E1 end1
+```
+
+* [If without else](../src/if-else01.py)
+* [if with elif and else](../src/if-else02.py)
+
+
 ## Loop
+* For loop
+  ![](images/Loop.svg)
+
 * [for/while loop](../src/loop.py)
 
+* While loop
+    ![](images/while.svg)
+* Python does NOT support do-while loop, but you can simulate do-while.
+    ![](images/DoWhile.svg)
 ```
 while loop has 3 part:
 1. initialize variable, a=0
@@ -125,6 +188,9 @@ classDef block1 fill:#ECC335,color:white;
 class B,C block1
 ```
 
+---
+[Table of Contents](#table-of-contents)
+
 ## Function
 A function is a block of organized, reusable code 
 that is used to perform a single, related action.
@@ -133,10 +199,11 @@ that is used to perform a single, related action.
     - function name: you can name a function whatever you want but follow the variable rules.
     - () you have to include () pair in you function definition
     - : must end your definition with :.
+    - the function body must indent
     - ❗️⚡️function can be overridden
     - 😄return more than one value
     - 💡Single response, do single thing
-
+    - call a function by function name and (), and arguments if thers is any
 
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
@@ -153,3 +220,10 @@ $$
 >part of Functional programming which focus on goal
 * [Functional programming basic](../src/passFunction.py)
 
+## OOP (Object Oriented Programming)
+![](images/oop.png)
+* Abstraction
+  ![](images/ClassAbstraction.png)
+* [Simplest class](../src/class01.py)
+* [say Hello outside of the class](../src/class02.py)
+* [Robot now can introduce himself](../src/class03.py)
