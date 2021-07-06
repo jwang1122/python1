@@ -8,7 +8,6 @@
 - [Variable Naming](#variable-naming)
   - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
-- [If-else](#if-else)
 - [operator](#operator)
 - [Loop](#loop)
 - [Function](#function)
@@ -83,8 +82,6 @@ otherwise, your python builtins functions no longer works the way you expected.
     - ** operator
     - function (items, keys, values, clear, pop)
   
-## If-else
-[]()
 
 ## operator
 * Arithmatic Operator: +; -; *; /: %; **;//(floor divisor)
@@ -106,29 +103,6 @@ otherwise, your python builtins functions no longer works the way you expected.
 * Bitwise Operator: &, |, ^, <<, >>
     [bitwise.py](../src/bitwise.py)
 
-## Loop
-* [for/while loop](../src/loop.py)
-
-```
-while loop has 3 part:
-1. initialize variable, a=0
-2. variable condition, a<10
-3. adjust variable, a +=1
-```
-
-```mermaid
-graph TB
-A([Python Programing])
-B[function]
-C[class]
-
-A--create-->B
-A--create-->C
-
-classDef block1 fill:#ECC335,color:white;
-
-class B,C block1
-```
 
 ## Function
 A function is a block of organized, reusable code 
@@ -156,6 +130,32 @@ $$
 * >part of Functional programming which focus on goal
 * [Functional programming basic](../src/passFunction.py)
 
+## Loop
+
+![](images/Loop.svg)
+
+* [for/while loop](../src/loop.py)
+
+```
+while loop has 3 part:
+1. initialize variable, a=0
+2. variable condition, a<10
+3. adjust variable, a +=1
+```
+
+```mermaid
+graph TB
+A([Python Programing])
+B[function]
+C[class]
+
+A--create-->B
+A--create-->C
+
+classDef block1 fill:#ECC335,color:white;
+
+class B,C block1
+```
 ## OOP (Object Oriented Programming)
 ![](images/oop.png)
 * Abstraction
