@@ -3,7 +3,7 @@ if-else is a execution control to under certain condition.
 """
 
 for i in range(10):
-    if (i % 2 == 1): # if without elif and else 
+    if (i % 2 == 1): # if without else and elif,  
         print(i)
 
 input = input("Please enter a test string: ")
