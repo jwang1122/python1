@@ -8,9 +8,11 @@
 - [Variable Naming](#variable-naming)
   - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
+- [If-else](#if-else)
 - [operator](#operator)
 - [Loop](#loop)
 - [Function](#function)
+- [OOP (Object Oriented Programming)](#oop-object-oriented-programming)
 
 
 ## My First python program
@@ -80,6 +82,9 @@ otherwise, your python builtins functions no longer works the way you expected.
     - no duplication
     - ** operator
     - function (items, keys, values, clear, pop)
+  
+## If-else
+[]()
 
 ## operator
 * Arithmatic Operator: +; -; *; /: %; **;//(floor divisor)
@@ -135,7 +140,8 @@ that is used to perform a single, related action.
     - : must end your definition with :.
     - ❗️⚡️function can be overridden
     - 😄return more than one value 
-    - 💡Single response
+    - 💡Single response, do single thing
+    - call a function by function name (), and arguments if there is any
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
@@ -149,4 +155,9 @@ $$
 * [return function dynamically](../src/returnFunction.py)
 * >part of Functional programming which focus on goal
 * [Functional programming basic](../src/passFunction.py)
+
+## OOP (Object Oriented Programming)
+![](images/oop.png)
+* Abstraction
+    ![](images/ClassAbstraction.png)
 
