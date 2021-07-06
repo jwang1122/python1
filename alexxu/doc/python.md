@@ -10,7 +10,7 @@
 - [Data Type](#data-type)
 - [operator](#operator)
 - [Multiply time operator: **](../src/other.py)
-
+- [Loop](../src/loop.py)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -87,3 +87,35 @@ otherwise, your python builtins functions no longer works the way you expected.
     [Assignment.py](../src/assignment.py)
 * Comparison Operators: ==; !=; <; >; >=; <=
     [](../src/comparison.py)
+
+
+
+
+
+
+
+
+$$
+\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
+$$
+[](../src/function.py)
+[define inner functions inside outer function](../src/functioninfunction.py)
+[return function](../src/returnFunction.py)
+[pass function](../src/passFunction.py)
+
+
+
+-single response, do the single thing
+
+# oop (Object Oriented Programming)
+![](images/oop.png)
+* Abstraction
+ ![](images/ClassAbstraction.png)
+
+
+
+
+
+
+
+
