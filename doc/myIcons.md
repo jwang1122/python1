@@ -2,6 +2,30 @@
 
 ❓✔️❌❗️⚡️📄📝📌🔨💡☝️👉👇☝️👍👎👌💾🗑🐛📒⚠️😄😢♻️🔥🛠📐🎯✉️☎️
 
+## Color picker
+[Pick color website](https://www.webfx.com/web-design/color-picker/)
+
+## math symbols
+|operator | LaTex Symbols |
+|---------|---------------|
+× | times
+÷ | div
+± | pm
+° | degree
+ϕ | phi
+Φ | Phi
+θ | theta
+α | alpha
+γ | gamma
+δ | delta
+μ | mu
+π | pi
+λ | lambda
+ω | omega
+⇒ | Rightarrow
+⟹| Longrightarrow
+⇓ | Downarrow
+
 ## Sample File Structure:
 
 ```output
