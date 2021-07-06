@@ -88,6 +88,43 @@ otherwise, your python builtins functions no longer works the way you expected.
 * Comparison Operators: ==; !=; <; >; >=; <=
     [](../src/comparison.py)
 
+## Execution If else 
+```mermaid
+graph TB
+A((start))
+B{if <condition>:}
+C[if code block]
+D[else code block]
+E[end]
+
+
+A-->B
+B--True-->C-->E
+B--False-->D-->E
+
+A1((start))
+B1{if <condition>:}
+B2{elif <condition>:}
+C1[if code block]
+D1[elif code block]
+E1[end]
+F1[else code block]
+
+A1-->B1
+B1--True-->C1-->E1
+B1--False-->B2--True-->D1-->E1
+B2--False-->F1-->E1
+
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px;
+class A,A1 start
+class B,B1,B2 html
+class E,E1 end1
+```
+
 
 
 
@@ -113,9 +150,15 @@ $$
  ![](images/ClassAbstraction.png)
 
 
+## loop
+ ![](images/Loop.svg)
 
+* [](../src/Loop.svg)
 
+* [for/while loop](../src/loop.py)
 
+* while loop
+    ![](images/while.svg)
 
 
 
