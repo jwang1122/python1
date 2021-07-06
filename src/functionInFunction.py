@@ -10,10 +10,13 @@ def parent():
 
     child1()
     child2()
+    return child2
 
 if __name__ == '__main__':
     parent()
     # 1. OOP: encapsulation: avoid function called unexpected
     # 2. Functional Programming: return function from function
     # parent.child1() # AttributeError: 'function' object has no attribute 'child1'
-
+    x = parent()
+    print(type(x))
+    x() # call a function by function name and (), and arguments if any

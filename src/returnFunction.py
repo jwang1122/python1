@@ -6,7 +6,7 @@ f(x) = ax^2 + bx + c
 
 def quadratic(a, b, c):
     def qd(x):
-        return a*x**2 + b*x +c
+        return a*x**2 + b*x + c
     return qd
 
 if __name__ == '__main__':

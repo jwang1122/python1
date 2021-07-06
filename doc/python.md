@@ -2,6 +2,8 @@
 
 [Markdown Shared Library](myIcons.md)
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
 - [My First python program](#my-first-python-program)
 - [print](#print)
 - [comment](#comment)
@@ -11,6 +13,8 @@
 - [operator](#operator)
 - [Loop](#loop)
 - [Function](#function)
+- [OOP](#oop)
+  - [abstraction](#abstraction)
 
 
 ## My First python program
@@ -31,10 +35,15 @@
 1. variable name cannot start with number
 2. variable can be combination of letters and numbers _, a~z, A~Z, 0~9, no other special characters
 3. don't use reserved keywords as variable name
-![](images/python-keywords.png)
+
+![](images/pythonKeywords.png)
+
 [Python Keywords](https://realpython.com/python-keywords/#:~:text=%20Python%20Keywords%20and%20Their%20Usage%20%201,are%20used%20for%20control%20flow%3A%20if%2C...%20More%20)
-4. Avoid using existing function name as your variable name.
+1. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
+
+---
+[Table of Contents](#table-of-contents)
 
 ### Variable and memory
 ![](images/chineseMedicine.jpg)
@@ -123,6 +132,17 @@ class B,C block
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
+    - def, Python reserved keyword
+    - function name, anything you want, but need follow the naming rules
+    - (), must have open/close parenthesis pair, no matter it has arguments or not
+    - arguments, positional or keyword arguments separated by comma ,
+    - :, must end with colon
+    - the function body must indent
+    - ❗️⚡️function can be overridden
+    - 😄a function can return more than one values
+    - 💡it is better the function only take single responsibility
+    - call a function by function name and (), and arguments if there is any
+
 * [define circleArea and sayHello function](../src/function.py)
 * [def circleArea function only](../src/circle.py)
 * [Understand if __name__=='__main__':](../src/testCircle.py)
@@ -131,5 +151,19 @@ if __name__ == '__main__':
     # your test code go here
 ```
 give developer a chance to write test code before it used somewhere else.
-* [handle neigative radius by raise Error](../src/tryexcept.py)
+* [handle negative radius by raise Error](../src/tryexcept.py)
 * [define inner functions](../src/functionInFunction.py)
+* [define a function return a function](../src/returnFunction.py)
+* [define a function as a goal has another function as a argument](../src/passFunction.py)
+
+---
+[Table of Contents](#table-of-contents)
+
+## OOP
+
+![](images/oop.png)
+
+### abstraction
+![](images/ClassAbstraction.png)
+
+* [class definition](../src/class0.py)

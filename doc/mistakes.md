@@ -3,6 +3,9 @@
 [Markdown Shared Library](myIcons.md)
 
 ## My Errors
+❌get Syntax Error while I'm running my python program
+✔️Use your Running Terminal for your playground cause Syntax Error.
+>use different terminal for your play ground.
 
 ## other's Errors
 

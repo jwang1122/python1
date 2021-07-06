@@ -20,9 +20,17 @@ def sayHello(name): # function may return nothing
     print(f"Hello, {name}!")
     # return 5
 
-# radius = 1
-# area = circleArea(radius)
-# print(area)
+def mymath(x, y): # bad example, violate single response
+    return x+y, x-y, x*y, x/y
+ 
+# circleArea = 3.14 # override the function that make the function no longer works
+radius = 1
+area = circleArea(radius)
+print(area)
 
 x = sayHello("John")
+print(x)
+
+x = mymath(4,5)
+print(type(x))
 print(x)
