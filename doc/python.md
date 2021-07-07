@@ -166,4 +166,11 @@ give developer a chance to write test code before it used somewhere else.
 ### abstraction
 ![](images/ClassAbstraction.png)
 
-* [class definition](../src/class0.py)
+* [class definition, define simple class](../src/class01.py)
+* [outside function help robot introduce himself](../src/class02.py)
+* [robot itself introduce himself](../src/class03.py)
+* [add constructor and create name on object build time](../src/class04.py)
+* [define __repr__()](../src/class05.py)
+* [compare __repr__() and __str__()](../src/class06.py)
+* [make our object attribute private]()
+* 
