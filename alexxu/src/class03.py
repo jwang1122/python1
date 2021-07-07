@@ -1,17 +1,26 @@
-x = 12
 
-# if with else
-if x >50:
-    print(x)
-else:
-    print("the number is less than 50")
 
-# if with elif and else    
-if x == 0:
-    print("x=0")
-elif x % 2 == 1:
-    print(f"the number {x} is an odd number.")
-else:
-    print(x)
 
-print("End")
+
+class robot:
+    id = 1234
+    def sayHello(self):
+        print(f'Hello, I am robot {self.name}.')
+
+    def add (self, x, y):
+        return x+y 
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    obj = Robot()
+    obj.name = "john"
+    obj.sayHello()
+    print(f"my id is {obj.id}") 
+
+
+

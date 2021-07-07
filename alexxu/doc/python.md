@@ -139,8 +139,8 @@ $$
 [define inner functions inside outer function](../src/functioninfunction.py)
 [return function](../src/returnFunction.py)
 [pass function](../src/passFunction.py)
-
-
+[Define constructor: __init__() with initial name](../src/class04.py)
+[make the inputName as keyword argument](../src/class05.py)
 
 -single response, do the single thing
 
