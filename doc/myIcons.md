@@ -12,10 +12,12 @@
 ÷ | div
 ± | pm
 ° | degree
+∞ | infty
 ϕ | phi
 Φ | Phi
 θ | theta
 α | alpha
+β | beta
 γ | gamma
 δ | delta
 μ | mu
