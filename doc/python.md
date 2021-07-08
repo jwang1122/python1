@@ -11,11 +11,10 @@
   - [Variable and memory](#variable-and-memory)
 - [Data Type](#data-type)
 - [operator](#operator)
+- [Execution Control (If-else)](#execution-control-if-else)
 - [Loop](#loop)
 - [Function](#function)
-- [OOP](#oop)
-  - [abstraction](#abstraction)
-
+- [OOP (Object Oriented Programming)](#oop-object-oriented-programming)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -31,25 +30,28 @@
 * single line comment: #
 * multiple lines comment: """, '''
 
+---
+[Table of Contents](#table-of-contents)
+
 ## Variable Naming
 1. variable name cannot start with number
 2. variable can be combination of letters and numbers _, a~z, A~Z, 0~9, no other special characters
 3. don't use reserved keywords as variable name
-
-![](images/pythonKeywords.png)
+   
+![](images/python-keywords.png)
 
 [Python Keywords](https://realpython.com/python-keywords/#:~:text=%20Python%20Keywords%20and%20Their%20Usage%20%201,are%20used%20for%20control%20flow%3A%20if%2C...%20More%20)
-1. Avoid using existing function name as your variable name.
+
+4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
-
----
-[Table of Contents](#table-of-contents)
-
 ### Variable and memory
 ![](images/chineseMedicine.jpg)
 ![](images/memory.gif)
 
 ![](images/LanguageBasics.svg)
+
+---
+[Table of Contents](#table-of-contents)
 
 ## Data Type
 * [Numbers](../src/number.py)
@@ -104,73 +106,130 @@ otherwise, your python builtins functions no longer works the way you expected.
     [membership.py](../src/membership.py)
 * Identity Operator: is, is not
     [identity.py](../src/identity.py)
+* Ternary operator: if-else, and-or
+    [ternary.py](../src/ternary.py)
+* Multiple times operator: **
+    [others.py](../src/others.py)
+* Bitwise Operator: &, |, ^, <<, >>
+    [bitwise.py](../src/bitwise.py)
 
-## Loop
-* [for/while loop](../src/loop.py)
-    1. initial value: a = 0
-    2. loop condition on the value: a<10
-    3. adjust value: a += 1
+## Execution Control (If-else)
+Execution control
 
 ```mermaid
 graph TB
-A([Python program])
+A((start))
+B{if <condition>:}
+C[if code block]
+D[else code block]
+E[end]
+
+
+A-->B
+B--True-->C-->E
+B--False-->D-->E
+
+A1((start))
+B1{if <condition>:<br>line-10}
+B2{elif <condition>:<br>line-12}
+C1[if code block<br>line-11]
+D1[elif code block<br>line-13]
+E1[end]
+F1[else code block<br>line-15]
+
+A1-->B1
+B1--True-->C1-->E1
+B1--False-->B2--True-->D1-->E1
+B2--False-->F1-->E1
+
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px;
+class A,A1 start
+class B,B1,B2 html
+class E,E1 end1
+```
+
+* [If without else](../src/if-else01.py)
+* [if with elif and else](../src/if-else02.py)
+
+
+## Loop
+* For loop
+  ![](images/Loop.svg)
+
+* [for/while loop](../src/loop.py)
+
+* While loop
+    ![](images/while.svg)
+* Python does NOT support do-while loop, but you can simulate do-while.
+    ![](images/DoWhile.svg)
+```
+while loop has 3 part:
+1. initialize variable, a=0
+2. variable condition, a<10
+3. adjust variable, a +=1
+```
+
+```mermaid
+graph TB
+A([Python Programing])
 B[function]
 C[class]
 
-A-->B
-A-->C
+A--create-->B
+A--create-->C
 
-classDef block fill:#ECC335,color:white;
+classDef block1 fill:#ECC335,color:white;
 
-class B,C block
+class B,C block1
 ```
-## Function
-* Python built in functions
-![Built in functions](./images/builtinFunctions.png)
-
-* define a function
-$$
-\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
-$$
-    - def, Python reserved keyword
-    - function name, anything you want, but need follow the naming rules
-    - (), must have open/close parenthesis pair, no matter it has arguments or not
-    - arguments, positional or keyword arguments separated by comma ,
-    - :, must end with colon
-    - the function body must indent
-    - ❗️⚡️function can be overridden
-    - 😄a function can return more than one values
-    - 💡it is better the function only take single responsibility
-    - call a function by function name and (), and arguments if there is any
-
-* [define circleArea and sayHello function](../src/function.py)
-* [def circleArea function only](../src/circle.py)
-* [Understand if __name__=='__main__':](../src/testCircle.py)
-```py
-if __name__ == '__main__':
-    # your test code go here
-```
-give developer a chance to write test code before it used somewhere else.
-* [handle negative radius by raise Error](../src/tryexcept.py)
-* [define inner functions](../src/functionInFunction.py)
-* [define a function return a function](../src/returnFunction.py)
-* [define a function as a goal has another function as a argument](../src/passFunction.py)
 
 ---
 [Table of Contents](#table-of-contents)
 
-## OOP
+## Function
+A function is a block of organized, reusable code 
+that is used to perform a single, related action.
 
+    - def: use Python reserved keyword
+    - function name: you can name a function whatever you want but follow the variable rules.
+    - () you have to include () pair in you function definition
+    - : must end your definition with :.
+    - the function body must indent
+    - ❗️⚡️function can be overridden
+    - 😄return more than one value
+    - 💡Single response, do single thing
+    - call a function by function name and (), and arguments if thers is any
+
+$$
+\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
+$$
+
+* [function.py](../src/function.py)
+* [argument.py](../src/argument.py)
+* [raise error when radius<0](../src/circle.py)
+* [understand if __name__ == '__main__':](../src/testCircle.py)
+>😄avoid running test code from outside
+* [add try-except block](../src/tryexcept.py)
+* [Define inner functions inside outer function](../src/functionInFunction.py)
+* [return function dynamically](../src/returnFunction.py)
+>part of Functional programming which focus on goal
+* [Functional programming basic](../src/passFunction.py)
+
+## OOP (Object Oriented Programming)
 ![](images/oop.png)
-
-### abstraction
-![](images/ClassAbstraction.png)
-
-* [class definition, define simple class](../src/class01.py)
-* [outside function help robot introduce himself](../src/class02.py)
-* [robot itself introduce himself](../src/class03.py)
-* [add constructor and create name on object build time](../src/class04.py)
-* [define __repr__()](../src/class05.py)
+* Abstraction
+  ![](images/ClassAbstraction.png)
+* [Simplest class](../src/class01.py)
+* [say Hello outside of the class](../src/class02.py)
+* [Robot now can introduce himself](../src/class03.py)
+* [Define constructor: __init__() with initial name](../src/class04.py)
+* [make the inputName as keyword argument](../src/class05.py)
 * [compare __repr__() and __str__()](../src/class06.py)
-* [make our object attribute private]()
-* 
+* [make private attribute __engergy](../src/class07.py)
+* [build getter, setter, and property](../src/class08.py)
+* [play __new__() with __init__() is used to initialize object](../src/class09.py)
+* [return instance from other class (override __new__())](../src/class10.py)

@@ -1,6 +1,12 @@
 * Write a Python program which accepts the radius of a circle from the user and compute the area. 
 
-$$ area = r^2 \pi $$
+import pi from math module as below:
+
+```py
+from math import pi
+```
+
+$$ a = r^2 \pi $$
 
 Sample input:
 

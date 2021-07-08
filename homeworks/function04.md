@@ -1,6 +1,6 @@
 # Define a function calculate area of circle by given radius
 
-![](../images/circleArea.jpg)
+![](images/circleArea.jpg)
 
 $$ A = \pi r^2 $$
 

@@ -1,4 +1,12 @@
-# VS Code 
+# VSCode Tricks
+
+[](myIcons.md)
+## Syntax Error due to run python code in playground
+trash the terminal > run program again
+❗️never use your running terminal for playground.
+
+## recover wrong typing
+Ctrl+z
 
 ## open terminal
 
@@ -18,11 +26,14 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-* Add Extension (Markdown PDF, PDF Preview)
-* Save file
-* Open Terminal
-* Add Terminal
-* Create a new folder
-* Create a Python file
-* Run Python file
-* Open markdown preview
+## Save File
+* File menu ⟹ Save All
+* Ctrl+s
+
+## Create shortcut for complex code block
+* create python code shortcut
+Right-Click in Editor window ⟹ Command Palettes ⟹ Configure User Snippets ⟹ python.json
+
+* create markdown code block shortcut
+Right-Click in Editor window ⟹ Command Palettes ⟹ Configure User Snippets ⟹ markdown.json
+

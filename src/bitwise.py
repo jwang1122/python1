@@ -5,58 +5,55 @@ Bitwise Operator:
 ^ : bit xor
 <<: left shift
 >>: right shift
+
+Computer has nothing but electronic switch (on/off or 1/0).
+each bit in memory is a switch which represent a binary 1 or 0.
+each byte in memory holds 8 bits, int holds 4 bytes, float holds 8 bytes or more.
+you can do bitwise operator on byte, int, ...
 """
 def binFormat(num):
     s = str(bin(num))
     s1 = s[:2] + s[2:].zfill(8)
     return s1
 
-# one byte have 8 bit, bit is single binary digit, switch on/off
-a = 0b00111100 # 1 byte which has 8 bits.
+# define a byte
+a = 0b00101100 # 1 byte = 8 bits
 print(binFormat(a))
-
-# left shift
-b = a<<1 # move all bits to the left on 1 position
+b = 0b00001111 # 1 byte = 8 bits
 print(binFormat(b))
 print()
 
-# right shift
-b = a>>3
-print(binFormat(a))
-print(binFormat(b))
-
-# left shift 1 is equivalent to multiply by 2
-print(a)
-print(a<<1) # a*2
-print(a>>1) # a/2
-
-b = 0b00001111
-print(b)
-
-# & operator return 1 onless both are 1, otherwise 0
+# & operator, return 1 if both bit is 1, return 0 otherwise
 c = a & b
-print(binFormat(a), end=' ')
-print('&')
+print(binFormat(a),'&')
 print(binFormat(b))
 print(binFormat(c))
-print(c)
+print()
 
-# | operator
-a = 0b00001100
-b = 0b00101110
+# | operator: return 1 as long as one is 1, return 0 if both 0
 c = a | b
-print(binFormat(a), end= ' ')
-print('|')
+print(binFormat(a),'|')
 print(binFormat(b))
 print(binFormat(c))
-print(c)
+print()
 
-# ^ operator
-a = 0b00001100
-b = 0b00101110
+# ^ operator: return 1 if different, return 0 if same
 c = a ^ b
-print(binFormat(a), end=' ')
-print('^')
+print(binFormat(a),'^')
 print(binFormat(b))
 print(binFormat(c))
-print(c)
+print()
+
+# << left shift operator: move all bits to the left, fill 0 on the end
+c = a<<1 # move only 1 bit, equivalent to c = a * 2
+print(binFormat(a),'<<')
+print(binFormat(c))
+print()
+
+# >> right shift operator: move all bits to the right, fill 0 on the begining
+c = a>>1 # move only 1 bit, equivalent to c = a / 2
+print(binFormat(a),'>>')
+print(binFormat(c))
+
+a = 'A'
+

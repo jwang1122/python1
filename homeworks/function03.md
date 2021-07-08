@@ -1,6 +1,6 @@
 # Define a function calculate volume of cylinder by given radius and height.
 
-![](../images/cylinderVolume.png)
+![](images/cylinderVolume.png)
 
 $$ V = \pi r^2 h $$
 

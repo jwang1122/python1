@@ -9,7 +9,7 @@ Expected output
 
 ```output
 Please enter a temperature (45C, 101F): 101F
-The temperature in Fahrenheit 101F is 38C in Celsius.
+The temperature in Fahrenheit 101°F is 38°C in Celsius.
 
 Please enter a temperature (45C, 101F): 45C
 The temperature in Celsius 45C is 113F in Fahrenheit.
