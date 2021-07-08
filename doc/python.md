@@ -227,3 +227,5 @@ $$
 * [Simplest class](../src/class01.py)
 * [say Hello outside of the class](../src/class02.py)
 * [Robot now can introduce himself](../src/class03.py)
+* [Define constructor: __init__() with initial name](../src/class04.py)
+* [make the inputName as keyword argument](../src/class05.py)

@@ -25,3 +25,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## Save File
 * File menu ⟹ Save All
 * Ctrl+s
+
+## Create shortcut for complex code block
+* create python code shortcut
+Right-Click in Editor window ⟹ Command Palettes ⟹ Configure User Snippets ⟹ python.json
+
+* create markdown code block shortcut
+Right-Click in Editor window ⟹ Command Palettes ⟹ Configure User Snippets ⟹ markdown.json
+
