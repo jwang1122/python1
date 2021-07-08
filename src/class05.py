@@ -20,7 +20,7 @@ if __name__ == '__main__':
     robot1 = Robot(inputName="John") # use user defined constructor
     robot1.sayHello()
 
-    robot2 = Robot("Marvin") # you can use same class to create many instance
+    robot2 = Robot() # you can use same class to create many instance
     robot2.sayHello()
 
     if robot1 == robot2: # they are same?

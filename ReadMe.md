@@ -45,7 +45,7 @@ class A start
 
 ![](doc/images/鲁班学艺.png)
 
-Everything you have learned, you need do it all by yourself, untill then, whatever you've learned indeed belongs to yourself.
+Everything you have learned, you need do it all by yourself, until then, whatever you've learned indeed belongs to yourself.
   
 
 

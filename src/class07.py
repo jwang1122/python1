@@ -28,3 +28,6 @@ if __name__ == '__main__':
     # print(robot1.__energy) # outside cannot access __energy in the Robot class.
     print(robot1._name) # same file can access the _name attribute
     print("Done")
+
+    x = robot1.__energy # the __energy cannot be accessed outside
+    print(x)
