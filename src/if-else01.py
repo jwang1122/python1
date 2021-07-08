@@ -1,9 +1,9 @@
 """
-if-else is a execution control to under certain condition.
+if-else is a execution control under certain condition.
 """
 
 for i in range(10):
-    if (i % 2 == 1): # if without else and elif,  
+    if (i % 2 == 1): # if without else and elif,
         print(i)
 
 input = input("Please enter a test string: ")
@@ -12,5 +12,3 @@ if len(input) < 5:
     print("Please enter a string with at least 5 characters.")
 
 print("Done.")
-
-

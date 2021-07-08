@@ -1,4 +1,4 @@
-x = 11
+x = 12
 
 # if with else
 if x >50:
@@ -6,12 +6,13 @@ if x >50:
 else:
     print("the number is less than 50")
 
-#if with elif and else   
+# if with elif and else    
 if x == 0:
     print("x=0")
 elif x % 2 == 1:
-    print(f"the number{x} is an odd number")
+    print(f"the number {x} is an odd number.")
 else:
     print(x)
 
 print("End")
+

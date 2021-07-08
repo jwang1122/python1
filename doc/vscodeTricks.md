@@ -25,3 +25,34 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## Save File
 * File menu ⟹ Save All
 * Ctrl+s
+
+## Create shorcut for complex code block
+* create python code shortcut
+Right-Click in Editor window ⟹ Command Palettes ⟹ Configure User Snippets ⟹ python.json
+
+* create markdown code block shortcut
+Right-Click in Editor window ⟹ Command Palettes ⟹ Configure User Snippets ⟹ markdown.json
+
+```mermaid
+classDiagram
+class classname {
+    variable:type
+    function():returntype
+}
+```
+```mermaid
+graph TB
+START((start))
+END[end]
+B[stuff]
+A-->B
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px;
+class START start
+class B,C,D html
+class END end1
+```
+# 
+
