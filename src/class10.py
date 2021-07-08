@@ -1,5 +1,6 @@
 """
-return instance for other class, another way to override __new__()
+a trick about override __new__()
+make one class create another class instance possible
 """
 
 class Sample(object):
@@ -8,24 +9,20 @@ class Sample(object):
     def add(self, x, y):
         return x + y
 
-# use class A to create instance of class Sample
 class A(object):
-    def __new__(cls):
-        return Sample()
+    def __new__(cls): # override __new__() then it never create instance of A
+        return Sample() # return instance of another class
+    def mul(self, x, y):
+        return x * y
 
 class B(object):
     def __new__(cls):
-        return super(B, cls).__new__(Sample)    
+        return super(B, cls).__new__(Sample) # this will return an instance of Sample class
 
 if __name__ == '__main__':
-    a = A()
+    a = A() # try to create instance of A
     print(type(a))
-    print(a.add(4,5))
-    print(a)
+    print(a.add(4, 5))
 
     b = B()
     print(type(b))
-    print(b.add(6,11))
-    print(b)
-
-    print(a==b)

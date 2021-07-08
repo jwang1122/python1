@@ -6,18 +6,18 @@ class Dog:
     tricks = [] # class level attributes
 
     def __init__(self, name):
-        self.name = name   # instance attribute
+        self.name = name # self.name is an instance level attibute
 
-    def addTricks(self, trick):
+    def addTrick(self, trick):
         self.tricks.append(trick)
 
 if __name__ == '__main__':
     fido = Dog("Fido")
-    fido.addTricks("roll over")
-    print(f"what fido can do: {fido.tricks}")
+    fido.addTrick("roll over")
+    print(f"Fido can do: {fido.tricks}")
 
     buddy = Dog("Buddy")
-    buddy.addTricks("Play dead")
+    buddy.addTrick("Play dead")
     print(f"what buddy can do: {buddy.tricks}")
 
     print(f"what fido can do: {fido.tricks}")

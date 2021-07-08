@@ -1,7 +1,6 @@
 """
-access none public attributes: getter, setter and property
+access none public attributes: getter, setter, and property
 """
-
 class Robot:
     def __init__(self, inputName=None, energy=1000):
         self._name = inputName # create a new attribute called self.name
@@ -15,41 +14,43 @@ class Robot:
             print(f"Hello, I am robot {self._name}.") 
         else:
             print('Hi, I am a robot without name yet.')
-
-    # Create setter, getter
-    def getName(self): # getter
-        return self._name
     
-    def setName(self, newName): # setter
-        # check authorization here
+    def getName(self): # getter
+        #if checkUser():
+        return self._name
+
+    def setName(self, newName): # setter: ❓Why you setter?
+        #✔️I can de authorization check before change the _name
         self._name = newName
 
     def getEnergy(self):
         return self.__energy
-    
+
     def setEnergy(self, newEnergy):
         self.__energy = newEnergy
 
     def delName(self):
-        print("delName() is called!!")
+        print("delName() is called!!!")
         del self._name
 
-    name = property(getName, setName, delName) # pass function as argument
+    name = property(getName, setName, delName)
 
-if __name__ == '__main__': # test area for testing code above
-    x = Robot("John Wang")
+if __name__ == '__main__':
+    x = Robot("Kayden Gao")
     x.sayHello()
 
     print(x.getName())
     print(x.getEnergy())
-    x.setEnergy(2000) # recharge the battery
-    print(x.getEnergy())
 
-    print(x.name) # this will call getName() function
-    x.name = "Amy" # this will call setName('Amy') function
-    print(x.name)
+    x.setName("Kayden") # 😄setter works!
+    x.setEnergy(2000)
+    print(x)
 
-    del x.name # this will call delName()
-    # print(x) # make our program blows up.
+    print(x.name) # using getName()
+    x.name = "Hongkai" # this operator will call our setter
+    print(x)
+
+    # del x.name # this will call delName() function
+    # print(x)
 
     print("Done")
