@@ -1,21 +1,24 @@
 """
-define cconstructor: __init__(self) object factory.
+define constructor: __init__(self), object factory.
 """
 
 class Robot:
     def __init__(self, inputName):
         self.name = inputName # create a new attribute called self.name
 
-    def sayHello(self): # every method defined inside the class has first positional argument as itself
-        print(f"Hello, I am robot {self.name}.")
+    def sayHello(self): # every function defined inside class has first positional argument as itself.
+        print(f"Hello, I am robot {self.name}.") 
     
-    def add (self, x, y): # self does NOT count as an argument
+    def add (self, x, y): # self does NOT count as a argument
         return x + y
 
+
 if __name__ == '__main__':
-    robot1 = Robot("Kayden") # use user defined constructor
+    robot1 = Robot("John") # use user defined constructor
     robot1.sayHello()
-    print(robot1.name)# directly access the attribute name
-    robot1.name = 'Dude' # change name
+    print(robot1.name) # directly access the attribute name 
+    robot1.name = "Marvin" # change name directly outside which unsafe
     robot1.sayHello()
+    
+    
     

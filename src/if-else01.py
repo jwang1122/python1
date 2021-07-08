@@ -12,3 +12,5 @@ if len(input) < 5:
     print("Please enter a string with at least 5 characters.")
 
 print("Done.")
+
+

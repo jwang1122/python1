@@ -60,7 +60,7 @@ while a<10:
 print()
 
 # break on while loop
-while True:
+while True: # simulate do-while loop
     x = float(input("Enter a number: "))
     answer = input("Do you want to continue? (y/n)")
     if answer == 'n':
