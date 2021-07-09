@@ -12,8 +12,8 @@ class Robot:
         return self._name + ": " + str(self.__energy)
 
     def sayHello(self): # every function defined inside class has first positional argument as itself.
-        if self.name:
-            print(f"Hello, I am robot {self.name}.") 
+        if self._name:
+            print(f"Hello, I am robot {self._name}.") 
         else:
             print('Hi, I am a robot without name yet.')
 
