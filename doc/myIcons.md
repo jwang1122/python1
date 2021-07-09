@@ -12,10 +12,12 @@
 ÷ | div
 ± | pm
 ° | degree
+∞ | infty
 ϕ | phi
 Φ | Phi
 θ | theta
 α | alpha
+β | beta
 γ | gamma
 δ | delta
 μ | mu
@@ -25,7 +27,6 @@
 ⇒ | Rightarrow
 ⟹| Longrightarrow
 ⇓ | Downarrow
-
 
 ## Sample File Structure:
 
@@ -69,3 +70,4 @@ class IF if
 class DB db
 class END end1
 ```
+
