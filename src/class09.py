@@ -12,11 +12,11 @@ class A:
 
 class B:
     def __init__(self): # use default __new__() to create instance
-        print("B.__init__() is called.")
+        print("B.__init__() iscalled.")
 
 class C:
-    def __init__(self, name): # initialize the object that __new__ created
-        print("C.__init__() is called.")
+    def __init__(self, name): # initialize the object that __new__ created.
+        print("C.__init__() iscalled.")
         self.name = name
         # return self.name # __init__ return nothing
 
@@ -27,8 +27,6 @@ class C:
         print("C.__new__() is called.") #
         return super(C, cls).__new__(cls) # return object
         # return 99 # return integer
-
-    
 
 if __name__ == '__main__':
     a = A() # try to create instance of A

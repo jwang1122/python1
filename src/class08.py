@@ -16,11 +16,11 @@ class Robot:
             print('Hi, I am a robot without name yet.')
     
     def getName(self): # getter
-        #if checkUser():
+        # if checkUser():
         return self._name
-
-    def setName(self, newName): # setter: ❓Why you setter?
-        #✔️I can de authorization check before change the _name
+    
+    def setName(self, newName): # setter: ❓Why you use setter?
+        #✔️I can do authorization check before change the _name
         self._name = newName
 
     def getEnergy(self):
@@ -28,7 +28,7 @@ class Robot:
 
     def setEnergy(self, newEnergy):
         self.__energy = newEnergy
-
+    
     def delName(self):
         print("delName() is called!!!")
         del self._name
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     print(x)
 
     print(x.name) # using getName()
-    x.name = "Hongkai" # this operator will call our setter
+    x.name = "Hongkai" # this operation will call our setter
     print(x)
 
     # del x.name # this will call delName() function

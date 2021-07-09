@@ -17,12 +17,12 @@ class A(object):
 
 class B(object):
     def __new__(cls):
-        return super(B, cls).__new__(Sample) # this will return an instance of Sample class
+        return super(B, cls).__new__(Sample) # this will return an instance of Sample
 
 if __name__ == '__main__':
-    a = A() # try to create instance of A
+    a = A() # try to create instance A
     print(type(a))
-    print(a.add(4, 5))
+    print(a.add(4,5))
 
     b = B()
     print(type(b))
