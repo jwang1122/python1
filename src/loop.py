@@ -8,12 +8,6 @@ print()
 
 #  for loop on string
 
-
-
-
-
-
-
 t = (1,3,5,7,9)
 for num in t:
     print(num, end=' ')
