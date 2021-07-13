@@ -36,13 +36,13 @@ class Robot:
     name = property(getName, setName, delName)
 
 if __name__ == '__main__':
-    x = Robot("John Wang")
+    x = Robot("Kayden Gao")
     x.sayHello()
 
     print(x.getName())
     print(x.getEnergy())
 
-    x.setName("Kayden") # 😄setter works!!
+    x.setName("Kayden") # 😄setter works!
     x.setEnergy(2000)
     print(x)
 

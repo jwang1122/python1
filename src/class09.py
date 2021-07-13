@@ -38,4 +38,3 @@ if __name__ == '__main__':
     c = C()
     print(type(c))
     print(c)
-
