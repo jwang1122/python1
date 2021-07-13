@@ -6,7 +6,7 @@ class Superclass:
         self.instancedata = a
     
     def __repr__(self):
-        return str(self.instancedata) # str function converts tuple to a string
+        return str(self.instancedata) # str function converts tuple to a string, __repr__ can only return str type
 
     def superFunc(self):
         print("superFunc() is running...")
@@ -27,3 +27,9 @@ if __name__ == '__main__':
     print(obj3)
     obj3.superFunc()
     obj3.subFunc()
+
+    # relationship of objects
+    print(isinstance(obj3, Superclass))
+    print(isinstance(obj3, Subclass))
+    print(isinstance(obj2, Subclass))
+    

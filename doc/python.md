@@ -269,16 +269,51 @@ There are 4 features in OOP
 
 ### dunder functions
 * [compare __repr__() most time, and __str__()](../src/class06.py)
+  - __repr__() function can only return str type, or need to convert it to str.
 * [play __new__() with __init__() is used to initialize object](../src/class09.py)
 * [return instance from other class (override __new__())](../src/class10.py)
 * [override __iter__, __next__ function](../src/class15.py)
-* [start from 1 include stop](../src/range1.py)
+* [start from 1 include stop, override __iter__, __next__](../src/range1.py)
 
 ### class tricks
 * [define class function outside, use function in different class](../src/class13.py)
 * [internal function call another internal function](../src/class14.py)
 
 ### class inheritance
+❓What inherit means?
+✔️to be born with the same physical or mental characteristics as one of your parents or grandparents:
+Definition of Inheritance in Software world: A subclass inherits all of the features including attributes and functions from superclass.
+❓How do I inherit from a superclass?
+✔️👇see following code below
+```py
+class Subclass(Superclass):
+    pass
+```
+
+```mermaid
+classDiagram
+
+class Person{
+    name:str
+    age:int
+    ssn:str
+    gender:int
+}
+
+class Student{
+    studentID:str
+}
+
+class Engineer{
+    employeeID:str
+}
+
+Person <|--Student:is
+Person <|--Engineer:is
+```
+❓How do I initialize instance level attribute?
+✔️
+
 [class inheritance](../src/class16.py)
 
 
