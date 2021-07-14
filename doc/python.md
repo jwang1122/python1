@@ -19,13 +19,8 @@
   - [attribute scope](#attribute-scope)
   - [dunder functions](#dunder-functions)
   - [class tricks](#class-tricks)
-<<<<<<< HEAD
-  - [class inheritence](#class-inheritence)
-- [BlackJack](#blackjack)
-=======
   - [class inheritance](#class-inheritance)
 - [Blackjack Card Game](#blackjack-card-game)
->>>>>>> c5f0b46ebf07ba4ea36292d7f036c86e297d46d8
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -46,7 +41,7 @@
 
 ## Variable Naming
 1. variable name cannot start with number
-2. variable can be combination of letters and numbers _, a~z, A~Z, 0~9, no other special characters
+2. variable can be combination of letters and numbers _, a~z, A~Z, 0~9, ❗️⚡️no other special characters
 3. don't use reserved keywords as variable name
    
 ![](images/python-keywords.png)
@@ -55,6 +50,9 @@
 
 4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
+
+5. ☝️class name, function name and attribute name, all of them must follow the rules above☝️.
+   
 ### Variable and memory
 ![](images/chineseMedicine.jpg)
 ![](images/memory.gif)
@@ -218,7 +216,7 @@ that is used to perform a single, related action.
     - ❗️⚡️function can be overridden
     - 😄return more than one value
     - 💡Single response, do single thing
-    - call a function by function name and (), and arguments if thers is any
+    - call a function by function name and () no matter it has arguments or not, and arguments if there is any
 
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
@@ -316,48 +314,15 @@ class Engineer{
 Person <|--Student:is
 Person <|--Engineer:is
 ```
+* [Person is a super class](../src/person.py)
+* [Student is a person](../src/student.py)
+* [Engineer is a person]((../src))
+
 ❓How do I initialize instance level attribute?
 ✔️
 
-[class inheritance](../src/class16.py)
+* [class inheritance](../src/class16.py)
+1. If subclass define its own __init__(), the superclass __init__() no longer works
 
-
-### class inheritence
-❓What does inherit mean
-✔️to be born with the same physical or mental characterisitcs as one of your parents or grandparents:
-Definition of Inheritance in Software world:A subclass inherits all of the features including attributes and function from superclass.
-❓How do I inherit from a superclass
-✔️Inheritance code:
-```py
-class Subclass(Superclass):
-    pass
-```
-
-```mermaid
-classDiagram
-
-class Person{
-    name:str
-    age:int
-    ssm:str
-    gender:int
-}
-
-class Student{
-    studentID:str
-}
-
-class Engineer{
-    employeeID:str
-}
-
-Person <|--Student: is
-Person <|--Engineer: is
-```
-❓How do I initialize instance level attribute?
-
-[class inheritance](../src/class16.py)
-
-
-## BlackJack 
-* [BlackJack Rules](https://bicyclecards.com/how-to-play/blackjack/)
+## Blackjack Card Game
+* [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
