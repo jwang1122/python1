@@ -14,13 +14,13 @@ class B:
     g = f1
     def add(self, x, y):
         return x + y
-
+    
 if __name__ == '__main__':
-    # run the same function by different instance of different class
+    # run the same function by different instance of different classes
     x = A()
     y = x.f(4,-3) # x is instance of A
     print(y)
 
-    x = B()        # x is instance of B
-    y = x.g(2, 4)
+    x = B()       # x is instance of B
+    y = x.g(2, 4) 
     print(y)

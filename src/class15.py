@@ -20,12 +20,12 @@ class Reverse:
         return self.data[self.index]
 
 if __name__ == '__main__':
-    rev = Reverse("moon")
+    rev = Reverse("international")
     for c in rev:
-        print(c, end = '')
+        print(c, end='')
     print()
 
-    rev = Reverse([1, 2, 3, 4, 5])
+    rev = Reverse([1,2,3,4,5])
     for c in rev:
-        print(c, end = '')
+        print(c, end='')
     print()

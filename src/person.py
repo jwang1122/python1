@@ -1,6 +1,6 @@
 class Person:
     def __init__(self, name, age, ssn, gender):
-        self.name = name
+        self.name= name
         self.age = age
         self.ssn = ssn
         self.gender = gender

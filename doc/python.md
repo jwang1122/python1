@@ -19,8 +19,13 @@
   - [attribute scope](#attribute-scope)
   - [dunder functions](#dunder-functions)
   - [class tricks](#class-tricks)
+<<<<<<< HEAD
   - [class inheritence](#class-inheritence)
 - [BlackJack](#blackjack)
+=======
+  - [class inheritance](#class-inheritance)
+- [Blackjack Card Game](#blackjack-card-game)
+>>>>>>> c5f0b46ebf07ba4ea36292d7f036c86e297d46d8
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -185,14 +190,14 @@ graph TB
 A([Python Programing])
 B[function]
 C[class]
-D[Data]
+D[data]
 E[function]
 
 A--create-->B
-A--create-->C--include-->D & E
+A--create-->C--building-->D & E
 
 classDef block1 fill:#ECC335,color:white;
-classDef block1 fill:#0088FF,color:yellow;
+classDef block2 fill:#5DA6E6,color:white;
 
 class B,C block1
 class D,E block2
@@ -223,7 +228,7 @@ $$
 * [argument.py](../src/argument.py)
 * [raise error when radius<0](../src/circle.py)
 * [understand if __name__ == '__main__':](../src/testCircle.py)
->😄avoid running test code from outside
+>😄avoid running test code block from import
 * [add try-except block](../src/tryexcept.py)
 * [Define inner functions inside outer function](../src/functionInFunction.py)
 * [return function dynamically](../src/returnFunction.py)
@@ -234,8 +239,8 @@ $$
 
 ![](images/oop.png)
 
-❓What is class❓
->✔️Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state, or do some special thing.
+❓What is class?
+>Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state, or do some special thing.
 
 ```mermaid
 graph LR
@@ -247,7 +252,7 @@ A-->B & C
 
 There are 4 features in OOP
 1. Abstraction: create class which abstract from the object in the real world.
-2. Inheritance: a class can inherit from multiple other classes to increase code reuseability.
+2. Inheritance:  a class can inherit from multiple other classes to increase code reuseability.
 3. Encapsulation: avoid data or function to be accessed outside unintentionally.
 4. Polymorphism: same function behavior differently by different object type which inherit from same class.
 
@@ -276,8 +281,46 @@ There are 4 features in OOP
 * [start from 1 include stop, override __iter__, __next__](../src/range1.py)
 
 ### class tricks
-* [define class fnction outside, use function in different class](../src/class13.py)
-* [internal function of a class calls another internal function](../src/class14.py)
+* [define class function outside, use function in different class](../src/class13.py)
+* [internal function call another internal function](../src/class14.py)
+
+### class inheritance
+❓What inherit means?
+✔️to be born with the same physical or mental characteristics as one of your parents or grandparents:
+Definition of Inheritance in Software world: A subclass inherits all of the features including attributes and functions from superclass.
+❓How do I inherit from a superclass?
+✔️👇see following code below
+```py
+class Subclass(Superclass):
+    pass
+```
+
+```mermaid
+classDiagram
+
+class Person{
+    name:str
+    age:int
+    ssn:str
+    gender:int
+}
+
+class Student{
+    studentID:str
+}
+
+class Engineer{
+    employeeID:str
+}
+
+Person <|--Student:is
+Person <|--Engineer:is
+```
+❓How do I initialize instance level attribute?
+✔️
+
+[class inheritance](../src/class16.py)
+
 
 ### class inheritence
 ❓What does inherit mean

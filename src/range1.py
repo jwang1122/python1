@@ -25,18 +25,18 @@ class range1:
         if self.current > self.stop:
             raise StopIteration
         result = self.current
-        self.current += 1
+        self.current += self.step
         return result
-        
+
 if __name__ == '__main__':
     r = range1(3, 10, 2)
     print(type(r))
 
-    for i in range1(10): # one variable start
+    for i in range1(10): # one vriable start
         print(i)
     print()
 
-    for i in range1(5, 10): # two vaiables start, stop
+    for i in range1(5, 10): # two variables start, stop
         print(i)
     print()
 
