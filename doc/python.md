@@ -20,6 +20,7 @@
   - [dunder functions](#dunder-functions)
   - [class tricks](#class-tricks)
   - [class inheritence](#class-inheritence)
+- [BlackJack](#blackjack)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -268,12 +269,52 @@ There are 4 features in OOP
 
 ### dunder functions
 * [compare __repr__() most time, and __str__()](../src/class06.py)
+  - __repr__() function can only return str type, or need to convert it to str.
 * [play __new__() with __init__() is used to initialize object](../src/class09.py)
 * [return instance from other class (override __new__())](../src/class10.py)
 * [override __iter__, __next__ function](../src/class15.py)
+* [start from 1 include stop, override __iter__, __next__](../src/range1.py)
 
 ### class tricks
 * [define class fnction outside, use function in different class](../src/class13.py)
 * [internal function of a class calls another internal function](../src/class14.py)
 
 ### class inheritence
+❓What does inherit mean
+✔️to be born with the same physical or mental characterisitcs as one of your parents or grandparents:
+Definition of Inheritance in Software world:A subclass inherits all of the features including attributes and function from superclass.
+❓How do I inherit from a superclass
+✔️Inheritance code:
+```py
+class Subclass(Superclass):
+    pass
+```
+
+```mermaid
+classDiagram
+
+class Person{
+    name:str
+    age:int
+    ssm:str
+    gender:int
+}
+
+class Student{
+    studentID:str
+}
+
+class Engineer{
+    employeeID:str
+}
+
+Person <|--Student: is
+Person <|--Engineer: is
+```
+❓How do I initialize instance level attribute?
+
+[class inheritance](../src/class16.py)
+
+
+## BlackJack 
+* [BlackJack Rules](https://bicyclecards.com/how-to-play/blackjack/)
