@@ -3,9 +3,8 @@ class level attribute vs. instance level attribute
 """
 
 class Dog:
-    tricks = [] # class level attribute
-
     def __init__(self, name):
+        self.tricks = [] # class level attribute self.tricks as empty list
         self.name = name # self.name is an instance level attribute
 
     def addTrick(self, trick):

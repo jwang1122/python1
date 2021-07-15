@@ -17,7 +17,6 @@ class Robot:
 if __name__ == '__main__':
     robot1 = Robot() # use the default constructor to create an instance of Robot class
     robot2 = Robot()
-
     print(robot1 == robot2)
     robot3 = robot1
     print(robot1 == robot3)
@@ -47,3 +46,4 @@ if __name__ == '__main__':
     robot1.energy = 2000
     x = getattr(robot1, 'energy', 1000)
     print(x)
+
