@@ -5,3 +5,4 @@
 
 Calculate total amount, and print out your result.
 
+gg ez team diff you guys suck -0/12 yasuo
