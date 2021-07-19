@@ -27,7 +27,7 @@ class Card:
         return self.getValue() < other.getValue()
 
     def getValue(self):
-        pictured = {'Ace':11, 'Jack':10, 'Queen':10, 'King':10}
+        pictured = {'A':11, 'J':10, 'Q':10, 'K':10}
         if self.face.name.isdigit():
             return self.face.value
         return pictured[self.face.name]
@@ -50,4 +50,4 @@ if __name__ == '__main__':
 
     # x = heartsJ.getValue # I am assigning function to 'x', to make 'x' a function
     # print(type(x))
-    # print(x()) # now I am calling the function 'x'
+    # print(x()) # now I am calling on the function x

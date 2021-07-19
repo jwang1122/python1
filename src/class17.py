@@ -18,25 +18,25 @@ if __name__ == '__main__':
     print(type(x))
     print(type(x) is Color) # 'is' is an identity operator
     print(isinstance(x, Color))
-    print(x == Color.RED)
-    print(x == Color.GREEN)
+    print(x==Color.RED)
+    print(x==Color.GREEN)
     print(x is Color.GREEN)
     print(x in Color) # in is a membership operator
 
-    # ENUM is iterable
+    # Enum is iterable
     for c in Color:
-        print(c, end = ' ')
+        print(c, end=' ')
     print()
 
     # Enum is callable
-    animal = Enum('Animal',('ANT', 'DUDE', 'BEE', 'FOX')) # use tuple to build enumeration constants
+    animal = Enum('Animal',('ANT','BEE','CAT','DOG')) # use tuple to build enumeration constants
     for a in animal:
-        print(a, end = '  |  ')
+        print(a.name, a.value, end=' | ')
     print()
     print(type(animal))
 
-    animal = Enum('Animal',({'ants in me pants':1, 'DUDE':2, 'BEE':3, 'FOX':4}))
+    animal = Enum('Animal', {'ANT':10,'BEE':21,'CAT':13,'DOG':54}) # use dict to build enumeration constants
     for a in animal:
-        print(a.name, end = '  |  ')
+        print(a.name, a.value, end=' | ')
     print()
-
+    

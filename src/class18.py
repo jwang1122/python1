@@ -1,7 +1,7 @@
 """
-class Inheritance 
+class Inheritance
 class level function
-class level attribute(field, variable)
+class level attribute (field, variable)
 """
 from enum import Enum
 
