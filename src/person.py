@@ -9,5 +9,5 @@ class Person:
         return f"{self.name}({self.ssn}, {self.age}, {self.gender})"
 
 if __name__ == '__main__':
-    p1 = Person("John", 12, "111-22-1234", "male")
+    p1 = Person("Kayden", 11, "246-69-1357", 1)
     print(p1)
