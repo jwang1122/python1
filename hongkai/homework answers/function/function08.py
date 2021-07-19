@@ -16,7 +16,7 @@ func1(80, 100)
 """
 
 def func1(*args):
-    print("func1", args, sep="")
+    print(f"func1{args}")
     for i in args:
         print(i)
 
