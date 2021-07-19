@@ -281,6 +281,7 @@ There are 4 features in OOP
 ### class tricks
 * [define class function outside, use function in different class](../src/class13.py)
 * [internal function call another internal function](../src/class14.py)
+* [class level function and attributes](../src/class18.py)
 
 ### class inheritance
 ❓What inherit means?
@@ -319,10 +320,12 @@ Person <|--Engineer:is
 * [Engineer is a person]((../src))
 
 ❓How do I initialize instance level attribute?
-✔️
+✔️1. initialize the intstance level attribute on __init__(); 2. define instance level attribute in setter.
 
 * [class inheritance](../src/class16.py)
 1. If subclass define its own __init__(), the superclass __init__() no longer works
+2. subclass can override superclass functions.
 
+* [](../src/class17.py)
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
