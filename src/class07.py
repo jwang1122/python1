@@ -31,3 +31,5 @@ if __name__ == '__main__':
 
     x = robot1.__energy # the __energy cannot be accessed outside
     print(x)
+
+
