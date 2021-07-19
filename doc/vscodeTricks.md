@@ -1,6 +1,7 @@
 # VSCode Tricks
 
 [](myIcons.md)
+
 ## Syntax Error due to run python code in playground
 trash the terminal > run program again
 ❗️never use your running terminal for playground.
@@ -9,6 +10,7 @@ trash the terminal > run program again
 Ctrl+z
 
 ## open terminal
+Menu Terminal ⟹ New Terminal
 
 ## open python playground
 ```DOS
