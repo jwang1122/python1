@@ -41,7 +41,7 @@
 
 ## Variable Naming
 1. variable name cannot start with number
-2. variable can be combination of letters and numbers _, a~z, A~Z, 0~9, no other special characters
+2. variable can be combination of letters and numbers _, a~z, A~Z, 0~9, ❗️⚡️no other special characters
 3. don't use reserved keywords as variable name
    
 ![](images/python-keywords.png)
@@ -50,6 +50,9 @@
 
 4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
+
+5. ☝️class name, function name and attribute name, all of them must follow the rules above☝️.
+   
 ### Variable and memory
 ![](images/chineseMedicine.jpg)
 ![](images/memory.gif)
@@ -213,7 +216,7 @@ that is used to perform a single, related action.
     - ❗️⚡️function can be overridden
     - 😄return more than one value
     - 💡Single response, do single thing
-    - call a function by function name and (), and arguments if thers is any
+    - ❗️❗️call a function by function name and () no matter it has arguments or not, and arguments if thers is any
 
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
@@ -274,10 +277,12 @@ There are 4 features in OOP
 * [return instance from other class (override __new__())](../src/class10.py)
 * [override __iter__, __next__ function](../src/class15.py)
 * [start from 1 include stop, override __iter__, __next__](../src/range1.py)
+* [class Card, override __add__, __gt__, __lt__, __eq__](../src/class24.py)
 
 ### class tricks
 * [define class function outside, use function in different class](../src/class13.py)
 * [internal function call another internal function](../src/class14.py)
+* [class level function and attributes](../src/class18.py)
 
 ### class inheritance
 ❓What inherit means?
@@ -311,11 +316,22 @@ class Engineer{
 Person <|--Student:is
 Person <|--Engineer:is
 ```
+* [Person is a super class](../src/person.py)
+* [Student is a person](../src/student.py)
+* [Engineer is a person](../src/engineer.py)
+
 ❓How do I initialize instance level attribute?
-✔️
+✔️1. initialize the instance level attribute in __init__(); 2. define instance level attribute in setter.
 
-[class inheritance](../src/class16.py)
+* [class inheritance](../src/class16.py)
+1. If subclass define its own __init__(), the superclass __init__() no longer works
+2. subclass can override superclass functions.
 
+* [inherit from Enum, callable](../src/class17.py)
+* [multiple inheritance](../src/class19.py)
+
+❓What is enumeration?
+>✔️Enum is a class in python for creating enumerations, which are a set of symbolic names (members) bound to unique, constant values. 
 
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)

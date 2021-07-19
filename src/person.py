@@ -1,6 +1,6 @@
 class Person:
     def __init__(self, name, age, ssn, gender):
-        self.name= name
+        self.name= name # create instance level attribute
         self.age = age
         self.ssn = ssn
         self.gender = gender
