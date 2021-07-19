@@ -216,7 +216,7 @@ that is used to perform a single, related action.
     - ❗️⚡️function can be overridden
     - 😄return more than one value
     - 💡Single response, do single thing
-    - call a function by function name and () no matter it has arguments or not, and arguments if there is any
+    - ❗️❗️call a function by function name and () no matter it has arguments or not, and arguments if thers is any
 
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
@@ -277,10 +277,12 @@ There are 4 features in OOP
 * [return instance from other class (override __new__())](../src/class10.py)
 * [override __iter__, __next__ function](../src/class15.py)
 * [start from 1 include stop, override __iter__, __next__](../src/range1.py)
+* [class Card, override __add__, __gt__, __lt__, __eq__](../src/class24.py)
 
 ### class tricks
 * [define class function outside, use function in different class](../src/class13.py)
 * [internal function call another internal function](../src/class14.py)
+* [class level function and attributes](../src/class18.py)
 
 ### class inheritance
 ❓What inherit means?
@@ -316,13 +318,23 @@ Person <|--Engineer:is
 ```
 * [Person is a super class](../src/person.py)
 * [Student is a person](../src/student.py)
-* [Engineer is a person]((../src))
+* [Engineer is a person](../src/engineer.py)
 
 ❓How do I initialize instance level attribute?
-✔️
+✔️1. initialize the instance level attribute in __init__(); 2. define instance level attribute in setter.
 
 * [class inheritance](../src/class16.py)
 1. If subclass define its own __init__(), the superclass __init__() no longer works
+2. subclass can override superclass functions.
 
+* [inherit from Enum, callable](../src/class17.py)
+* [multiple inheritance](../src/class19.py)
+
+❓What is enumeration?
+>✔️Enum is a class in python for creating enumerations, which are a set of symbolic names (members) bound to unique, constant values. 
+* [class inheritance](../src/class16.py)
+1. If subclass define its own __init__(), the superclass __init__() no longer works
+
+* [](../src/class17.py)
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
