@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   1. Add Extension (Markdown PDF, PDF Preview)
   > click extension symbol on left bar > input extention name/keyword in search bar > click "Install"
   2. Save file
@@ -10,7 +9,9 @@
   5. Create a Python file
   > click file > click new file > press CTRL+N
   6. Run Python file
-=======
+
+
+
   1. Add Extension (Markdown PDF, PDF Preview)
   > click extension symbol on left bar > input extention name/keyword in search bar > click "Install"
   2. Save file
@@ -22,5 +23,4 @@
   5. Create a Python file
   > click file > click new file > press CTRL+N
   6. Run Python file
->>>>>>> af2e94c5fc010072d63c564148493bf7c5afd9f0
   > click the green triangle at top right

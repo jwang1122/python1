@@ -1,0 +1,1 @@
+[vscode Tricks](../melynda/vscodeTricks.md)
