@@ -12,7 +12,7 @@ print(s[4:9])
 print(s[1:100])
 print(s[1:100:2]) # s[[start]:[stop]:[step]]
 print(s[::])
-print(s[-1])
+print(s[-1]) # get last character in the string s
 print(s[::-1])
 
 # string functions

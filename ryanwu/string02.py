@@ -1,0 +1,6 @@
+s = input("Enter a phrase or word: ")
+a = input("Enter a number: ")
+print(type(a))
+b = int(a)
+print(type(b))
+print(s[{b}:100:1])
