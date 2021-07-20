@@ -337,5 +337,6 @@ Person <|--Engineer:is
 * [class inheritance](../src/class16.py)
 1. If subclass define its own __init__(), the superclass __init__() no longer works
 
+* [](../src/class17.py)
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)

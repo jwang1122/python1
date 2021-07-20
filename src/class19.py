@@ -8,7 +8,6 @@ class Base1:
 
     def add(self, x, y):
         return x + y
-
 class Base2:
     def __init__(self, name, age=10):
         self.name = name
