@@ -283,7 +283,11 @@ There are 4 features in OOP
 * [define class function outside, use function in different class](../src/class13.py)
 * [internal function call another internal function](../src/class14.py)
 * [class level function and attributes](../src/class18.py)
-
+* [inherit from Enum, callable](../src/class17.py)
+* [multiple inheritance](../src/class19.py)
+* [Nested class](../src/class20.py)
+* [Car has Engine](../src/class21.py)
+* 
 ### class inheritance
 ❓What inherit means?
 ✔️to be born with the same physical or mental characteristics as one of your parents or grandparents:
@@ -327,8 +331,6 @@ Person <|--Engineer:is
 1. If subclass define its own __init__(), the superclass __init__() no longer works
 2. subclass can override superclass functions.
 
-* [inherit from Enum, callable](../src/class17.py)
-* [multiple inheritance](../src/class19.py)
 
 ❓What is enumeration?
 >✔️Enum is a class in python for creating enumerations, which are a set of symbolic names (members) bound to unique, constant values. 
