@@ -20,6 +20,8 @@
   - [dunder functions](#dunder-functions)
   - [class tricks](#class-tricks)
   - [class inheritance](#class-inheritance)
+- [Unit Test](#unit-test)
+- [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
 
 ## My First python program
@@ -330,11 +332,55 @@ Person <|--Engineer:is
 * [inherit from Enum, callable](../src/class17.py)
 * [multiple inheritance](../src/class19.py)
 
+* [class inheritance](../src/class16.py)
+1. If subclass define its own __init__(), the superclass __init__() no longer works
+2. subclass can override superclass functions.
 ❓What is enumeration?
 >✔️Enum is a class in python for creating enumerations, which are a set of symbolic names (members) bound to unique, constant values. 
 * [class inheritance](../src/class16.py)
 1. If subclass define its own __init__(), the superclass __init__() no longer works
 
-* [](../src/class17.py)
+```mermaid
+graph LR
+A([Software Project])
+B[User Interface<br>GUI, Front END]
+C[Business Logic<br>middle tier]
+D[Database<br>Back End]
+E[Unit test]
+F[Logging]
+G[Window Based<br>VS Code]
+H[Web Based<br>Google]
+M[MongoDB<br>No SQL]
+S[SQL Server]
+P[SQLite]
+
+A-->B & C & D & E & F
+B-->G & H
+D-->M & S & P
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class C,E,F html
+```
+## Unit Test
+❓What is unit test?
+>✔️A unit is a specific piece of code need to be tested, such as a function or a class.  in our sample code, circleArea() function is a code unit. The Unit test are then other piece of code that specifically exercise the code unit with a **full range** of different inputs.
+
+❓How do I configure the unit test in Python?
+✔️Right-click ⟹ Command Palette... ⟹ Configure Tests ⟹ unittest ⟹ test ⟹ test_*.py
+
+❓How do I run unittest?
+✔️
+
+[Test Circle area calculation](../test/test_circleArea.py)
+
+## Logging
+❓What is logging?
+✔️write software execution record to console, file or database used for application analysis.
+there are at least 5 level of logging: Debug, Info, Warning, Error, Fatal
+
+[Out put log message to a file](../src/logging1.py)
+
+
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
