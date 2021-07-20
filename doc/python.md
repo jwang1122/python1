@@ -69,7 +69,7 @@ otherwise, your python builtins functions no longer works the way you expected.
     - int: a=4
     - float: a=3.4
     - complex: c=4-3j
-* [String](../src/string.py)
+* [String](../src/string1.py)
     - string is iterable
     - string slicing: [[start]:[end]:[step]]
     - String operator +, *
