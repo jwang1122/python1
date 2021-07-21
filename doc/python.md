@@ -20,6 +20,8 @@
   - [dunder functions](#dunder-functions)
   - [class tricks](#class-tricks)
   - [class inheritance](#class-inheritance)
+- [Unit Test](#unit-test)
+- [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
 
 ## My First python program
@@ -67,7 +69,7 @@ otherwise, your python builtins functions no longer works the way you expected.
     - int: a=4
     - float: a=3.4
     - complex: c=4-3j
-* [String](../src/string.py)
+* [String](../src/string1.py)
     - string is iterable
     - string slicing: [[start]:[end]:[step]]
     - String operator +, *
@@ -337,6 +339,48 @@ Person <|--Engineer:is
 * [class inheritance](../src/class16.py)
 1. If subclass define its own __init__(), the superclass __init__() no longer works
 
-* [](../src/class17.py)
+```mermaid
+graph LR
+A([Software Project])
+B[User Interface<br>GUI, Front END]
+C[Business Logic<br>middle tier]
+D[Database<br>Back End]
+E[Unit test]
+F[Logging]
+G[Window Based<br>VS Code]
+H[Web Based<br>Google]
+M[MongoDB<br>No SQL]
+S[SQL Server]
+P[SQLite]
+
+A-->B & C & D & E & F
+B-->G & H
+D-->M & S & P
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class C,E,F html
+```
+
+## Unit Test
+❓What is unit test?
+>✔️A unit is a specific piece of code need to be tested, such as a function or a class.  in our sample code, circleArea() function is a code unit. The Unit test are then other piece of code that specifically exercise the code unit with a **full range** of different inputs.
+
+❓How do I configure the unit test in Python?
+✔️Right-click ⟹ Command Palette... ⟹ Configure Tests ⟹ unittest ⟹ test ⟹ test_*.py
+
+❓How do I run unittest?
+✔️
+
+[Test Circle area calculation](../test/test_circleArea.py)
+
+## Logging
+❓What is logging?
+✔️write software execution record to console, file or database used for application analysis.
+there are at least 5 level of logging: Debug, Info, Warning, Error, Fatal
+
+[Out put log message to a file](../src/logging1.py)
+
+
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
