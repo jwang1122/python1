@@ -23,6 +23,7 @@
 - [Unit Test](#unit-test)
 - [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
+  - [Blackjack Rules](#blackjack-rules)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -386,3 +387,64 @@ there are at least 5 level of logging: Debug, Info, Warning, Error, Fatal
 
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
+### Blackjack Rules
+1. Object of the game: 
+>beat the dealer by getting a count as close to 21 as possible, without going over 21
+2. Card Values 
+>ace is worth 1 or 11, J,Q,K are 10, other card is its pip value
+3. Betting
+>for simplicity, we don't bet.
+4. Shuffle and cut
+>the dealer shuffles the pack of card, no need player cut
+5. Deal
+>dealer gives one card face up to each player, and one card face up for himself. Another round of cards is then dealt face up to each player, but the dealer takes the second card face down.
+6. Naturals
+>If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving a count of 21 in two cards, this is a natural or "blackjack." If any player has a natural and the dealer does not, the dealer loses.  If the dealer has a natural, other doesn't, dealer win. If both dealer and player have natural, no body wins.
+
+```mermaid
+classDiagram
+class Card {
+  face:str
+  suit:str
+  getValue()
+}
+
+class BlackjackCard{
+  getValue()
+}
+
+class Deck{
+  currentIndex:int
+  stackOfCards:list
+  shuffle()
+  getCard()
+  nextCard()
+}
+
+class Player{
+  name:str
+  hand:[]
+  win:int
+  addCardToHand()
+  cleanHand()
+  getHandValue()
+  getHandSize()
+  hit()
+  showHand()
+}
+
+class Dealer {
+  deck:Deck
+  hand:[]
+  win:int
+  shuffle()
+  deal()
+  hit()
+  showHand()
+}
+
+Player<|--Dealer:dealer is player
+Dealer *--Deck:dealer owns the deck
+Card<|--BlackjackCard: is a card
+Deck o--BlackjackCard:stack of Cards
+```

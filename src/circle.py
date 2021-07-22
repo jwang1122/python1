@@ -1,6 +1,8 @@
 from math import pi
 
 def circleArea(radius):
+    if type(radius) not in [float, int]:
+        raise TypeError(f"The radius of a circle must be a 'float' or an 'int' data type")
     if radius < 0:
         raise ValueError(f"Circle radius cannot be negative, but you enter {radius}.")
     return pi*radius**2
