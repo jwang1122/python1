@@ -20,7 +20,10 @@
   - [dunder functions](#dunder-functions)
   - [class tricks](#class-tricks)
   - [class inheritance](#class-inheritance)
+- [Unit Test](#unit-test)
+- [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
+  - [Blackjack Rules](#blackjack-rules)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -67,7 +70,7 @@ otherwise, your python builtins functions no longer works the way you expected.
     - int: a=4
     - float: a=3.4
     - complex: c=4-3j
-* [String](../src/string.py)
+* [String](../src/string1.py)
     - string is iterable
     - string slicing: [[start]:[end]:[step]]
     - String operator +, *
@@ -283,7 +286,11 @@ There are 4 features in OOP
 * [define class function outside, use function in different class](../src/class13.py)
 * [internal function call another internal function](../src/class14.py)
 * [class level function and attributes](../src/class18.py)
-
+* [inherit from Enum, callable](../src/class17.py)
+* [multiple inheritance](../src/class19.py)
+* [Nested class](../src/class20.py)
+* [Car has Engine](../src/class21.py)
+* 
 ### class inheritance
 ❓What inherit means?
 ✔️to be born with the same physical or mental characteristics as one of your parents or grandparents:
@@ -327,14 +334,117 @@ Person <|--Engineer:is
 1. If subclass define its own __init__(), the superclass __init__() no longer works
 2. subclass can override superclass functions.
 
-* [inherit from Enum, callable](../src/class17.py)
-* [multiple inheritance](../src/class19.py)
 
+* [class inheritance](../src/class16.py)
+1. If subclass define its own __init__(), the superclass __init__() no longer works
+2. subclass can override superclass functions.
 ❓What is enumeration?
 >✔️Enum is a class in python for creating enumerations, which are a set of symbolic names (members) bound to unique, constant values. 
 * [class inheritance](../src/class16.py)
 1. If subclass define its own __init__(), the superclass __init__() no longer works
 
-* [](../src/class17.py)
+```mermaid
+graph LR
+A([Software Project])
+B[User Interface<br>GUI, Front END]
+C[Business Logic<br>middle tier]
+D[Database<br>Back End]
+E[Unit test]
+F[Logging]
+G[Window Based<br>VS Code]
+H[Web Based<br>Google]
+M[MongoDB<br>No SQL]
+S[SQL Server]
+P[SQLite]
+
+A-->B & C & D & E & F
+B-->G & H
+D-->M & S & P
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class C,E,F html
+```
+## Unit Test
+❓What is unit test?
+>✔️A unit is a specific piece of code need to be tested, such as a function or a class.  in our sample code, circleArea() function is a code unit. The Unit test are then other piece of code that specifically exercise the code unit with a **full range** of different inputs.
+
+❓How do I configure the unit test in Python?
+✔️Right-click ⟹ Command Palette... ⟹ Configure Tests ⟹ unittest ⟹ test ⟹ test_*.py
+
+❓How do I run unittest?
+✔️
+
+[Test Circle area calculation](../test/test_circleArea.py)
+
+## Logging
+❓What is logging?
+✔️write software execution record to console, file or database used for application analysis.
+there are at least 5 level of logging: Debug, Info, Warning, Error, Fatal
+
+[Out put log message to a file](../src/logging1.py)
+
+
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
+### Blackjack Rules
+1. Object of the game: 
+>beat the dealer by getting a count as close to 21 as possible, without going over 21
+2. Card Values 
+>ace is worth 1 or 11, J,Q,K are 10, other card is its pip value
+3. Betting
+>for simplicity, we don't bet.
+4. Shuffle and cut
+>the dealer shuffles the pack of card, no need player cut
+5. Deal
+>dealer gives one card face up to each player, and one card face up for himself. Another round of cards is then dealt face up to each player, but the dealer takes the second card face down.
+6. Naturals
+>If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving a count of 21 in two cards, this is a natural or "blackjack." If any player has a natural and the dealer does not, the dealer loses.  If the dealer has a natural, other doesn't, dealer win. If both dealer and player have natural, no body wins.
+
+```mermaid
+classDiagram
+class Card {
+  face:str
+  suit:str
+  getValue()
+}
+
+class BlackjackCard{
+  getValue()
+}
+
+class Deck{
+  currentIndex:int
+  stackOfCards:list
+  shuffle()
+  getCard()
+  nextCard()
+}
+
+class Player{
+  name:str
+  hand:[]
+  win:int
+  addCardToHand()
+  cleanHand()
+  getHandValue()
+  getHandSize()
+  hit()
+  showHand()
+}
+
+class Dealer {
+  deck:Deck
+  hand:[]
+  win:int
+  shuffle()
+  deal()
+  hit()
+  showHand()
+}
+
+Player<|--Dealer:dealer is player
+Dealer *--Deck:dealer owns the deck
+Card<|--BlackjackCard: is a card
+Deck o--BlackjackCard:stack of Cards
+```
