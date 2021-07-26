@@ -11,5 +11,3 @@ logger.warning("My first warning message.")
 logger.error("My first error message.")
 logger.fatal("My first fatal message.")
 print(logger.level)
-
-

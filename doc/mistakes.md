@@ -31,6 +31,9 @@ print("%s is %d years old." %(name,age))
 print("after 5 years you will be %d years old." %(age+5))
 ```
 
+❌The Unit test connot be run!
+✔️You can only run unit test by clicking **Testing** icon on left-hand tool bar
+
 ## Other's mistakes
 
 ## Syntax Errors

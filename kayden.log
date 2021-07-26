@@ -1,0 +1,8 @@
+
+2021-07-20 17:48:55,559    DEBUG - My first debug message.
+2021-07-20 17:48:55,559     INFO - My first info message.
+2021-07-20 17:48:55,559  WARNING - My first warning message.
+2021-07-20 17:48:55,559    ERROR - My first error message.
+2021-07-20 17:48:55,559 CRITICAL - My first fatal message.
+2021-07-20 17:50:03,924    ERROR - My first error message.
+2021-07-20 17:50:03,924 CRITICAL - My first fatal message.

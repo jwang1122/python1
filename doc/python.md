@@ -335,6 +335,9 @@ Person <|--Engineer:is
 2. subclass can override superclass functions.
 
 
+* [class inheritance](../src/class16.py)
+1. If subclass define its own __init__(), the superclass __init__() no longer works
+2. subclass can override superclass functions.
 ❓What is enumeration?
 >✔️Enum is a class in python for creating enumerations, which are a set of symbolic names (members) bound to unique, constant values. 
 * [class inheritance](../src/class16.py)
@@ -422,6 +425,7 @@ class Deck{
   currentIndex:int
   stackOfCards:list
   shuffle()
+  getCard()
   nextCard()
 }
 
