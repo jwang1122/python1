@@ -1,6 +1,9 @@
 # Mistakes in Python Class
 ## My mistakes
 
+❌The Unit test cannot be run!
+✔️You can only run unit test by clicking **Testing** icon on left tool bar.
+
 * ❌TypeError due to input string
 ```output
 Traceback (most recent call last):
