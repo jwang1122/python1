@@ -3,8 +3,8 @@ def removeValue(givenList, value):
     s = set()
     for i in givenList:
         s.add(i)
-    s.remove(20)
-    return list(s)
+    s.remove(value)
+    return sorted(list(s))
 
 if __name__ == '__main__':
     
