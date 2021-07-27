@@ -1,3 +1,15 @@
-def recursive():
-    return(1+2+3+4+5+6+7+8+9+10)
-print(recursive())
+"""
+recursive function is the function call itself.
+1. termination condition
+2. adjust the variable to meet the termination
+"""
+
+def sumOfNumber(number):
+    if number == 0: #termination condition
+        return 0
+    number -= 1
+    return number + sumOfNumber(number)
+
+if __name__ == '__main__':
+    
+    print(sumOfNumber(10))

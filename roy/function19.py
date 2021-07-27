@@ -1,8 +1,11 @@
 def findMom(child):
     for childMom in nameList:
-        if childMom[0] == child:
+        if childMom[0] == x:
             return childMom[1]
-    return "NOT in our list"
+    return "NOT in the list"
+
+
+
 
 if __name__ == '__main__':
     
@@ -17,5 +20,3 @@ if __name__ == '__main__':
 
     x = input("Please enter child name:")
     print(f"{x}'s mom is {findMom(x)}.")
-
-

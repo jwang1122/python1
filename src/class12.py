@@ -1,6 +1,7 @@
 """
 class level attribute vs. instance level attribute
 """
+from circle import circleArea
 
 class Dog:
     def __init__(self, name):
@@ -11,6 +12,8 @@ class Dog:
         self.tricks.append(trick)
 
 if __name__ == '__main__':
+    x = circleArea(1)
+    print(x)
     fido = Dog('Fido')
     fido.addTrick("roll over")
     print(f"Fido can do: {fido.tricks}")

@@ -1,6 +1,6 @@
 def showEmployee(name,salary=9000):
-    return  (f"Employee {name}'s sallary is {salary}")    
+    print(f"Employee {name}'s sallary is {salary}")  #this function does NOT return anything.  
 
-print(showEmployee("Bongo Cat",20000000))
-print(showEmployee("Jomgo Bob"))
+showEmployee("Bongo Cat",20000000)
+showEmployee("Jomgo Bob")
 
