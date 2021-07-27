@@ -457,3 +457,7 @@ Card<|--BlackjackCard:is a card
 Deck o--BlackjackCard:stack of Cards
 ```
 [blackjack card game](../src/blackjack.py)
+* Card
+* BlackjackCard
+* Deck
+* Player

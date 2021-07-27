@@ -10,15 +10,9 @@ class TestCard(unittest.TestCase):
     black_clubsQ = BlackjackCard("Q", "CLUBS")
     black_spades7 = BlackjackCard("7", "SPADES")
 
-<<<<<<< HEAD
     roy = Player("roy") # class level attribute
     roy.addCardToHand(black_heartsA)
     roy.addCardToHand(black_clubsQ)
-=======
-    KaydentheDude = Player("KaydentheDude") # class level attribute
-    KaydentheDude.addCardToHand(black_heartsA)
-    KaydentheDude.addCardToHand(black_clubsQ)
->>>>>>> de069c52e78c77d958af8f34320be5ea01970ee3
     
 
     def test_getCardValue(self):
