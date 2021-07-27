@@ -5,23 +5,28 @@ Password rules:
 3. A password must contain at least two digits.
 """
 
+
+
 def isValidPassword(password):
-    items = len(password)
-    isValid = False # assume the password is NOT valid
+    items = len(x)
+    isValid = False
     if items >= 8: # rule 1
-        if password.isalnum():
+        if x.isalnum():
             count = 0
-            for s in password:
+            for s in x:
                 if s.isdigit():
                     count+=1
-            if count >=2:
+            if count >= 2:
                 isValid = True
+                print(f"{x} is a valid password")
+            else:
+                isValid = False
     if isValid:
-        print(f"{x} is a valid password.")
+        print(f"{x} is a valid password")
     else:
         print(f"{x} is NOT a valid password")
 
-if __name__ == '__main__':
-    x = input("Input a password: ")
-    isValidPassword(x)
 
+if __name__ == '__main__':
+    x = input("Input a password:")
+    isValidPassword(x)
