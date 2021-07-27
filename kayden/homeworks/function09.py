@@ -1,7 +1,5 @@
-def calculation(a, b):
-    x = a+b
-    y = a-b
-    return (x, y)
-
-res = calculation(40, 10)
+def calculation(a,b):
+    return (a+b, a-b)
+    
+res = calculation(40,20)
 print(res)
