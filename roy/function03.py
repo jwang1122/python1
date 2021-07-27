@@ -1,12 +1,13 @@
 from math import pi
 
-radius = 1
-area=radius**2*pi
-
 def circle_area(radius):
-    return (f"The area with radius of {radius} is {area}")
+    return radius**radius*pi
+    
 
-a=circle_area(radius)
+if __name__ == '__main__':
+    
+    radius = 3
+    a=circle_area(radius)
 
-print(a)
+    print (f"The area with radius of {radius} is {a}")
 

@@ -6,7 +6,7 @@ set1 = {1,2,3,4,5}
 """
 
 # Create set
-set1 = set()
+set1 = set() # create an empty set
 set2 = set()
 
 odds = set(range(1,11,2))
