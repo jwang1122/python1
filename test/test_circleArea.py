@@ -9,12 +9,12 @@ class TestCircleArea(unittest.TestCase):
         self.assertEqual(circleArea(2.34).__round__(2), 17.20)
 
     def test_negativeRadius(self):
-        self.assertRaises(ValueError, circleArea, -2)
+        self.assertRaises(ValueError, circleArea, -2.0)
 
     def test_invalidDataType(self):
-        self.assertRaises(TypeError, circleArea, -2.0+3j)# complex radius
-        self.assertRaises(TypeError, circleArea, "hello")# string radius
-        self.assertRaises(TypeError, circleArea, None)# none radius
-        self.assertRaises(TypeError, circleArea, True)# complex radius
-        self.assertRaises(TypeError, circleArea, False)# complex radius
-
+        self.assertRaises(TypeError, circleArea, -2.0+3j) # complex radius
+        self.assertRaises(TypeError, circleArea, "hello") # string radius
+        self.assertRaises(TypeError, circleArea, None) # none radius
+        self.assertRaises(TypeError, circleArea, True) # complex radius
+        self.assertRaises(TypeError, circleArea, False) # complex radius
+        

@@ -245,7 +245,7 @@ $$
 
 ```mermaid
 graph LR
-A[Data type]
+A([Data type])
 B[Python Builtins]
 C[User defined]
 A-->B & C
@@ -356,15 +356,23 @@ H[Web Based<br>Google]
 M[MongoDB<br>No SQL]
 S[SQL Server]
 P[SQLite]
+K[ReactJS]
+L[Angular]
+DJ[DJango]
 
-A-->B & C & D & E & F
+A--includes-->B & C & D & E & F
 B-->G & H
 D-->M & S & P
+H-->K & L & DJ
 
 classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
 
 class C,E,F html
+class A, start
+
 ```
+
 ## Unit Test
 ❓What is unit test?
 >✔️A unit is a specific piece of code need to be tested, such as a function or a class.  in our sample code, circleArea() function is a code unit. The Unit test are then other piece of code that specifically exercise the code unit with a **full range** of different inputs.
@@ -399,7 +407,7 @@ there are at least 5 level of logging: Debug, Info, Warning, Error, Fatal
 5. Deal
 >dealer gives one card face up to each player, and one card face up for himself. Another round of cards is then dealt face up to each player, but the dealer takes the second card face down.
 6. Naturals
->If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving a count of 21 in two cards, this is a natural or "blackjack." If any player has a natural and the dealer does not, the dealer loses.  If the dealer has a natural, other doesn't, dealer win. If both dealer and player have natural, no body wins.
+>If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving a count of 21 in two cards, this is a natural or "blackjack." If any player has a natural and the dealer does not, the dealer loses.  If the dealer has a natural, other doesn't, dealer win. If both dealer and player have natural, nobody wins.
 
 ```mermaid
 classDiagram
@@ -443,8 +451,13 @@ class Dealer {
   showHand()
 }
 
-Player<|--Dealer:dealer is player
+Player<|--Dealer:the dealer is a player
 Dealer *--Deck:dealer owns the deck
-Card<|--BlackjackCard: is a card
+Card<|--BlackjackCard:is a card
 Deck o--BlackjackCard:stack of Cards
 ```
+[blackjack card game](../src/blackjack.py)
+* Card
+* BlackjackCard
+* Deck
+* Player

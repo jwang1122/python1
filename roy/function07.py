@@ -1,8 +1,10 @@
-name="Jimothy Bean"
-age=2000
-
-def NameAge(name,age):
-    return print(f"{name} is {age} years old.")
+def printNameAge(name,age):
+    print(f"{name} is {age} years old.")
 
 
-print(NameAge(name,age))
+if __name__ == '__main__':
+    
+    name="Jimothy Bean"
+    age=2000
+
+    printNameAge(name,age)

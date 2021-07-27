@@ -13,9 +13,9 @@ if __name__ == '__main__':
         ('david', 'linda'),
         ('susan', 'elizabeth'),
         ('nancy', 'barbara'),
+        ('KaydentheDude', 'Mom'),
     ]
 
-    x = input("Please enter child name:")
+    x = input("Please enter child name: ")
     print(f"{x}'s mom is {findMom(x)}.")
-
 

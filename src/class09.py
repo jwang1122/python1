@@ -23,7 +23,7 @@ class C:
     def __repr__(self):
         return self.name
 
-    def __new__(cls): # constructor which create the object
+    def __new__(cls, name): # constructor which create the object, need same signature with __init__()
         print("C.__new__() is called.") #
         return super(C, cls).__new__(cls) # return object
         # return 99 # return integer
@@ -35,6 +35,6 @@ if __name__ == '__main__':
     b = B()
     print(type(b))
 
-    c = C()
+    c = C("John")
     print(type(c))
     print(c)
