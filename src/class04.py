@@ -17,10 +17,10 @@ class Robot:
 
 
 if __name__ == '__main__':
-    robot1 = Robot("John") # use user defined constructor
+    robot1 = Robot("KaydentheDude") # use user defined constructor
     robot1.sayHello()
     print(robot1.name) # directly access the attribute name 
-    robot1.name = "Marvin" # change name directly outside which unsafe
+    robot1.name = "EthantheBoi" # change name directly outside which unsafe
     robot1.sayHello()
     print(robot1)
     

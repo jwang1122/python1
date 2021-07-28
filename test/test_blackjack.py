@@ -10,9 +10,9 @@ class TestCard(unittest.TestCase):
     black_clubsQ = BlackjackCard("Q", "CLUBS")
     black_spades7 = BlackjackCard("7", "SPADES")
 
-    roy = Player("roy") # class level attribute
-    roy.addCardToHand(black_heartsA)
-    roy.addCardToHand(black_clubsQ)
+    KaydentheDude = Player("KaydentheDude") # class level attribute
+    KaydentheDude.addCardToHand(black_heartsA)
+    KaydentheDude.addCardToHand(black_clubsQ)
     dealer = Dealer() # create dealer instance
 
     def test_repr(self):
@@ -46,11 +46,11 @@ class TestCard(unittest.TestCase):
         self.assertNotEqual('(A, SPADES)', deck.stackOfCards[0].__repr__())
         self.assertNotEqual('(K, HEARTS)', deck.stackOfCards[51].__repr__())
 
-    def getRoy(self):
-        roy = Player("roy") # local variable within function
-        roy.addCardToHand(self.black_heartsA)
-        roy.addCardToHand(self.black_clubsQ)
-        return roy
+    def getKaydentheDude(self):
+        KaydentheDude = Player("KaydentheDude") # local variable within function
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_clubsQ)
+        return KaydentheDude
 
     def getJohn(self):
         john = Player("John") # local variable within function
@@ -60,25 +60,25 @@ class TestCard(unittest.TestCase):
         return john
 
     def test_playerHand(self):
-        roy = self.getRoy()
-        card = roy.hand[0]
+        KaydentheDude = self.getKaydentheDude()
+        card = KaydentheDude.hand[0]
         self.assertEquals(card, self.black_heartsA)
-        card = roy.hand[1]
+        card = KaydentheDude.hand[1]
         self.assertEquals(card, self.black_clubsQ)
 
     def test_cleanHand(self):
-        self.roy.cleanHand()
-        self.assertEquals(0, self.roy.getHandSize())
+        self.KaydentheDude.cleanHand()
+        self.assertEquals(0, self.KaydentheDude.getHandSize())
 
     def test_showHand(self):
-        roy = self.getRoy()
-        actual = roy.showHand()
-        expected = "roy: [(A, HEARTS), (Q, CLUBS)]"
+        KaydentheDude = self.getKaydentheDude()
+        actual = KaydentheDude.showHand()
+        expected = "KaydentheDude: [(A, HEARTS), (Q, CLUBS)]"
         self.assertEqual(expected, actual)
 
     def test_getHandValue(self):
-        roy = self.getRoy()
-        actual = roy.getHandValue()
+        KaydentheDude = self.getKaydentheDude()
+        actual = KaydentheDude.getHandValue()
         self.assertEqual(21, actual)
 
     def test_getHandValueWithAceBust(self):
