@@ -6,7 +6,7 @@ class Robot:
     def __init__(self, inputName):
         self.name = inputName # create a new attribute called self.name
 
-    def __repr__(self): # this dunder function returns a represent string for this object
+    def __repr__(self): # this dunder function return a represent string for this object
         return self.name
 
     def sayHello(self): # every function defined inside class has first positional argument as itself.

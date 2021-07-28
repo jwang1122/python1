@@ -7,8 +7,12 @@ def circleArea(radius):
         raise ValueError(f"Circle radius cannot be negative, but you enter {radius}.")
     return pi*radius**2
 
+def circumference(radius):
+    return 2 * pi * radius
+
 if __name__ == '__main__':
-    radius = 2.34 # code block for developer to test their code defined in this file
+    radius = 3 # code block for developer to test their code defined in this file
     area = circleArea(radius)
     print(area)
+    print(circumference(radius))
     print("Done.")

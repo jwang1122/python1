@@ -14,8 +14,9 @@ classDiagram
 class Student{
     name:str
     id:int
-    turnInHomework
+    turnInHomework()
 }
+```
 3. Define a function that calculate circle area.
-![homework](../doc/images/20200529Homework.png)
+
 4. write a test program to test your student class and area calculation function.
