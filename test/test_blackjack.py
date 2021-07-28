@@ -85,3 +85,12 @@ class TestCard(unittest.TestCase):
         john = self.getJohn()
         actual = john.getHandValue()
         self.assertEqual(15, actual) # homework: how do I change code make this pass
+
+    def testDealerHit(self):
+        dealer = Dealer()
+        dealer.addCardToHand(self.black_diamonds4)
+        dealer.addCardToHand(self.black_diamonds4) # 8 in hand
+        self.assertEqual(True, dealer.hit())
+        dealer.addCardToHand(self.black_clubsQ) # 18 in hand
+        self.assertEqual(False, dealer.hit())
+

@@ -74,15 +74,42 @@ class Player:
         value = 0
         for card in self.hand:
             value += card.getValue()
+        if value > 21 and self.hasAce(): # A=11,
+            value -= 10 # change A=1
         return value
+
+    def hasAce(self):
+        for card in self.hand:
+            if card.face == 'A':
+                return True
+        return False # return False till check every card in hand
+
+    def hit(self):
+        moreCard = input(self.name + ", do you want another card? (y/n) ")
+        if moreCard=='y':
+            return True
+        return False
 
 class Dealer(Player):
     def __init__(self):
         self.name = "Dealer"
+        self.hand = []
         self.deck = Deck()
+
+    def hit(self):
+        value = self.getHandValue()
+        if value < 17:
+            return True
+        return False
+
+class Game:
+    def __init__(self, player):
+        self.player = player
+        self.dealer = Dealer()
+
+    def play(self):
+        pass
 
 if __name__ == '__main__':
     heartsA = Card("A", "HEARTS")
     print(heartsA)
-    dealer = Dealer()
-    print(repr(dealer))
