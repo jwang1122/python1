@@ -6,6 +6,9 @@ class Robot:
     def __init__(self, inputName):
         self.name = inputName # create a new attribute called self.name
 
+    def __repr__(self): # this dunder function return a represent string for this object
+        return self.name
+
     def sayHello(self): # every function defined inside class has first positional argument as itself.
         print(f"Hello, I am robot {self.name}.") 
     
@@ -19,6 +22,7 @@ if __name__ == '__main__':
     print(robot1.name) # directly access the attribute name 
     robot1.name = "Marvin" # change name directly outside which unsafe
     robot1.sayHello()
+    print(robot1)
     
     
     

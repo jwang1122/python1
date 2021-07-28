@@ -13,7 +13,10 @@ class TestCard(unittest.TestCase):
     roy = Player("roy") # class level attribute
     roy.addCardToHand(black_heartsA)
     roy.addCardToHand(black_clubsQ)
-    
+    dealer = Dealer() # create dealer instance
+
+    def test_repr(self):
+        self.assertEqual("Dealer", repr(self.dealer))
 
     def test_getCardValue(self):
         self.assertEqual(4, self.diamonds4.getValue())
@@ -81,4 +84,4 @@ class TestCard(unittest.TestCase):
     def test_getHandValueWithAceBust(self):
         john = self.getJohn()
         actual = john.getHandValue()
-        self.assertEqual(15, actual) #homework: how do I change code make this pass
+        self.assertEqual(15, actual) # homework: how do I change code make this pass

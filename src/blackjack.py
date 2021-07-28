@@ -8,7 +8,7 @@ class Card:
         self.face = face
         self.suit = suit
 
-    def __repr__(self):
+    def __repr__(self): # this dunder function return a string to represent this object(card).
         return f"({self.face}, {self.suit})"
 
     def getValue(self): # Test Driving Development
@@ -54,6 +54,9 @@ class Player:
         self.name = name
         self.hand = []
 
+    def __repr__(self):
+        return self.name
+
     def addCardToHand(self, card):
         self.hand.append(card)
     
@@ -73,6 +76,13 @@ class Player:
             value += card.getValue()
         return value
 
+class Dealer(Player):
+    def __init__(self):
+        self.name = "Dealer"
+        self.deck = Deck()
+
 if __name__ == '__main__':
     heartsA = Card("A", "HEARTS")
     print(heartsA)
+    dealer = Dealer()
+    print(repr(dealer))
