@@ -85,7 +85,7 @@ class Player:
         return False # return False till check every card in hand
 
     def hit(self):
-        moreCard = input(self.name + ", would you like another card? (y/n) ")
+        moreCard = input(self.name + ", do you want another card? (y/n) ")
         if moreCard=='y':
             return True
         return False
@@ -113,5 +113,3 @@ class Game:
 if __name__ == '__main__':
     heartsA = Card("A", "HEARTS")
     print(heartsA)
-    dealer = Dealer()
-    print(repr(dealer))

@@ -20,6 +20,7 @@
   - [dunder functions](#dunder-functions)
   - [class tricks](#class-tricks)
   - [class inheritance](#class-inheritance)
+- [Software Development](#software-development)
 - [Unit Test](#unit-test)
 - [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
@@ -345,6 +346,9 @@ Person <|--Engineer:is
 * [class inheritance](../src/class16.py)
 1. If subclass define its own __init__(), the superclass __init__() no longer works
 
+## Software Development
+
+* Software development must include the following parts at lease.
 ```mermaid
 graph LR
 A([Software Project])
@@ -378,6 +382,8 @@ class C,E,F,GIT html
 class A, start
 
 ```
+❓How do I adjust a good software?
+✔️👍Performance!!!👍1. correct; 2. fast.
 
 
 ## Unit Test
@@ -424,7 +430,6 @@ there are at least 5 level of logging: Debug, Info, Warning, Error, Fatal
 11. No Insurance
 12. Reshuffling when start new game.
 
-
 ```mermaid
 classDiagram
 class Card {
@@ -467,19 +472,19 @@ class Dealer {
   showHand()
 }
 
-class Game {
-    player:Player
-    dealer:Dealer
-    play()
-    determineWinner()
+class Game{
+  player:Player
+  dealer:Dealer
+  play()
+  determineWinner()
 }
 
 Player<|--Dealer:the dealer is a player
 Dealer *--Deck:dealer owns the deck
 Card<|--BlackjackCard:is a card
 Deck o--BlackjackCard:stack of Cards
-GAME *-- Player
-GAME *-- Dealer
+Game *-- Player
+Game *-- Dealer
 ```
 
 [blackjack card game](../src/blackjack.py)
@@ -497,7 +502,7 @@ graph TB
 
 START([start])
 INIT[initialize game]
-DEAL[deal cards<br>two rounds]
+DEAL[deal cards<br>two round]
 SHOW[show hand]
 HIT{hit?}
 D[determine winner]
@@ -506,16 +511,17 @@ AGAIN{more game?}
 CLEAN[clean hand]
 END([end])
 
-START -->INIT-->DEAL-->SHOW-->HIT
-HIT--TRUE-->DEAL
+START-->INIT-->DEAL-->SHOW-->HIT
+HIT--True-->DEAL
 HIT--stand-->D-->RESULT-->AGAIN
 AGAIN--yes-->CLEAN-->DEAL
 AGAIN--no-->END
 
-classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
 classDef if fill:#EBCD6F,stroke:black,stroke-width:2px;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px,color:white;
 
 class START start
-class HIT if
+class HIT,AGAIN if
 class END end1
 ```
