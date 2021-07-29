@@ -477,7 +477,7 @@ class Game{
   determineWinner()
 }
 
-Player<|--Dealer:the dealer is a player
+Player<|--Dealer:dealer is a player
 Dealer *--Deck:dealer owns the deck
 Card<|--BlackjackCard:is a card
 Deck o--BlackjackCard:stack of Cards
@@ -492,6 +492,8 @@ Game *-- Dealer
 * Player
 * Dealer
 * Game
+
+[Unit test](../test/test_blackjack.py)
 
 ### Game Play Logic
 
@@ -522,4 +524,35 @@ classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px,color:white;
 class START start
 class HIT,AGAIN if
 class END end1
+```
+
+* determine winner
+
+```mermaid
+graph TB
+
+START([start])
+A{player>21}
+DEALER[dealer wins]
+B{dealer>21}
+PLAYER[player wins]
+C{player==dealer}
+TIE[tied up]
+D{player>dealer}
+
+START-->A
+A--False-->B
+A--True-->DEALER
+B--True-->PLAYER
+B--False-->C
+C--True-->TIE
+C--False-->D
+D--True-->PLAYER
+D--False-->DEALER
+
+classDef if fill:#EBCD6F,stroke:black,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
+
+class A,B,C,D if
+class START start
 ```
