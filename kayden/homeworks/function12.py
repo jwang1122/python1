@@ -1,11 +1,11 @@
 """
-recursive function is the function call itself.
-1. termination condition
+recursive function is the functions call itself.
+1. termination condition 
 2. adjust the variable to meet the termination
 """
 
 def sumOfNumber(number):
-    if number == 0: #termination condition
+    if number == 0:# termination condition 
         return 0
     number -= 1
     return number + sumOfNumber(number)
