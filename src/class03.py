@@ -12,7 +12,7 @@ class Robot:
 
 if __name__ == '__main__':
     obj = Robot() # call default constructor to create instance of Robot.
-    obj.name = "John"
+    obj.name = "KaydentheDude"
     obj.sayHello() # let robot object introduce himself, self argument does NOT count as argument
     print(f"my ID is {obj.id}")
 

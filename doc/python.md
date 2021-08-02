@@ -20,10 +20,12 @@
   - [dunder functions](#dunder-functions)
   - [class tricks](#class-tricks)
   - [class inheritance](#class-inheritance)
+- [Software Development](#software-development)
 - [Unit Test](#unit-test)
 - [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
   - [Blackjack Rules](#blackjack-rules)
+  - [Game Play Logic](#game-play-logic)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -340,17 +342,21 @@ Person <|--Engineer:is
 2. subclass can override superclass functions.
 ❓What is enumeration?
 >✔️Enum is a class in python for creating enumerations, which are a set of symbolic names (members) bound to unique, constant values. 
+
 * [class inheritance](../src/class16.py)
 1. If subclass define its own __init__(), the superclass __init__() no longer works
 
+## Software Development
+
+* Software development must include the following parts at lease.
 ```mermaid
 graph LR
 A([Software Project])
 B[User Interface<br>GUI, Front END]
 C[Business Logic<br>middle tier]
 D[Database<br>Back End]
-E[Unit test]
-F[Logging]
+E(Unit test)
+F(Logging)
 G[Window Based<br>VS Code]
 H[Web Based<br>Google]
 M[MongoDB<br>No SQL]
@@ -359,8 +365,12 @@ P[SQLite]
 K[ReactJS]
 L[Angular]
 DJ[DJango]
+INT(Integration test)
+GIT(Source control)
+DOC(Documentation)
 
-A--includes-->B & C & D & E & F
+A--includes-->B & C & D 
+A--tools--> E & F & INT & DOC & GIT
 B-->G & H
 D-->M & S & P
 H-->K & L & DJ
@@ -368,10 +378,13 @@ H-->K & L & DJ
 classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
 classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
 
-class C,E,F html
+class C,E,F,GIT html
 class A, start
 
 ```
+❓How do I adjust a good software?
+✔️👍Performance!!!👍1. correct; 2. fast.
+
 
 ## Unit Test
 ❓What is unit test?
@@ -396,18 +409,26 @@ there are at least 5 level of logging: Debug, Info, Warning, Error, Fatal
 ## Blackjack Card Game
 * [Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
 ### Blackjack Rules
-1. Object of the game: 
->beat the dealer by getting a count as close to 21 as possible, without going over 21
+1. Objective of the game: 
+>Beat the dealer by getting a count as close to 21 as possible, without going over 21
 2. Card Values 
->ace is worth 1 or 11, J,Q,K are 10, other card is its pip value
+>Ace is worth 1 or 11, J,Q,K are 10, other card is its pip value
 3. Betting
->for simplicity, we don't bet.
+>For simplicity, we don't bet.
 4. Shuffle and cut
->the dealer shuffles the pack of card, no need player cut
+>The dealer shuffles the pack of card, no need player cut
 5. Deal
->dealer gives one card face up to each player, and one card face up for himself. Another round of cards is then dealt face up to each player, but the dealer takes the second card face down.
+>The dealer gives one card face up to each player, and one card face up for himself. Another round of cards is then dealt face up to each player, but the dealer takes the second card face down.
 6. Naturals
 >If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving a count of 21 in two cards, this is a natural or "blackjack." If any player has a natural and the dealer does not, the dealer loses.  If the dealer has a natural, other doesn't, dealer win. If both dealer and player have natural, nobody wins.
+7. The Play
+>Any player on his turn must decide whether to "stand" (not ask for another card) or "hit" (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly). Thus, a player may stand on the two cards originally dealt to them, or they may ask the dealer for additional cards, one at a time, until deciding to stand on the total (if it is 21 or under), or goes "bust" (if it is over 21). In the latter case, play loses the game. The dealer then turns to the next player and serves them in the same manner. The combination of an ace with a card other than a ten-card is known as a "soft hand," because the player can count the ace as a 1 or 11, and either draw cards or not. For example with a "soft 17" (an ace and a 6), the total is 7 or 17. While a count of 17 is a good hand, the player may wish to draw for a higher total. If the draw creates a bust hand by counting the ace as an 11, the player simply counts the ace as a 1 and continues playing by standing or "hitting" (asking the dealer for additional cards, one at a time).
+8. The Dealer's Play
+>When the dealer has served every player, the dealers face-down card is turned up. If the total is 17 or more, it must stand. If the total is 16 or under, they must take a card. The dealer must continue to take cards until the total is 17 or more, at which point the dealer must stand. If the dealer has an ace, and counting it as 11 would bring the total to 17 or more (but not over 21), the dealer must count the ace as 11 and stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards.
+9. No Splitting Pairs
+10. No Doubing Down
+11. No Insurance
+12. Reshuffling when start new game.
 
 ```mermaid
 classDiagram
@@ -451,13 +472,89 @@ class Dealer {
   showHand()
 }
 
-Player<|--Dealer:the dealer is a player
+class Game{
+  player:Player
+  dealer:Dealer
+  play()
+  determineWinner()
+}
+
+Player<|--Dealer:dealer is a player
 Dealer *--Deck:dealer owns the deck
 Card<|--BlackjackCard:is a card
 Deck o--BlackjackCard:stack of Cards
+Game *-- Player
+Game *-- Dealer
 ```
+
 [blackjack card game](../src/blackjack.py)
 * Card
 * BlackjackCard
 * Deck
 * Player
+* Dealer
+* Game
+
+[Unit test](../test/test_blackjack.py)
+
+### Game Play Logic
+
+```mermaid
+graph TB
+
+START([start])
+INIT[initialize game]
+DEAL[deal cards<br>two round]
+SHOW[show hand]
+HIT{hit?}
+D[determine winner]
+RESULT[display result]
+AGAIN{more game?}
+CLEAN[clean hand]
+END([end])
+
+START-->INIT-->DEAL-->SHOW-->HIT
+HIT--True-->DEAL
+HIT--stand-->D-->RESULT-->AGAIN
+AGAIN--yes-->CLEAN-->DEAL
+AGAIN--no-->END
+
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
+classDef if fill:#EBCD6F,stroke:black,stroke-width:2px;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px,color:white;
+
+class START start
+class HIT,AGAIN if
+class END end1
+```
+
+* determine winner
+
+```mermaid
+graph TB
+
+START([start])
+A{player>21}
+DEALER[dealer wins]
+B{dealer>21}
+PLAYER[player wins]
+C{player==dealer}
+TIE[tied up]
+D{player>dealer}
+
+START-->A
+A--False-->B
+A--True-->DEALER
+B--True-->PLAYER
+B--False-->C
+C--True-->TIE
+C--False-->D
+D--True-->PLAYER
+D--False-->DEALER
+
+classDef if fill:#EBCD6F,stroke:black,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
+
+class A,B,C,D if
+class START start
+```

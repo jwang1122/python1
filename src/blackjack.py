@@ -8,7 +8,7 @@ class Card:
         self.face = face
         self.suit = suit
 
-    def __repr__(self):
+    def __repr__(self): # this dunder function return a string to represent this object(card).
         return f"({self.face}, {self.suit})"
 
     def getValue(self): # Test Driving Development
@@ -53,6 +53,13 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.hand = []
+        self.winCount = 0 # also add this attribute to Dealer
+
+    def win(self):
+        self.winCount += 1
+
+    def __repr__(self):
+        return self.name
 
     def addCardToHand(self, card):
         self.hand.append(card)
@@ -64,15 +71,111 @@ class Player:
         return len(self.hand)
 
     def showHand(self):
-        myHand = f"{self.name}: {self.hand}"
-        return myHand
+        return f"{self.name}: {self.hand}:{self.getHandValue()}:{self.winCount}"
 
     def getHandValue(self):
         value = 0
         for card in self.hand:
             value += card.getValue()
+        if value > 21 and self.hasAce(): # A=11,
+            value -= 10 # change A=1
         return value
 
+    def hasAce(self):
+        for card in self.hand:
+            if card.face == 'A':
+                return True
+        return False # return False till check every card in hand
+
+    def hit(self):
+        value = self.getHandValue()
+        if value >=20:
+            return False
+        moreCard = input(self.name + ", do you want another card? (y/n) ")
+        if moreCard=='y':
+            return True
+        return False
+
+class Dealer(Player):
+    def __init__(self):
+        self.name = "Dealer"
+        self.hand = []
+        self.deck = Deck()
+        self.winCount = 0
+
+    def hit(self):
+        value = self.getHandValue()
+        if value < 17:
+            return True
+        return False
+
+    def shuffle(self):
+        self.deck.shuffle()
+
+    def deal(self):
+        return self.deck.nextCard()
+
+    def showHand(self, faceUp):
+        if not faceUp:
+            return f"{self.name}: [{self.hand[0]}, HIDDEN]"
+        return super().showHand()
+
+class Game:
+    def __init__(self, player):
+        self.player = player
+        self.dealer = Dealer()
+        self.dealer.shuffle()
+
+    def dealCards(self):
+        self.player.addCardToHand(self.dealer.deal())
+        self.dealer.addCardToHand(self.dealer.deal())
+        self.player.addCardToHand(self.dealer.deal())
+        self.dealer.addCardToHand(self.dealer.deal())
+        print(self.player.showHand())
+        print(self.dealer.showHand(False))
+
+    def showResult(self):
+        print(self.player.showHand())
+        print(self.dealer.showHand(True))
+
+    def cleanHand(self):
+        self.player.cleanHand()
+        self.dealer.cleanHand()
+
+    def hit(self):
+        while self.player.hit():
+            self.player.addCardToHand(self.dealer.deal())
+            print(self.player.showHand())
+        while self.dealer.hit():
+            self.dealer.addCardToHand(self.dealer.deal())
+
+    def play(self):
+        while(True):
+            self.dealCards()
+            self.hit()
+            determineWinner(self.dealer, self.player)
+            self.showResult()
+            moreGame = input("Would you like to play another game? (y/n) ")
+            if moreGame=='n':
+                break
+            self.cleanHand()
+        print("Game Over!")
+
+def determineWinner(dealer, player):
+    dealerTotal = dealer.getHandValue()
+    playerTotal = player.getHandValue()
+    if playerTotal>21:
+        dealer.win()
+    elif dealerTotal>21:
+        player.win()
+    elif playerTotal==dealerTotal:
+        pass
+    elif playerTotal > dealerTotal:
+        player.win()
+    else:
+        dealer.win()
+
 if __name__ == '__main__':
-    heartsA = Card("A", "HEARTS")
-    print(heartsA)
+    john = Player("John")
+    game = Game(john)
+    game.play()
