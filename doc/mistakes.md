@@ -57,3 +57,35 @@ SyntaxError: invalid syntax
 area=3.14
 print("the area of rectangle is %f." %area)
 ```
+
+❌ override both __new__ and __init__
+```py
+class C():
+    def __new__(cls): 
+        print("C.__new__() is called.", name)
+        cls.name = name
+        return super(C, cls).__new__(cls)
+
+    def __repr__(self):
+        return self.name
+
+    def __init__(self, inputName):
+        print("C.__init() is called")
+        self.name = inputName
+
+if __name__ == '__main__':
+    a = A()
+    print(type(a))
+    print(a)
+
+    c = C("John")
+    print(type(c))
+    print(c)
+```
+
+```output
+  File "c:\Users\12818\workspace\Terry\python1\src\class\class09.py", line 30, in <module>        
+    c = C("John")
+TypeError: __new__() takes 1 positional argument but 2 were given
+```
+✔️Obviously, if you override both __new__ and __init__ function, python will use __new__ create instance, which cause problem. conclusion: don't override __new__().

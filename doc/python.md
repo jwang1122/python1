@@ -25,6 +25,7 @@
 - [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
   - [Blackjack Rules](#blackjack-rules)
+  - [getHandValue()](#gethandvalue)
   - [Game Play Logic](#game-play-logic)
 
 ## My First python program
@@ -497,6 +498,64 @@ Game *-- Dealer
 
 [Unit test](../test/test_blackjack.py)
 
+### getHandValue()
+
+```mermaid
+graph TB
+
+A[calculate hand value<br>c=number of Ace]
+B([loop])
+C{value>21 and c>0}
+D[return value]
+E[subtract 10, c--]
+
+A-->B-->C
+C--False-->D
+C--True-->E-->B
+
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
+classDef if fill:#EBCD6F,stroke:black,stroke-width:2px;
+
+class C,F if
+class B start
+```
+
+```py
+    def getHandValue(self):
+        value = 0
+        for card in self.hand:
+            value += card.getValue()
+        if value > 21 and self.hasAce(): # A=11,
+            value -= 10 # change A=1
+        return value
+
+    def hasAce(self):
+        for card in self.hand:
+            if card.face == 'A':
+                return True
+        return False # return False till check every card in hand
+
+```
+
+```py
+  def getHandValue(self):
+    value = 0
+    for card in self.hand:
+        value += card.getValue()
+    a = self.numberAce()
+    while value > 21 and a>0: # A=11,
+        value -= 10 # change A=1
+        a -= 1
+    return value
+
+  def numberAce(self):
+    count = 0; 
+    for card in self.hand:
+        if card.face == 'A':
+            count += 1
+    return count # return number of Ace in hand
+
+```
 ### Game Play Logic
 
 ```mermaid
