@@ -41,26 +41,17 @@ class Converter:
                     return decimal[i]
             return decimal[i]
         
-        listPair = [0, 0]
+        item = 0
         roman_num = number[::-1]
         total = 0
-        prevType = 0
+        prevItem = 0
         for i in range(len(roman_num)):
-            itemType = findSybValue(roman_num[i])
-            lP0 = listPair[0]
-            lP1 = listPair[1]
-            if lP0 == itemType:
-                listPair[1] += 1
+            item = findSybValue(roman_num[i])
+            if item < prevItem:
+                total -= item
             else:
-                if lP0 > prevType:
-                    total += lP0 * lP1
-                else:
-                    total -= lP0 * lP1
-                prevType = lP0
-                listPair = [itemType, 1]
-        lP0 = listPair[0]
-        lP1 = listPair[1]
-        total += lP0 * lP1
+                total += item
+            prevItem = item
         str1 = f"The integer for Roman Numeral {number} is {total}."
         print(str1)
 
