@@ -27,6 +27,7 @@
   - [Blackjack Rules](#blackjack-rules)
   - [getHandValue()](#gethandvalue)
   - [Game Play Logic](#game-play-logic)
+  - [missing unit tests](#missing-unit-tests)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -369,17 +370,20 @@ DJ[DJango]
 INT(Integration test)
 GIT(Source control)
 DOC(Documentation)
+TKINTER[tkinter]
+TURTLE[turtle]
 
 A--includes-->B & C & D 
 A--tools--> E & F & INT & DOC & GIT
 B-->G & H
 D-->M & S & P
 H-->K & L & DJ
+G-->TKINTER & TURTLE
 
 classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
 classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
 
-class C,E,F,GIT html
+class C,E,F,GIT,INT html
 class A, start
 
 ```
@@ -617,3 +621,9 @@ classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
 class A,B,C,D if
 class START start
 ```
+### missing unit tests
+1. player holds 1 Ace busted
+2. player holds 1 Ace without busted
+3. player holds 2 Aces
+4. player holds 3 Aces
+5. player holds 4 Aces

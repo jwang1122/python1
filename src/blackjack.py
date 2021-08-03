@@ -75,17 +75,19 @@ class Player:
 
     def getHandValue(self):
         value = 0
-        for card in self.hand:
+        for card in self.hand: #A,Q,A,Q=42
             value += card.getValue()
-        if value > 21 and self.hasAce(): # A=11,
+        count = self.countAce()
+        while value > 21 and count>0: # A=11,
             value -= 10 # change A=1
-        return value
+        return value # 22
 
-    def hasAce(self):
+    def countAce(self):
+        count = 0
         for card in self.hand:
             if card.face == 'A':
-                return True
-        return False # return False till check every card in hand
+                count += 1
+        return count # return number of Ace in hand
 
     def hit(self):
         value = self.getHandValue()
@@ -121,45 +123,74 @@ class Dealer(Player):
         return super().showHand()
 
 class Game:
-    def __init__(self, player):
-        self.player = player
+    def __init__(self, playerList):
+        self.playerList = playerList
         self.dealer = Dealer()
         self.dealer.shuffle()
 
     def dealCards(self):
-        self.player.addCardToHand(self.dealer.deal())
+        for player in self.playerList: # first round for all player
+            player.addCardToHand(self.dealer.deal())
         self.dealer.addCardToHand(self.dealer.deal())
-        self.player.addCardToHand(self.dealer.deal())
+        for player in self.playerList: # second round for all player
+            player.addCardToHand(self.dealer.deal())
+            print(player.showHand())
         self.dealer.addCardToHand(self.dealer.deal())
-        print(self.player.showHand())
         print(self.dealer.showHand(False))
 
     def showResult(self):
-        print(self.player.showHand())
+        for player in self.playerList:
+            print(player.showHand())
         print(self.dealer.showHand(True))
 
     def cleanHand(self):
-        self.player.cleanHand()
+        for player in self.playerList:
+            player.cleanHand()
         self.dealer.cleanHand()
 
     def hit(self):
-        while self.player.hit():
-            self.player.addCardToHand(self.dealer.deal())
-            print(self.player.showHand())
+        for player in self.playerList:
+            while player.hit():
+                player.addCardToHand(self.dealer.deal())
+                print(player.showHand())
         while self.dealer.hit():
             self.dealer.addCardToHand(self.dealer.deal())
 
-    def play(self):
+    def play(self, winner):
         while(True):
             self.dealCards()
             self.hit()
-            determineWinner(self.dealer, self.player)
+            for player in self.playerList:
+                winner(self.dealer, player)
             self.showResult()
             moreGame = input("Would you like to play another game? (y/n) ")
             if moreGame=='n':
                 break
             self.cleanHand()
         print("Game Over!")
+
+# if without else: each function takes a single responsibility
+def winner(dealer, player):
+    dealerTotal = dealer.getHandValue()
+    playerTotal = player.getHandValue()
+    if playerTotal > 21:
+        return dealer.win()
+    return dealerBusted(dealer, player, dealerTotal, playerTotal)   
+
+def dealerBusted(dealer, player, dealerTotal, playerTotal):
+    if dealerTotal > 21:
+        return player.win()
+    return tiedUp(dealer, player, dealerTotal, playerTotal)
+
+def tiedUp(dealer, player, dealerTotal, playerTotal):
+    if dealerTotal==playerTotal:
+        pass
+    return playerLarge(dealer, player, dealerTotal, playerTotal)
+
+def playerLarge(dealer, player, dealerTotal, playerTotal):
+    if playerTotal > dealerTotal:
+        return player.win()
+    return dealer.win()
 
 def determineWinner(dealer, player):
     dealerTotal = dealer.getHandValue()
@@ -176,6 +207,14 @@ def determineWinner(dealer, player):
         dealer.win()
 
 if __name__ == '__main__':
-    john = Player("John")
-    game = Game(john)
-    game.play()
+    playerList = []
+    while True:
+        morePlayer = input("more player? (y/n)")
+        if morePlayer=='n':
+            break
+        name = input("enter a name: ")
+        player = Player(name)
+        playerList.append(player)
+
+    game = Game(playerList)
+    game.play(winner) # pass function to play function

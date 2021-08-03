@@ -73,7 +73,7 @@ class TestCard(unittest.TestCase):
     def test_showHand(self):
         KaydentheDude = self.getKaydentheDude()
         actual = KaydentheDude.showHand()
-        expected = "KaydentheDude: [(A, HEARTS), (Q, CLUBS)]"
+        expected = "KaydentheDude: [(A, HEARTS), (Q, CLUBS)]:21:0"
         self.assertEqual(expected, actual)
 
     def test_getHandValue(self):
@@ -102,5 +102,16 @@ class TestCard(unittest.TestCase):
         expected = "Dealer: [(4, DIAMONDS), HIDDEN]"
         self.assertEqual(expected, actual)
         actual = dealer.showHand(True)
-        expected = "Dealer: [(4, DIAMONDS), (Q, CLUBS)]"
+        expected = "Dealer: [(4, DIAMONDS), (Q, CLUBS)]:14:0"
         self.assertEqual(expected, actual)
+    
+    def testGetHandValue_2A_Busted(self):
+        john = Player("John")
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_clubsQ) 
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_clubsQ) 
+        expected = 22
+        actual = john.getHandValue()
+        self.assertEqual(expected, actual)
+
