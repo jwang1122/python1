@@ -1,17 +1,40 @@
 """
 Blackjack Card Game
+
+Game Rules:
+https://bicyclecards.com/how-to-play/blackjack/
+
 """
 import random
 
 class Card:
+    """
+    Base class for blackjack card game.
+
+    it has two attributes, face and suit, and a getValue() function which return the face value of the card.
+    where A=1, 2=2, ..., J=11, Q=12, K=13
+    """
     def __init__(self, face, suit):
+        """
+        Sample code for create Card instance:
+
+        card = Card("A", "DIAMONDS")
+
+        here is all SUITS "SPADES, DIAMONDS, CLUBS, HEARTS".
+        """
         self.face = face
         self.suit = suit
 
     def __repr__(self): # this dunder function return a string to represent this object(card).
+        """
+        return a string to represent the card, for intance, (A, HEARTS).
+        """
         return f"({self.face}, {self.suit})"
 
     def getValue(self): # Test Driving Development
+        """
+        use dictionary to get value of A, J, Q, K
+        """
         if self.face.isdigit():
             return int(self.face)
         pictured = {"A":1, "J":11, "Q":12, "K":13}
@@ -28,14 +51,7 @@ class Deck:
     FACES = ('A','2','3','4','5','6','7','8','9','10','J','Q','K') # class level attribute
     SUITS = ('SPADES','CLUBS','DIAMONDS','HEARTS')
     def __init__(self):
-        # more powerful way to generate stack of cards
         self.stackOfCards = [BlackjackCard(face, suit) for face in Deck.FACES for suit in Deck.SUITS]
-        # regular way to generate stack of cards
-        # self.stackOfCards = []
-        # for f in Deck.FACES:
-        #     for s in Deck.SUITS:
-        #         card = BlackjackCard(f, s)
-        #         self.stackOfCards.append(card)
         self.currentIndex = 51
 
     def shuffle(self):
@@ -80,6 +96,7 @@ class Player:
         count = self.countAce()
         while value > 21 and count>0: # A=11,
             value -= 10 # change A=1
+            count -= 1
         return value # 22
 
     def countAce(self):
@@ -140,6 +157,7 @@ class Game:
 
     def showResult(self):
         for player in self.playerList:
+            print(player.msg)
             print(player.showHand())
         print(self.dealer.showHand(True))
 
@@ -171,30 +189,36 @@ class Game:
 
 # if without else: each function takes a single responsibility
 def winner(dealer, player):
-    dealerTotal = dealer.getHandValue()
-    playerTotal = player.getHandValue()
-    if playerTotal > 21:
+    dealer.total = dealer.getHandValue() # dynamically create an attribute in dealer
+    player.total = player.getHandValue() # add attribute total to player
+    if player.total > 21:
+        player.msg = f"Dealer win, {player.name} busted!"
         return dealer.win()
-    return dealerBusted(dealer, player, dealerTotal, playerTotal)   
+    return dealerBusted(dealer, player)   
 
-def dealerBusted(dealer, player, dealerTotal, playerTotal):
-    if dealerTotal > 21:
+def dealerBusted(dealer, player):
+    if dealer.total > 21:
+        player.msg = f"{player.name} wins, dealer busted!"
         return player.win()
-    return tiedUp(dealer, player, dealerTotal, playerTotal)
+    return tiedUp(dealer, player)
 
-def tiedUp(dealer, player, dealerTotal, playerTotal):
-    if dealerTotal==playerTotal:
-        pass
-    return playerLarge(dealer, player, dealerTotal, playerTotal)
+def tiedUp(dealer, player):
+    if dealer.total==player.total:
+        player.msg = "Tied up, no body wins."
+        return
+    return playerLarge(dealer, player)
 
-def playerLarge(dealer, player, dealerTotal, playerTotal):
-    if playerTotal > dealerTotal:
+def playerLarge(dealer, player):
+    if player.total > dealer.total:
+        player.msg = f"{player.name} wins, {player.name} has large hand."
         return player.win()
+    player.msg = "Dealer wins, dealer has large hand."
     return dealer.win()
 
 def determineWinner(dealer, player):
     dealerTotal = dealer.getHandValue()
     playerTotal = player.getHandValue()
+    player.msg = ""
     if playerTotal>21:
         dealer.win()
     elif dealerTotal>21:
@@ -206,15 +230,30 @@ def determineWinner(dealer, player):
     else:
         dealer.win()
 
-if __name__ == '__main__':
+def buildPlayerList():
     playerList = []
     while True:
-        morePlayer = input("more player? (y/n)")
+        morePlayer = input("Player? (y/n)")
         if morePlayer=='n':
             break
-        name = input("enter a name: ")
-        player = Player(name)
+        player = Player(getName(playerList))
         playerList.append(player)
+    return playerList
 
-    game = Game(playerList)
+def getName(playerList):
+    while True:
+        name = input("enter a name: ")
+        if contains(name, playerList):
+            print(f"the '{name}' is aready taken.")
+        else: break
+    return name
+
+def contains(name, playerList):
+    for player in playerList:
+        if name == player.name:
+            return True
+    return False
+
+if __name__ == '__main__':
+    game = Game(buildPlayerList())
     game.play(winner) # pass function to play function

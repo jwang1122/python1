@@ -28,6 +28,7 @@
   - [getHandValue()](#gethandvalue)
   - [Game Play Logic](#game-play-logic)
   - [missing unit tests](#missing-unit-tests)
+- [Documentation](#documentation)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -383,7 +384,7 @@ G-->TKINTER & TURTLE
 classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
 classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
 
-class C,E,F,GIT,INT html
+class C,E,F,GIT,INT,DOC html
 class A, start
 
 ```
@@ -523,7 +524,7 @@ classDef if fill:#EBCD6F,stroke:black,stroke-width:2px;
 class C,F if
 class B start
 ```
-
+❌👇Wrong code below, only handle 1 Ace!😢
 ```py
     def getHandValue(self):
         value = 0
@@ -540,7 +541,7 @@ class B start
         return False # return False till check every card in hand
 
 ```
-
+✔️👇Better solution, handle 1,2,3,4 Aces in one player hand.😄
 ```py
   def getHandValue(self):
     value = 0
@@ -626,4 +627,20 @@ class START start
 2. player holds 1 Ace without busted
 3. player holds 2 Aces
 4. player holds 3 Aces
-5. player holds 4 Aces
+5. player holds 4 Aces (may never happens in integration test)
+
+## Documentation
+❓How do I open the python document for my blackjack game?
+✔️Open Python playground ⟹ import src.blackjack as bj ⟹ help(bj)
+
+❓How do I open Python playground?
+✔️open a new terminal, type in python
+```output
+(env) C:\Users\12818\workspace\python1>python
+Python 3.9.1 (tags/v3.9.1:1e5d33e, Dec  7 2020, 17:08:21) [MSC v.1927 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+❓How do I see one function or class in blackjack module?
+✔️Open Python playground ⟹ from src.blackjack import * ⟹ help(Card)

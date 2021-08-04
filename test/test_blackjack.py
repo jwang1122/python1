@@ -114,4 +114,28 @@ class TestCard(unittest.TestCase):
         expected = 22
         actual = john.getHandValue()
         self.assertEqual(expected, actual)
+    
+    def testGetHandValue_3A(self):
+        john = Player("John")
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_clubsQ) 
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_clubsQ) 
+        expected = 23
+        actual = john.getHandValue()
+        self.assertEqual(expected, actual)
+
+    def testGetHandValue_4A(self):
+        john = Player("John")
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_clubsQ) 
+        john.addCardToHand(self.black_heartsA)
+        john.addCardToHand(self.black_clubsQ) 
+        expected = 24
+        actual = john.getHandValue()
+        self.assertEqual(expected, actual)
+
 
