@@ -28,7 +28,12 @@
   - [getHandValue()](#gethandvalue)
   - [Game Play Logic](#game-play-logic)
   - [missing unit tests](#missing-unit-tests)
+  - [use logging in Blackjack](#use-logging-in-blackjack)
 - [Documentation](#documentation)
+  - [document for developer](#document-for-developer)
+  - [Document for player (user)](#document-for-player-user)
+- [Data Structure](#data-structure)
+  - [stack](#stack)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -63,6 +68,7 @@ otherwise, your python builtins functions no longer works the way you expected.
    
 ### Variable and memory
 ![](images/chineseMedicine.jpg)
+
 ![](images/memory.gif)
 
 ![](images/LanguageBasics.svg)
@@ -629,7 +635,24 @@ class START start
 4. player holds 3 Aces
 5. player holds 4 Aces (may never happens in integration test)
 
+### use logging in Blackjack
+1. copy logger code from logging1.py under Game class
+```py
+import logging
+
+    LOG_FORMAT = "%(asctime)s %(levelname)8s - %(message)s"
+    logging.basicConfig(filename=r"/Users/12818/workspace/python1/blackjack.log", level=logging.DEBUG, format=LOG_FORMAT)
+
+    logger = logging.getLogger("Huaxia")
+```
+2. we add logger.debug() or logger.info() in our function.
+3. change level on demands
+```py
+    logging.basicConfig(filename=r"/Users/12818/workspace/python1/blackjack.log", level=logging.INFO, format=LOG_FORMAT)
+```
+
 ## Documentation
+### document for developer
 ❓How do I open the python document for my blackjack game?
 ✔️Open Python playground ⟹ import src.blackjack as bj ⟹ help(bj)
 
@@ -642,5 +665,22 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-❓How do I see one function or class in blackjack module?
+❓How do I see document of function or class in blackjack module?
+1. class
 ✔️Open Python playground ⟹ from src.blackjack import * ⟹ help(Card)
+2. function
+✔️Open Python playground ⟹ from src.blackjack import * ⟹ help(winner)
+3. function in class
+✔️Open Python playground ⟹ from src.blackjack import * ⟹ help(Game.play) 
+
+### Document for player (user)
+[Blackjack.md](blackjack.md)
+
+## Data Structure
+### stack
+❓What is stack?
+✔️a stack is an abstract data type that serves as a collection of elements, with two main principal operations: (LIFO) last in first out.
+1. Push, which adds an element to the collection, and
+2. Pop, which removes the most recently added element that was not yet removed.
+you have list of element, stack each other.
+* [stack.py](../src/stack.py)

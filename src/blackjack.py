@@ -6,6 +6,7 @@ https://bicyclecards.com/how-to-play/blackjack/
 
 """
 import random
+import logging
 
 class Card:
     """
@@ -140,26 +141,40 @@ class Dealer(Player):
         return super().showHand()
 
 class Game:
+    LOG_FORMAT = "%(asctime)s %(levelname)8s - %(message)s"
+    logging.basicConfig(filename=r"/Users/12818/workspace/python1/blackjack.log", level=logging.DEBUG, format=LOG_FORMAT)
+
+    logger = logging.getLogger("Huaxia")
+
     def __init__(self, playerList):
+        self.logger.debug("__init__()...")
         self.playerList = playerList
         self.dealer = Dealer()
         self.dealer.shuffle()
 
     def dealCards(self):
+        self.logger.debug("dealCards()...")
         for player in self.playerList: # first round for all player
             player.addCardToHand(self.dealer.deal())
+            self.logger.info(f"{player.showHand()}")
         self.dealer.addCardToHand(self.dealer.deal())
+        self.logger.info(f"{self.dealer.showHand(True)}")
         for player in self.playerList: # second round for all player
             player.addCardToHand(self.dealer.deal())
+            self.logger.info(f"{player.showHand()}")
             print(player.showHand())
         self.dealer.addCardToHand(self.dealer.deal())
+        self.logger.info(f"{self.dealer.showHand(True)}")
         print(self.dealer.showHand(False))
 
     def showResult(self):
+        self.logger.debug("showResult()...")
         for player in self.playerList:
             print(player.msg)
             print(player.showHand())
+            self.logger.info(f"{player.showHand()}")
         print(self.dealer.showHand(True))
+        self.logger.info(f"{self.dealer.showHand(True)}")
 
     def cleanHand(self):
         for player in self.playerList:
@@ -167,14 +182,26 @@ class Game:
         self.dealer.cleanHand()
 
     def hit(self):
+        self.logger.debug("hit()...")
         for player in self.playerList:
             while player.hit():
                 player.addCardToHand(self.dealer.deal())
                 print(player.showHand())
+                self.logger.info(f"{player.showHand()}")
         while self.dealer.hit():
             self.dealer.addCardToHand(self.dealer.deal())
+            self.logger.info(f"{self.dealer.showHand(True)}")
 
-    def play(self, winner):
+    def play(self, winner): # pass function for flexibility
+        """
+        After game initialized, this function will be called.
+        where winner is a function passed to this function used to determine who is winner.
+
+        this is good design, so that we can pass different function to determine who is winner.
+        ---------------------------------------------------------------------------------------
+        winner(dealer, player)
+        winner should include two argument (dealer, player).
+        """
         while(True):
             self.dealCards()
             self.hit()
@@ -189,6 +216,13 @@ class Game:
 
 # if without else: each function takes a single responsibility
 def winner(dealer, player):
+    """
+    this function takes two positional arguments, dealer and player.
+    It will increase winning count on dealer or player if he wins.
+    It will also setup a message of the reason in player.msg.
+
+    it uses if-without-else tech to get rid of elif and else code block by function return chain.
+    """
     dealer.total = dealer.getHandValue() # dynamically create an attribute in dealer
     player.total = player.getHandValue() # add attribute total to player
     if player.total > 21:
@@ -216,6 +250,11 @@ def playerLarge(dealer, player):
     return dealer.win()
 
 def determineWinner(dealer, player):
+    """
+    this function takes two positional arguments, dealer and player.
+    It will increase winning count on dealer or player if he wins.
+    It will also setup a empty message in player.msg.
+    """
     dealerTotal = dealer.getHandValue()
     playerTotal = player.getHandValue()
     player.msg = ""
@@ -256,4 +295,4 @@ def contains(name, playerList):
 
 if __name__ == '__main__':
     game = Game(buildPlayerList())
-    game.play(winner) # pass function to play function
+    game.play(winner) # pass check function to play() function
