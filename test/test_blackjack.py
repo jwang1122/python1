@@ -52,12 +52,12 @@ class TestCard(unittest.TestCase):
         KaydentheDude.addCardToHand(self.black_clubsQ)
         return KaydentheDude
 
-    def getJohn(self):
-        john = Player("John") # local variable within function
-        john.addCardToHand(self.black_heartsA)
-        john.addCardToHand(self.black_clubsQ)
-        john.addCardToHand(self.black_diamonds4)
-        return john
+    def getKaydentheDude(self):
+        KaydentheDude = Player("KaydentheDude") # local variable within function
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_clubsQ)
+        KaydentheDude.addCardToHand(self.black_diamonds4)
+        return KaydentheDude
 
     def test_playerHand(self):
         KaydentheDude = self.getKaydentheDude()
@@ -73,7 +73,7 @@ class TestCard(unittest.TestCase):
     def test_showHand(self):
         KaydentheDude = self.getKaydentheDude()
         actual = KaydentheDude.showHand()
-        expected = "KaydentheDude: [(A, HEARTS), (Q, CLUBS)]"
+        expected = "KaydentheDude: [(A, HEARTS), (Q, CLUBS)]:21:0"
         self.assertEqual(expected, actual)
 
     def test_getHandValue(self):
@@ -82,8 +82,8 @@ class TestCard(unittest.TestCase):
         self.assertEqual(21, actual)
 
     def test_getHandValueWithAceBust(self):
-        john = self.getJohn()
-        actual = john.getHandValue()
+        KaydentheDude = self.getKaydentheDude()
+        actual = KaydentheDude.getHandValue()
         self.assertEqual(15, actual) # homework: how do I change code make this pass
 
     def testDealerHit(self):
@@ -99,8 +99,43 @@ class TestCard(unittest.TestCase):
         dealer.addCardToHand(self.black_diamonds4)
         dealer.addCardToHand(self.black_clubsQ) # 8 in hand
         actual = dealer.showHand(False)
-        expected = "Dealer:[(4, DIAMONDS), HIDDEN]"
-        dealer.addCardToHand(self.black_clubsQ) 
-        actual = dealer.showHand(False)
-        expected = "Dealer:[(4, DIAMONDS), HIDDEN]"
+        expected = "Dealer: [(4, DIAMONDS), HIDDEN]"
         self.assertEqual(expected, actual)
+        actual = dealer.showHand(True)
+        expected = "Dealer: [(4, DIAMONDS), (Q, CLUBS)]:14:0"
+        self.assertEqual(expected, actual)
+    
+    def testGetHandValue_2A_Busted(self):
+        KaydentheDude = Player("KaydentheDude")
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_clubsQ) 
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_clubsQ) 
+        expected = 22
+        actual = KaydentheDude.getHandValue()
+        self.assertEqual(expected, actual)
+    
+    def testGetHandValue_3A(self):
+        KaydentheDude = Player("KaydentheDude")
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_clubsQ) 
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_clubsQ) 
+        expected = 23
+        actual = KaydentheDude.getHandValue()
+        self.assertEqual(expected, actual)
+
+    def testGetHandValue_4A(self):
+        KaydentheDude = Player("KaydentheDude")
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_clubsQ) 
+        KaydentheDude.addCardToHand(self.black_heartsA)
+        KaydentheDude.addCardToHand(self.black_clubsQ) 
+        expected = 24
+        actual = KaydentheDude.getHandValue()
+        self.assertEqual(expected, actual)
+
+
