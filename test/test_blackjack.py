@@ -94,3 +94,13 @@ class TestCard(unittest.TestCase):
         dealer.addCardToHand(self.black_clubsQ) # 18 in hand
         self.assertEqual(False, dealer.hit())
 
+    def testShowHand4Dealer(self):
+        dealer = Dealer()
+        dealer.addCardToHand(self.black_diamonds4)
+        dealer.addCardToHand(self.black_clubsQ) # 8 in hand
+        actual = dealer.showHand(False)
+        expected = "Dealer:[(4, DIAMONDS), HIDDEN]"
+        dealer.addCardToHand(self.black_clubsQ) 
+        actual = dealer.showHand(False)
+        expected = "Dealer:[(4, DIAMONDS), HIDDEN]"
+        self.assertEqual(expected, actual)
