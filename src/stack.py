@@ -10,6 +10,9 @@ class Stack:
         self.collection.append(obj)
     
     def pop(self):
+        if len(self.collection)==0:
+            print("The stack is empty.")
+            return
         return self.collection.pop()
 
 if __name__ == '__main__':
@@ -28,6 +31,6 @@ if __name__ == '__main__':
     print(x)
     x = s.pop()
     print(x)
-    s.pop()
-    s.pop()
+    print(s.pop())
+    print(s.pop())
     s.pop()

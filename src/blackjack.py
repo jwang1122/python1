@@ -142,7 +142,7 @@ class Dealer(Player):
 
 class Game:
     LOG_FORMAT = "%(asctime)s %(levelname)8s - %(message)s"
-    logging.basicConfig(filename=r"/Users/12818/workspace/python1/blackjack.log", level=logging.DEBUG, format=LOG_FORMAT)
+    logging.basicConfig(filename=r"blackjack.log", level=logging.DEBUG, format=LOG_FORMAT)
 
     logger = logging.getLogger("Huaxia")
 
@@ -152,19 +152,19 @@ class Game:
         self.dealer = Dealer()
         self.dealer.shuffle()
 
-    def dealCards(self):
-        self.logger.debug("dealCards()...")
+    def dealOneCard(self):
         for player in self.playerList: # first round for all player
-            player.addCardToHand(self.dealer.deal())
-            self.logger.info(f"{player.showHand()}")
-        self.dealer.addCardToHand(self.dealer.deal())
-        self.logger.info(f"{self.dealer.showHand(True)}")
-        for player in self.playerList: # second round for all player
             player.addCardToHand(self.dealer.deal())
             self.logger.info(f"{player.showHand()}")
             print(player.showHand())
         self.dealer.addCardToHand(self.dealer.deal())
         self.logger.info(f"{self.dealer.showHand(True)}")
+
+
+    def dealCards(self):
+        self.logger.debug("dealCards()...")
+        self.dealOneCard()
+        self.dealOneCard()
         print(self.dealer.showHand(False))
 
     def showResult(self):

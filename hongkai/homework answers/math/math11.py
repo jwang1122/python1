@@ -23,21 +23,23 @@ def tempConvert(tempPara):
     letterEnd = tempPara[len(tempPara)-1]
     if letterEnd == "F" or letterEnd == "f":
         temp2 = (temp1-32)*5/9
-        str = "The temperature in Fahrenheit %.3f°F is %.3f°C in Celsius." %(temp1,temp2)
+        str1 = "The temperature in Fahrenheit %.3f°F is %.3f°C in Celsius." %(temp1,temp2)
     elif letterEnd == "C" or letterEnd == "c":
         temp2 = temp1*9/5+32
-        str = "The temperature in Celsius %.3f°C is %.3f°F in Fahrenheit." %(temp1,temp2)
+        str1 = "The temperature in Celsius %.3f°C is %.3f°F in Fahrenheit." %(temp1,temp2)
     else:
-        print("??????")
-    print(str)
+        str1="No such temperature unit."
+    print(str1)
 
 
 tempInput = input("Please enter a temperature: ")
-if tempInput.count("F") == 1:
-    tempConvert(tempInput)
-if tempInput.count("f") == 1:
-    tempConvert(tempInput)
-if tempInput.count("C") == 1:
-    tempConvert(tempInput)
-if tempInput.count("c") == 1:
-    tempConvert(tempInput)
+tempConvert(tempInput)
+# if tempInput.count("F") == 1:
+#     tempConvert(tempInput)
+# if tempInput.count("f") == 1:
+#     tempConvert(tempInput)
+# if tempInput.count("C") == 1:
+#     tempConvert(tempInput)
+# if tempInput.count("c") == 1:
+#     tempConvert(tempInput)
+print("Done.")

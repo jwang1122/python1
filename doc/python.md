@@ -34,6 +34,7 @@
   - [Document for player (user)](#document-for-player-user)
 - [Data Structure](#data-structure)
   - [stack](#stack)
+- [Deployment](#deployment)
 
 ## My First python program
 [hello world](../src/hello.py)
@@ -379,9 +380,10 @@ GIT(Source control)
 DOC(Documentation)
 TKINTER[tkinter]
 TURTLE[turtle]
+DIST(Deployment)
 
 A--includes-->B & C & D 
-A--tools--> E & F & INT & DOC & GIT
+A--tools--> E & F & INT & DOC & GIT & DIST
 B-->G & H
 D-->M & S & P
 H-->K & L & DJ
@@ -390,7 +392,7 @@ G-->TKINTER & TURTLE
 classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
 classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
 
-class C,E,F,GIT,INT,DOC html
+class C,E,F,GIT,INT,DOC,DIST html
 class A, start
 
 ```
@@ -684,3 +686,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 2. Pop, which removes the most recently added element that was not yet removed.
 you have list of element, stack each other.
 * [stack.py](../src/stack.py)
+
+## Deployment
+1. open github > create new repository called "blackjack"
+2. run the following command
+```DOS
+git clone https://github.com/jwang1122/blackjack.git
+```
+3. copy python files to the blackjack folder
+4. push your source code to gitHub
