@@ -36,10 +36,9 @@ class Converter:
         def findSybValue(symbol):
             sybTuple = ("M" ,"D","C","L","X","V","I")
             decimal =  (1000,500,100, 50, 10, 5 , 1 )
-            for i in range(12):
-                if sybTuple[i] == symbol[0]:
+            for i in range(7):
+                if sybTuple[i] == symbol:
                     return decimal[i]
-            return decimal[i]
         
         item = 0
         roman_num = number[::-1]
@@ -60,7 +59,7 @@ if __name__ == '__main__':
     Converter().int_to_Roman(4000)
     Converter().int_to_Roman(6942)
     Converter().Roman_to_int("MMMCMLXXXVI")
-    Converter().Roman_to_int("MMMMMMCMXLII")
+    Converter().Roman_to_int("MMXCMMMMMLII")
     Converter().Roman_to_int("MMMM")
     Converter().Roman_to_int("I")
 
