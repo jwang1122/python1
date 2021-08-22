@@ -6,11 +6,7 @@ class Superclass:
         self.instancedata = a
     
     def __repr__(self):
-<<<<<<< HEAD
         return str(self.instancedata) # str function converts tuple to a string, __repr__ can only retun str type
-=======
-        return str(self.instancedata) # str function converts tuple to a string, __repr__ can only return str type
->>>>>>> c5f0b46ebf07ba4ea36292d7f036c86e297d46d8
 
     def superFunc(self):
         print("superFunc() is running...")

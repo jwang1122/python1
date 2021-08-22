@@ -1,0 +1,29 @@
+2021-08-05 17:19:32,529    DEBUG - __init__()...
+2021-08-05 17:19:32,530    DEBUG - dealCards()...
+2021-08-05 17:19:32,530     INFO - gaoyu: [(K, SPADES)]:10:0
+2021-08-05 17:19:32,530     INFO - doge: [(6, SPADES)]:6:0
+2021-08-05 17:19:32,530     INFO - Dealer: [(10, CLUBS)]:10:0
+2021-08-05 17:19:32,530     INFO - gaoyu: [(K, SPADES), (9, HEARTS)]:19:0
+2021-08-05 17:19:32,532     INFO - doge: [(6, SPADES), (K, CLUBS)]:16:0
+2021-08-05 17:19:32,535     INFO - Dealer: [(10, CLUBS), (10, SPADES)]:20:0
+2021-08-05 17:19:32,535    DEBUG - hit()...
+2021-08-05 17:20:41,617    DEBUG - showResult()...
+2021-08-05 17:20:41,618     INFO - gaoyu: [(K, SPADES), (9, HEARTS)]:19:0
+2021-08-05 17:20:41,619     INFO - doge: [(6, SPADES), (K, CLUBS)]:16:0
+2021-08-05 17:20:41,620     INFO - Dealer: [(10, CLUBS), (10, SPADES)]:20:2
+2021-08-16 06:16:47,930    DEBUG - __init__()...
+2021-08-16 06:16:47,962    DEBUG - dealCards()...
+2021-08-16 06:16:47,962     INFO - john: [(10, SPADES)]:10:0
+2021-08-16 06:16:47,962     INFO - charles: [(4, CLUBS)]:4:0
+2021-08-16 06:16:47,963     INFO - Dealer: [(5, CLUBS)]:5:0
+2021-08-16 06:16:47,963     INFO - john: [(10, SPADES), (A, DIAMONDS)]:21:0
+2021-08-16 06:16:47,963     INFO - charles: [(4, CLUBS), (7, SPADES)]:11:0
+2021-08-16 06:16:47,964     INFO - Dealer: [(5, CLUBS), (8, HEARTS)]:13:0
+2021-08-16 06:16:47,964    DEBUG - hit()...
+2021-08-16 06:17:02,368     INFO - charles: [(4, CLUBS), (7, SPADES), (6, DIAMONDS)]:17:0
+2021-08-16 06:17:09,699     INFO - Dealer: [(5, CLUBS), (8, HEARTS), (2, CLUBS)]:15:0
+2021-08-16 06:17:09,700     INFO - Dealer: [(5, CLUBS), (8, HEARTS), (2, CLUBS), (10, DIAMONDS)]:25:0
+2021-08-16 06:17:09,700    DEBUG - showResult()...
+2021-08-16 06:17:09,701     INFO - john: [(10, SPADES), (A, DIAMONDS)]:21:1
+2021-08-16 06:17:09,702     INFO - charles: [(4, CLUBS), (7, SPADES), (6, DIAMONDS)]:17:1
+2021-08-16 06:17:09,702     INFO - Dealer: [(5, CLUBS), (8, HEARTS), (2, CLUBS), (10, DIAMONDS)]:25:0

@@ -1,17 +1,41 @@
 """
 Blackjack Card Game
+
+Game Rules:
+https://bicyclecards.com/how-to-play/blackjack/
+
 """
 import random
+import logging
 
 class Card:
+    """
+    Base class for blackjack card game.
+
+    it has two attributes, face and suit, and a getValue() function which return the face value of the card.
+    where A=1, 2=2, ..., J=11, Q=12, K=13
+    """
     def __init__(self, face, suit):
+        """
+        Sample code for create Card instance:
+
+        card = Card("A", "DIAMONDS")
+
+        here is all SUITS "SPADES, DIAMONDS, CLUBS, HEARTS".
+        """
         self.face = face
         self.suit = suit
 
     def __repr__(self): # this dunder function return a string to represent this object(card).
+        """
+        return a string to represent the card, for intance, (A, HEARTS).
+        """
         return f"({self.face}, {self.suit})"
 
     def getValue(self): # Test Driving Development
+        """
+        use dictionary to get value of A, J, Q, K
+        """
         if self.face.isdigit():
             return int(self.face)
         pictured = {"A":1, "J":11, "Q":12, "K":13}
@@ -28,14 +52,7 @@ class Deck:
     FACES = ('A','2','3','4','5','6','7','8','9','10','J','Q','K') # class level attribute
     SUITS = ('SPADES','CLUBS','DIAMONDS','HEARTS')
     def __init__(self):
-        # more powerful way to generate stack of cards
         self.stackOfCards = [BlackjackCard(face, suit) for face in Deck.FACES for suit in Deck.SUITS]
-        # regular way to generate stack of cards
-        # self.stackOfCards = []
-        # for f in Deck.FACES:
-        #     for s in Deck.SUITS:
-        #         card = BlackjackCard(f, s)
-        #         self.stackOfCards.append(card)
         self.currentIndex = 51
 
     def shuffle(self):
@@ -75,17 +92,20 @@ class Player:
 
     def getHandValue(self):
         value = 0
-        for card in self.hand:
+        for card in self.hand: #A,Q,A,Q=42
             value += card.getValue()
-        if value > 21 and self.hasAce(): # A=11,
+        count = self.countAce()
+        while value > 21 and count>0: # A=11,
             value -= 10 # change A=1
-        return value
+            count -= 1
+        return value # 22
 
-    def hasAce(self):
+    def countAce(self):
+        count = 0
         for card in self.hand:
             if card.face == 'A':
-                return True
-        return False # return False till check every card in hand
+                count += 1
+        return count # return number of Ace in hand
 
     def hit(self):
         value = self.getHandValue()
@@ -121,39 +141,72 @@ class Dealer(Player):
         return super().showHand()
 
 class Game:
-    def __init__(self, player):
-        self.player = player
+    LOG_FORMAT = "%(asctime)s %(levelname)8s - %(message)s"
+    logging.basicConfig(filename=r"blackjack.log", level=logging.DEBUG, format=LOG_FORMAT)
+
+    logger = logging.getLogger("Huaxia")
+
+    def __init__(self, playerList):
+        self.logger.debug("__init__()...")
+        self.playerList = playerList
         self.dealer = Dealer()
         self.dealer.shuffle()
 
+    def dealOneCard(self):
+        for player in self.playerList: # first round for all player
+            player.addCardToHand(self.dealer.deal())
+            self.logger.info(f"{player.showHand()}")
+            print(player.showHand())
+        self.dealer.addCardToHand(self.dealer.deal())
+        self.logger.info(f"{self.dealer.showHand(True)}")
+
+
     def dealCards(self):
-        self.player.addCardToHand(self.dealer.deal())
-        self.dealer.addCardToHand(self.dealer.deal())
-        self.player.addCardToHand(self.dealer.deal())
-        self.dealer.addCardToHand(self.dealer.deal())
-        print(self.player.showHand())
+        self.logger.debug("dealCards()...")
+        self.dealOneCard()
+        self.dealOneCard()
         print(self.dealer.showHand(False))
 
     def showResult(self):
-        print(self.player.showHand())
+        self.logger.debug("showResult()...")
+        for player in self.playerList:
+            print(player.msg)
+            print(player.showHand())
+            self.logger.info(f"{player.showHand()}")
         print(self.dealer.showHand(True))
+        self.logger.info(f"{self.dealer.showHand(True)}")
 
     def cleanHand(self):
-        self.player.cleanHand()
+        for player in self.playerList:
+            player.cleanHand()
         self.dealer.cleanHand()
 
     def hit(self):
-        while self.player.hit():
-            self.player.addCardToHand(self.dealer.deal())
-            print(self.player.showHand())
+        self.logger.debug("hit()...")
+        for player in self.playerList:
+            while player.hit():
+                player.addCardToHand(self.dealer.deal())
+                print(player.showHand())
+                self.logger.info(f"{player.showHand()}")
         while self.dealer.hit():
             self.dealer.addCardToHand(self.dealer.deal())
+            self.logger.info(f"{self.dealer.showHand(True)}")
 
-    def play(self):
+    def play(self, winner): # pass function for flexibility
+        """
+        After game initialized, this function will be called.
+        where winner is a function passed to this function used to determine who is winner.
+
+        this is good design, so that we can pass different function to determine who is winner.
+        ---------------------------------------------------------------------------------------
+        winner(dealer, player)
+        winner should include two argument (dealer, player).
+        """
         while(True):
             self.dealCards()
             self.hit()
-            determineWinner(self.dealer, self.player)
+            for player in self.playerList:
+                winner(self.dealer, player)
             self.showResult()
             moreGame = input("Would you like to play another game? (y/n) ")
             if moreGame=='n':
@@ -161,9 +214,50 @@ class Game:
             self.cleanHand()
         print("Game Over!")
 
+# if without else: each function takes a single responsibility
+def winner(dealer, player):
+    """
+    this function takes two positional arguments, dealer and player.
+    It will increase winning count on dealer or player if he wins.
+    It will also setup a message of the reason in player.msg.
+
+    it uses if-without-else tech to get rid of elif and else code block by function return chain.
+    """
+    dealer.total = dealer.getHandValue() # dynamically create an attribute in dealer
+    player.total = player.getHandValue() # add attribute total to player
+    if player.total > 21:
+        player.msg = f"Dealer win, {player.name} busted!"
+        return dealer.win()
+    return dealerBusted(dealer, player)   
+
+def dealerBusted(dealer, player):
+    if dealer.total > 21:
+        player.msg = f"{player.name} wins, dealer busted!"
+        return player.win()
+    return tiedUp(dealer, player)
+
+def tiedUp(dealer, player):
+    if dealer.total==player.total:
+        player.msg = "Tied up, no body wins."
+        return
+    return playerLarge(dealer, player)
+
+def playerLarge(dealer, player):
+    if player.total > dealer.total:
+        player.msg = f"{player.name} wins, {player.name} has large hand."
+        return player.win()
+    player.msg = "Dealer wins, dealer has large hand."
+    return dealer.win()
+
 def determineWinner(dealer, player):
+    """
+    this function takes two positional arguments, dealer and player.
+    It will increase winning count on dealer or player if he wins.
+    It will also setup a empty message in player.msg.
+    """
     dealerTotal = dealer.getHandValue()
     playerTotal = player.getHandValue()
+    player.msg = ""
     if playerTotal>21:
         dealer.win()
     elif dealerTotal>21:
@@ -175,7 +269,30 @@ def determineWinner(dealer, player):
     else:
         dealer.win()
 
+def buildPlayerList():
+    playerList = []
+    while True:
+        morePlayer = input("Player? (y/n)")
+        if morePlayer=='n':
+            break
+        player = Player(getName(playerList))
+        playerList.append(player)
+    return playerList
+
+def getName(playerList):
+    while True:
+        name = input("enter a name: ")
+        if contains(name, playerList):
+            print(f"the '{name}' is aready taken.")
+        else: break
+    return name
+
+def contains(name, playerList):
+    for player in playerList:
+        if name == player.name:
+            return True
+    return False
+
 if __name__ == '__main__':
-    john = Player("John")
-    game = Game(john)
-    game.play()
+    game = Game(buildPlayerList())
+    game.play(winner) # pass check function to play() function
