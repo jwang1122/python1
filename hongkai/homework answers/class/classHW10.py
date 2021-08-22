@@ -12,7 +12,7 @@ Expected output:
 ```
 
 """
-class intSet:
+class IntSet:
     def __init__(self, thisSet):
         self.intSet = set(thisSet)
         self.intSubsets = set({})
@@ -21,14 +21,9 @@ class intSet:
         return str(self.intSet)
     
     def createSubsets(self):
-        """
-        doesn't really work
-        """
-        thisIntSet = list(self.intSet)[::-1]
-        subsets = []
-        subsets.append([])
-        return subsets
+        #what do I do here???
+        pass
 
 if __name__ == '__main__':
-    x = intSet({4, 5, 6})
+    x = IntSet({4, 5, 6})
     print(x.createSubsets())

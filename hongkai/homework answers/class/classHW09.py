@@ -43,7 +43,7 @@ class Converter:
         item = 0
         roman_num = number[::-1]
         total = 0
-        prevItem = 0
+        prevItem = 0 
         for i in range(len(roman_num)):
             item = findSybValue(roman_num[i])
             if item < prevItem:
