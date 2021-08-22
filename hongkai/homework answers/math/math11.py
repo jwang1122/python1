@@ -1,3 +1,4 @@
+#???
 """
 * Write Python progrom recieve user input of temperature, convert from Celsius to Fahrenheit or vice versa. for instance, if user input 101F, which represents a Fahrenheit temperature, your output should be 38C.
 
@@ -17,10 +18,21 @@ The temperature in Celsius 45C is 113F in Fahrenheit.
 ```
 """
 
+def tempToFloat(temp):
+    tempEnd = temp[len(temp)-1]
+    allowedEnds = ("F", "f", "C", "c")
+    if tempEnd == "F" or tempEnd == "f":
+        returnTempEnd = "F"
+    returnTemp = float(temp[0:len(temp)-1])
+    if returnTemp.is_integer:
+        return temp, returnTempEnd
+    return "Not valid format"
 
-def tempConvert(tempPara):
-    temp1 = float(tempPara[0:len(tempPara)-1])
-    letterEnd = tempPara[len(tempPara)-1]
+def tempConvert(tempInput):
+    temp = tempToFloat(tempInput)
+    if type(temp) != float:
+
+    letterEnd = temp[len(temp)-1]
     if letterEnd == "F" or letterEnd == "f":
         temp2 = (temp1-32)*5/9
         str = "The temperature in Fahrenheit %.3f°F is %.3f°C in Celsius." %(temp1,temp2)
@@ -31,13 +43,17 @@ def tempConvert(tempPara):
         print("??????")
     print(str)
 
+def askConvertTemp():
+    tempInput = input("Please enter a temperature: ")
+    tempUnits = ("F","f","C","c")
+    tempConvert(tempInput)
 
-tempInput = input("Please enter a temperature: ")
-if tempInput.count("F") == 1:
-    tempConvert(tempInput)
-if tempInput.count("f") == 1:
-    tempConvert(tempInput)
-if tempInput.count("C") == 1:
-    tempConvert(tempInput)
-if tempInput.count("c") == 1:
-    tempConvert(tempInput)
+if __name__ == '__main__': #<<< this file was so old it didn't even have this!!!
+    askConvertTemp()
+
+    # if tempInput.count("f") == 1:
+    #     tempConvert(tempInput)
+    # if tempInput.count("C") == 1:
+    #     tempConvert(tempInput)
+    # if tempInput.count("c") == 1:
+    #     tempConvert(tempInput)
