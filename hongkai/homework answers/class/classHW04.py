@@ -27,8 +27,9 @@ class Circle:
         pass
 
     def area():
-        return 
+        pass 
 
 if __name__ == '__main__':
     c = Circle()
-    print(c.area())
+    print(type(c).__name__)
+    print(Circle.__dict__)

@@ -9,7 +9,7 @@ Please enter a string: this is a test.
 THIS IS A TEST.
 """
 
-class storeString:
+class StoreString:
     def __init__(self):
         self.storedString = ""
 
@@ -20,6 +20,6 @@ class storeString:
         print(self.storedString.upper())
     
 if __name__ == '__main__':
-    store1 = storeString()
+    store1 = StoreString()
     store1.get_String()
     store1.print_String()

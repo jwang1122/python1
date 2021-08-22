@@ -12,23 +12,37 @@ Expected output:
 ```
 
 """
-class intSet:
+class FindSubSet:
     def __init__(self, thisSet):
-        self.intSet = set(thisSet)
-        self.intSubsets = set({})
+        self.intList = list(thisSet)
+        self.intSubsets = []
 
     def __repr__(self):
-        return str(self.intSet)
+        return str(self.intList)
     
     def createSubsets(self):
         """
         doesn't really work
         """
-        thisIntSet = list(self.intSet)[::-1]
-        subsets = []
-        subsets.append([])
-        return subsets
+        self.intSubsets.append([])
+        self.intSubsets.append(self.intList)
+        list1 = list(self.intList)
+        for x in range(len(list1)):
+            l2 = [self.intList[x]]
+            self.intSubsets.append(l2)
+            for y in range(x):
+                l3 = [self.intList[x], self.intList[y]]
+                self.intSubsets.append(l3)
+        return self.intSubsets
+
+    def subsetsRecur(self, current, sset):
+        if sset:
+            return self.subsetsRecur(current, sset[1:]) + self.subsetsRecur(current + [sset[0]], sset[1:])
+        return [current]
 
 if __name__ == '__main__':
-    x = intSet({4, 5, 6})
+    x = FindSubSet({4, 5, 6})
     print(x.createSubsets())
+
+    mylist = x.subsetsRecur([], [4, 5, 6])
+    print(mylist)

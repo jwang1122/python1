@@ -14,8 +14,10 @@ __main__
 ```
 """
 class Student:
-    def __init__(self):
-        print(type(Student), self.__dict__, self.__module__, sep="\n")
+    pass
     
 if __name__ == '__main__':
     student = Student()
+    print(type(student))
+    print(Student.__dict__.keys())
+    print(Student.__module__)

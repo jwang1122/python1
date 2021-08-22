@@ -97,3 +97,9 @@ x = set1.isdisjoint(set2)
 print(x)
 set3 = set1.intersection(set2)
 print(set3)
+
+# set3.add([1,2]) # cannot add list to set as element
+# print(set3)
+
+set3.add((1,2)) # but can add tuple to set
+print(set3)

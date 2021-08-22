@@ -1,5 +1,7 @@
 """
-* Write a Python class named Converter, and define a function to convert an integer to a Roman numeral; and another function to convert Roman numeral to integer.
+* Write a Python class named Converter, and define a function 
+to convert an integer to a Roman numeral; 
+and another function to convert Roman numeral to integer.
 
 for example:
 
