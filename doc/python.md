@@ -5,6 +5,7 @@
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [My First python program](#my-first-python-program)
+- [Getting Start](#getting-start)
 - [print](#print)
 - [comment](#comment)
 - [Variable Naming](#variable-naming)
@@ -38,6 +39,28 @@
 
 ## My First python program
 [hello world](../src/hello.py)
+
+## Getting Start
+❓ How do I run python program?
+✔️
+
+❓ How do I save python file?
+✔️
+
+❓ How do I open new Terminal?
+✔️
+
+❓ How do I open Python playground?
+✔️
+
+❓ How do I find all Python built-in functions?
+✔️
+
+❓ How do I find all Python built-in fuction documents?
+✔️
+
+
+
 
 ## print
 [print](../src/print.py)
@@ -220,7 +243,8 @@ class D,E block2
 [Table of Contents](#table-of-contents)
 
 ## Function
-A function is a block of organized, reusable code 
+❓ What is function?
+>✔️A function is a block of organized, reusable code 
 that is used to perform a single, related action.
 
     - def: use Python reserved keyword
