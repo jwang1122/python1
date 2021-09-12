@@ -261,9 +261,7 @@ that is used to perform a single, related action.
     - 💡Single response, do single thing
     - ❗️❗️call a function by function name and () no matter it has arguments or not, and arguments if thers is any
 
-$$
-\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
-$$
+$$\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}$$
 
 * [function.py](../src/function.py)
 * [argument.py](../src/argument.py)
@@ -738,3 +736,5 @@ in python application.
 * [create a button on window](../src/tkinter/tkinter05.py)
 
 ### display image
+* [Display image on window](../src/tkinter/tkinter42.py)
+* [Card, Deck class to get image of card](../src/tkinter/tkinter43.py)
