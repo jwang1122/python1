@@ -39,6 +39,7 @@
 - [tkinter](#tkinter)
   - [Open window](#open-window)
   - [use widgets](#use-widgets)
+  - [Tkinter Layout](#tkinter-layout)
   - [display image](#display-image)
 
 ## My First python program
@@ -734,7 +735,24 @@ in python application.
 * [use pack() function attribute to dispaly labels](../src/tkinter/tkinter03.py)
 * [Change label font: C:/Windows/fonts](../src/tkinter/tkinter04.py)
 * [create a button on window](../src/tkinter/tkinter05.py)
+* 
 
+### Tkinter Layout
+* [grid() System](../src/tkinter/tkinter06.py)
+  - pack() and place() can be used together
+  - grid() and place() can be used together
+  - pack() and grid() cannot be used same time.
+* [pack() function](../src/tkinter/tkinter04.py)
+* [place() function](../src/tkinter/tkinter44.py)
+
+> pack() will allow you change the widgets location and size.
+> the location of the widgets will not chaged for grid() and place() while you change window size. 
+> 
 ### display image
 * [Display image on window](../src/tkinter/tkinter42.py)
 * [Card, Deck class to get image of card](../src/tkinter/tkinter43.py)
+* [Basic frame for all GUI application](../src/tkinter/tkinter44.py)
+* [Blackjack game frame](../src/tkinter/tkinter45.py)
+* [Calculatot basic frame](../src/tkinter/tkinter46.py)
+* [Homework: build GUI for Blackjack](../homeworks/tkinterFinalHW.md)
+* [Basic Blackjack Card Game GUI](../src/tkinter/tkinter47.py)
